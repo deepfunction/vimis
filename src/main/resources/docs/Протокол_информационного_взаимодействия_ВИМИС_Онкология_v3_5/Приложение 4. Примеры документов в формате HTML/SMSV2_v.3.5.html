@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do NOT edit this HTML directly: it was generated via an XSLT transformation from a CDA Release 2 or 3 XML document. -->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Протокол инструментального исследования (October 20, 2020, 15:55 +0300)</title>
+      <!-- General CSS -->
+      <style type="text/css" media="all">
+                    *{
+                        font-family: Verdana, Tahoma, sans-serif;
+                        font-size: 9pt;
+                    }
+                    body{
+                        padding: 2px;
+                        color: #003366;
+                        background-color: white;
+                        font-size: 9pt;
+                    }
+                    #documentheader,
+                    #documentbody,
+                    #documentfooter{
+                        width: 100%;
+                    }
+                    #documentheader{
+                        border-bottom: 1px solid grey;
+                        margin-bottom: 1em;
+                    }
+                    #documentfooter{
+                        border-top: 1px solid grey;
+                        margin-top: 1em;
+                    }
+                    a{
+                        color: #003366;
+                        background-color: white;
+                    }
+                    h1{
+                        font-size: 12pt;
+                        font-weight: bold;
+                    }
+                    h1.title{
+                        text-align: center;
+                    }
+                    h2{
+                        font-size: 11pt;
+                        font-weight: bold;
+                    }
+                    h3{
+                        font-size: 10pt;
+                        font-weight: bold;
+                    }
+                    h4{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    h5{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    h6{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    hr{
+                        width: 100%;
+                    }
+                    span {
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        display: inline; /* IE8 hack: would go to next line otherwise */
+                    }
+                    table{
+                        line-height: 10pt;
+                        width: 100%;
+                    }
+                    thead tr, th{
+                        background-color: LightGrey;
+                    }
+                    tbody tr{
+                        background-color: #f2f2f2;
+                    }
+                    td{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        padding: 0.1cm 0.2cm;
+                        vertical-align: top;
+                    }
+                    .table_simple{
+                        width: auto;
+                        color: inherit;
+                        background-color: inherit;
+                    }
+                    .table_simple td{
+                        padding: 0;
+                    }
+                    .table_simple td.td_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: inherit;
+                        font-style: italic;
+                        padding-right: 0.2cm;
+                    }
+                    .header_table{
+                        border: 1pt solid #00008b;
+                    }
+                    .narr_table{
+                        width: 100%;
+                        margin: 0.3em 0;
+                    }
+                    .narr_tr{
+                        //background-color: #ffffcc;
+                    }
+                    .narr_th{
+                        background-color: LightGrey;
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                    }
+                    .narr_footnote{
+                        font-size: 8pt;
+                        font-style: italic;
+                    }
+                    .td_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: bold;
+                        background-color: LightGrey;
+                    }
+                    .td_label_width{
+                        width: 20%;
+                    }
+                    .span_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: bold;
+                    }
+                    .span_value{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: normal;
+                    }
+                    .revision_insert{
+                        text-decoration: underline overline;
+                    }
+                    .revision_insert_final{
+                    }
+                    .revision_delete{
+                        text-decoration: line-through;
+                    }
+                    .revision_delete_final{
+                        display: none;
+                    }
+                    .span_button {
+                        display: table-cell;
+                        cursor: pointer;
+                        border: 2pt inset #585858;
+                        border-radius: 15px;
+                        -moz-border-radius: 15px;
+                        padding: 0.1cm 0.2cm;
+                        background-color: #f2f2f2;
+                        font-weight: bold;
+                        vertical-align: baseline;
+                        width: 150px;
+                    }
+                    div.separator {
+                        height: 1em;
+                    }
+                    div.caption {
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                </style>
+      <!-- Stylecode CSS -->
+      <style type="text/css" media="all">
+                    .Bold{
+                        font-weight: bold;
+                    }
+                    .Italics{
+                        font-style: italic;
+                    }
+                    .Underline{
+                        text-decoration: underline;
+                    }
+                    .Emphasis{
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                    .Lrule{
+                        border-left-width: 2px;
+                        border-left-style: solid;
+                    }
+                    .Rrule{
+                        border-right-width: 2px;
+                        border-right-style: solid;
+                    }
+                    .Toprule{
+                        border-top-width: 2px;
+                        border-top-style: solid;
+                    }
+                    .Botrule{
+                        border-bottom-width: 2px;
+                        border-bottom-style: solid;
+                    }
+                    .Arabic{
+                        list-style: arabic;
+                    }
+                    .LittleRoman{
+                        list-style: lower-roman;
+                    }
+                    .BigRoman{
+                        list-style: upper-roman;
+                    }
+                    .LittleAlpha{
+                        list-style: lower-alpha;
+                    }
+                    .BigAlpha{
+                        list-style: upper-alpha
+                    }
+                    .Disc{
+                        list-style: disc;
+                    }
+                    .Circle{
+                        list-style: circle;
+                    }
+                    .Square{
+                        list-style: square;
+                    }</style>
+      <!-- Section Button Toggle CSS -->
+      <style type="text/css" media="screen">
+                    div.button.expandCollapse {
+                        float: left;
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                </style>
+      <!-- Revision Toggle CSS -->
+      <style type="text/css" media="print">
+                    button, 
+                    div.button,
+                    #buttontable {
+                        display: none;
+                    }
+                    div.section-content {
+                        display: block !important;
+                    }
+                    .print_visible {
+                        display: block;
+                        float: none;
+                        margin-right: 0;
+                    }
+                </style>
+      <!-- Table of Contents CSS -->
+      <style type="text/css" media="screen">
+                    #nav, #nav ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                    }
+                    
+                    #nav li {
+                        float: left;
+                        width: 300px;
+                    }
+                    #nav ul {
+                        position: absolute;
+                        width: 300px;
+                        left: -1000px;
+                    }
+                    #nav li ul li ul {
+                        display: none;
+                    }
+                    
+                    #nav li ul li:hover > ul {
+                        display: block;
+                        position: absolute;
+                        left: 50px !important;
+                    }
+                    #nav li ul li:hover > ul > li > a {
+                        border: 1px solid #585858;
+                    }
+                    
+                    #nav li:hover ul, #nav li.ie_does_hover ul {
+                        left: auto;
+                        background-position: 0 0;
+                    }
+                    
+                    #nav * a {
+                        display: block;
+                        padding: 2px 8px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 11px;
+                    }
+                    
+                    #nav ul * a {
+                        font-weight: bold;
+                        color: #585858;
+                        background-color: #f2f2f2;
+                        cursor: pointer;
+                    }
+                    
+                    #nav ul ul a:link, #nav ul ul a:visited {
+                        font-weight: normal;
+                        color: #585858;
+                        background-color: #f2f2f2;
+                        cursor: pointer;
+                    }
+                    
+                    #nav * li a:hover, #nav * li a:active,
+                    #nav * li * li a:hover, #nav * li * li a:active {
+                        /*font-weight: normal;*/
+                        color: white;
+                        background-color: #585858;
+                        cursor: pointer;
+                    }
+                    
+                    #nav * li {
+                        border-left: 2px solid white;
+                    }
+                    
+                    #nav * ul li {
+                        border-top: 2px solid white;
+                        border-left: 0;
+                    }
+                    
+                    /* IE only hack */
+                    * html ul li, * html ul ul li{
+                        border-bottom: 2px solid white;
+                    }
+                    
+                    * html ul ul li{
+                        border-top: 0;
+                    }
+                    /* End IE only hack */
+                </style>
+   </head>
+   <body>
+      <div id="documentheader">
+         <a id="_toc"> </a>
+         <h1 class="title">Протокол инструментального исследования (October 20, 2020, 15:55 +0300)</h1>
+         <table class="header_table">
+            <tbody>
+               <tr>
+                  <td class="td_label">Patient</td>
+                  <td>
+                     <span class="span_value"> Сельченков Михаил Владимирович</span>
+                     <span style="float: right; margin-left: 1em;">
+                        <span>
+                           <span class="span_label">Date of Birth: </span>
+                           <span class="span_value">February  17, 1980<span title="At document creation time"> (40yr)</span>
+                           </span>
+                        </span>
+                        <span class="span_label">Gender: </span>
+                        <span class="span_value">Мужской</span>
+                     </span>
+                     <span style="float: right;" class="print_visible">
+                        <span class="span_label">Patient-ID: </span>
+                        <span class="span_value">
+                           <span>735486 (1.2.643.5.1.13.13.12.2.77.8481.100.1.1.10)</span>, <span>254-636-254 26 (1.2.643.100.3)</span>, <span title="ОВД &#34;Твардовское&#34; ОУФМС России по гор. Москве. Код подразделения: 770-095. Дата выдачи: 18.02.2005">4509 395643 (1.2.643.5.1.13.13.99.2.48.1)</span>, <span>1 (1.2.643.5.1.13.13.11.1042)</span>
+                        </span>
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Encounter</td>
+                  <td>
+                     <span class="span_label">ID: </span>
+                     <span class="span_value">
+                        <span>5469-18 (1.2.643.5.1.13.13.12.2.77.8481.100.1.1.15)</span>
+                     </span>, <span class="span_label">Date/Time: </span>
+                     <span class="span_value">from September  25, 2020, 15:30 +0300</span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Documentation Of</td>
+                  <td>
+                     <span class="span_value">Компьютерная томография</span>, <span class="span_label">Date/Time: </span>
+                     <span class="span_value">October  20, 2020 15:30 +0300 - 15:55 +0300</span>, <span class="span_label">Primary Performer: </span>
+                     <span class="span_value"> Смирнов Александр Игоревич</span>, <span class="span_label">Supporting Performer: </span>
+                     <span class="span_value"> Иванова Татьяна Михайловна</span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">In Fulfillment Of</td>
+                  <td>
+                     <span class="span_label">Order </span>
+                     <span class="span_label">ID: </span>
+                     <span class="span_value">
+                        <span>659481548 (1.2.643.5.1.13.13.12.2.77.7809.100.1.1.59)</span>
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Author</td>
+                  <td>
+                     <span class="span_value"> Смирнов Александр Игоревич</span>, <span class="span_value">Врач-рентгенолог</span>, <span class="span_label">Organization: </span>
+                     <span class="span_value">ГБУЗ "МГОБ № 62 ДЗМ"</span>, <span class="span_label">Authored On: </span>
+                     <span class="span_value">September  25, 2020, 16:00 +0300</span>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="documentbody">
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_1" title="Сведения о документе">ОБЩИЕ СВЕДЕНИЯ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Выполнено по направлению</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_0">от 5 октября 2020 № 659481548
+										<br/>из ГБУЗ "Городская поликлиника № 25 Департамента здравоохранения города Москвы"
+										<br/>направил врач-терапевт Кузнецов Дмитрий Олегович
+										</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Обращение</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_1">Повторное</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Дата проведения</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_4">20 Октября 2020, с 15:30 по 15:55</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Место проведения</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_2">Стационар: Кабинет КТ 2 Рад.корп.</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Диагноз</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_5">K85.8 Острый панкреатит</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Исследование</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_3_1">Компьютерная томография живота с внутривенным контрастированием</span>
+                                 <br/>
+                                 <span id="DOC_3_2">Компьютерная томография ангиография почек</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_2" title="Заключение">РЕЗУЛЬТАТ ИССЛЕДОВАНИЯ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Протокол</span>
+                              </td>
+                              <td>
+                                 <span id="RES_1">Печень расположена обычно, в размерах не увеличена, контуры ее четкие, края ровные. Структура паренхимы однородная, очаговых образований не определятся. Плотность паренхимы 42 ед.Х. Внутрипеченочные желчные протоки не расширены, дефектов наполнения в них не определяется. Воротная вена 12 мм.
+Желчный пузырь обычного размера и расположения, дефектов наполнения в нем также не визуализируется. Толщина стенки до 3 мм.
+Поджелудочная железа: в структуре головки железы определяются очаги деструкции, в области тела и хвоста железа имеет дольчатое строение, контуры её четкие, волнистые, структура паренхимы однородная. Толщина в области головки - 34 мм, в области тела- 23 мм, в области хвоста 20 мм. Панкреатический проток не расширен. В парапанкреатической клетчатки вокруг головки железы жидкостные скопления с признаками отграничения (формирующиеся кисты). Лимфоузлы панкреатодуоденальной области увеличены в количестве и размерах до 11 мм в длиннике.
+Селезенка расположена обычно, в размерах не увеличена. Контуры органа четкие, внутренняя структура однородная. Характеристики контрастирования в пределах нормы.
+Надпочечники при исследовании обычных размеров и расположения с нормальным развитием ножек. Включений, участков разрастания ткани не определяется. Капсула надпочечников не изменена. 
+Почки типично расположены, с ровными четкими контурами. Толщина паренхимы 15 мм, коркового слоя- 7 мм.
+В нижней чашечке левой почки микролит 1,5 мм в диаметре. Чашечки нормальной формы. Почечные лоханки нормального вида, свободны от камней и без признаков обструкции и нарушения пассажа мочи. Мочеточники осмотрены на протяжении до устьев. Просветы их не расширены. Конкрементов в проекции просветов не определяется. Смежная клетчатка не изменена.
+Исследование, выполненное с контрастным усилением, показывает нормальное время кортико-медуллярного равновесия (достижение одинаковой плотности обеими слоями почечной паренхимы) и одновременно симметричное выделение контрастного вещества в почечные лоханки с обеих сторон, без выявления дефектов наполнения.
+Толщина фасции Героты 1-2 мм. Паранефральная клетчатка не изменена.
+Со стороны органов малого таза патологических изменений не определяется.</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Заключение</span>
+                              </td>
+                              <td>
+                                 <span id="RES_2">	КТ-картина очагового панкреонекроза головки железы с формированием псевдокист. Диффузный жировой гепатоз. Микролит левой почки. 
+Без отрицательной динамики в сравнении с исследованием от 05.10.18 г.</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Рекомендации</span>
+                              </td>
+                              <td>
+                                 <span id="RES_3">Повторное исследование через один месяц.</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Выявленная патология</span>
+                              </td>
+                              <td>
+                                 <span id="RES_4_1">Гепатоз</span>
+                                 <br/>
+                                 <span id="RES_4_2">Острый панкреатит</span>
+                                 <br/>
+                                 <span id="RES_4_3">Камни почек</span>
+                                 <br/>
+                                 <br/>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Cсылка на DICOM в ЦАМИ</span>
+                              </td>
+                              <td>
+                                 <span>Cсылка на DICOM в ЦАМИ</span>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_3" title="Оказанные услуги">МЕДИЦИНСКИЕ УСЛУГИ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <td>A06.30.005.002</td>
+                              <td>Компьютерная томография органов брюшной полости и забрюшинного пространства с внутривенным болюсным контрастированием от 20.10.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>A06.12.050</td>
+                              <td>Компьютерно-томографическая ангиография одной анатомической области от 20.10.2020</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_4" title="vimisInformation">Дополнительные данные по протоколу инструментального исследования</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Условия оказания медицинской помощи</th>
+                              <td id="VIMISRES_700">Амбулаторно</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">BI-RADS классификация</th>
+                              <td id="VIMISRES_701">BI-RADS 3</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Критерии ответа солидных опухолей на терапию RECIST 1.1</th>
+                              <td id="VIMISRES_702">Полный ответ</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th" id="VIMISRES_703">Рентгеновские аппараты и оборудование</th>
+                              <td id="VIMISRES_704">Гематологический анализатор Sysmex KX21. Гелевые карты для иммуногематологических исследований HEMOS SP</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_5" title="vimisMedicalCard">Данные о медицинских картах пациента</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption" id="VIMISRES_100">Медицинская карта стационарного больного</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер</th>
+                              <td id="VIMISRES_101">КВ-567/3.4</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата создания</th>
+                              <td id="VIMISRES_102">25.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Группа крови</th>
+                              <td id="VIMISRES_103">0(I)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Резус-фактор</th>
+                              <td id="VIMISRES_104">Rh(D)+, положительный резус-фактор</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption" id="VIMISRES_110">Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер</th>
+                              <td id="VIMISRES_111">КВ-567/3.4</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата создания</th>
+                              <td id="VIMISRES_112">25.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Группа крови</th>
+                              <td id="VIMISRES_113">0(I)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Резус-фактор</th>
+                              <td id="VIMISRES_114">Rh(D)+, положительный резус-фактор</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" vc:minVersion="1.1"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="id" type="xs:integer"/>
+    <xs:element name="MKB10" type="xs:string"/>
+    <xs:element name="profile" type="xs:string"/>
+    <xs:element name="age_group" type="xs:string"/>
+    <xs:element name="begin_date" type="xs:date"/>
+    <xs:element name="end_date" type="xs:date"/>
+    <xs:element name="number" type="xs:int"/>
+    <xs:element name="text" type="xs:string"/>
+    <xs:element name="comment" type="xs:string"/>
+    <xs:element name="stage" type="xs:string"/>
+    <xs:element name="convincing" type="xs:string"/>
+    <xs:element name="evidential" type="xs:string"/>
+    <xs:element name="condition" type="xs:string"/>
+    <xs:element name="stadia" type="xs:string"/>
+    <xs:element name="tnm" type="xs:string"/>
+    <xs:element name="description" type="xs:string"/>
+    <xs:element name="code" type="xs:string"/>
+    <xs:element name="from_state" type="xs:int"/>
+    <xs:element name="to_state" type="xs:int"/>
+    <xs:element name="timeout" type="xs:int"/>
+    <xs:element name="timeout_unit" type="xs:string"/>
+    <xs:element name="label" type="xs:string"/>
+    <xs:element name="pmc">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="summary"/>
+                <xs:element ref="graphs"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="clinrec">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="summary"/>
+                <xs:element ref="thesises"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="summary">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name"/>
+                <xs:element ref="id"/>
+                <!-- Элементы MKB10, age_group обязательны для метода КР -->
+                <xs:element ref="MKB10" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="age_group" minOccurs="0"/>
+                <!-- Элемент profile обязателен для метода ОМП -->
+                <xs:element ref="profile" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="revision"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="revision">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="id"/>
+                <xs:element ref="begin_date"/>
+                <xs:element ref="end_date"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="thesises">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="thesis-rec"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="thesis-rec">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" ref="number"/>
+                <xs:element ref="text"/>
+                <xs:element minOccurs="0" ref="comment"/>
+                <xs:element ref="stage"/>
+                <xs:element ref="convincing"/>
+                <xs:element ref="evidential"/>
+                <xs:element minOccurs="0" ref="condition"/>
+                <xs:element minOccurs="0" ref="stadia"/>
+                <xs:element minOccurs="0" ref="tnm"/>
+                <xs:element minOccurs="0" ref="activities"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="activities">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="activity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="activity" nillable="false">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" ref="name"/>
+                <xs:choice>
+                    <xs:element minOccurs="1" ref="services"/>
+                    <!-- Установлен minOccurs="0" - элемент обязателен для метода КР, но не должен быть в методе порядка ОМП -->
+                    <xs:element minOccurs="0" ref="medications"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="services">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="1" ref="service"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="service">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" ref="name"/>
+                <xs:element ref="code"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="medications">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="medication"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="medication">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" ref="name"/>
+                <xs:element ref="code"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Блоки описания элементов графов ОМП -->
+    <xs:element name="graphs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="graph"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="graph">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="id"/>
+                <xs:element ref="name"/>
+                <xs:element ref="MKB10"/>
+                <xs:element ref="states"/>
+                <xs:element ref="transfers"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="states">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="state"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="transfers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="transfer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="state">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="label"/>
+                <xs:element ref="name"/>
+                <xs:element ref="description" minOccurs="0"/>
+                <xs:element ref="stage"/>
+                <xs:element minOccurs="0" ref="activities"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="transfer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="from_state"/>
+                <xs:element ref="to_state"/>
+                <xs:element minOccurs="0" ref="timeout"/>
+                <xs:element minOccurs="0" ref="timeout_unit"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:wsa="http://www.w3.org/2005/08/addressing"
+    xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <S:Header>
+        <To xmlns="http://www.w3.org/2005/08/addressing" wsu:Id="id-to"
+            >https://ips-test.rosminzdrav.ru/510ed05515ba2</To>
+        <Action xmlns="http://www.w3.org/2005/08/addressing" wsu:Id="id-action"
+            >checkStatus</Action>
+        <ReplyTo xmlns="http://www.w3.org/2005/08/addressing" wsu:Id="id-replyto">
+            <Address>https://ips-test.rosminzdrav.ru/0000000000000</Address>
+        </ReplyTo>
+        <FaultTo xmlns="http://www.w3.org/2005/08/addressing">
+            <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+        </FaultTo>
+        <MessageID xmlns="http://www.w3.org/2005/08/addressing" wsu:Id="id-messageid"
+            >f7e12d2b-6d85-44c7-9bef-c6bc1c67c5db</MessageID>
+        <egisz:transportHeader xmlns:egisz="http://egisz.rosminzdrav.ru">
+            <egisz:authInfo>
+                <egisz:clientEntityId>523dec46-f829-7e86-5c0e-1550d5718871</egisz:clientEntityId>
+            </egisz:authInfo>
+        </egisz:transportHeader>
+        <wsse:Security>
+            <wsse:BinarySecurityToken wsu:Id="id-x509"
+                EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary"
+                ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"
+                >MIIDITCCAtCgAwIBAgITEgBEaXAKrj45xP8mhgABAERpcDAIBgYqhQMCAgMwfzEjMCEGCSqGSIb3DQEJARYUc3VwcG9ydEBjcnlwdG9wcm8ucnUxCzAJBgNVBAYTAlJVMQ8wDQYDVQQHEwZNb3Njb3cxFzAVBgNVBAoTDkNSWVBUTy1QUk8gTExDMSEwHwYDVQQDExhDUllQVE8tUFJPIFRlc3QgQ2VudGVyIDIwHhcNMjAwNTA4MDYyMDQ3WhcNMjAwODA4MDYzMDQ3WjAnMRYwFAYDVQQDDA1WaW1pc0dvc3RUZXN0MQ0wCwYDVQQKDARCYXJzMGYwHwYIKoUDBwEBAQEwEwYHKoUDAgIkAAYIKoUDBwEBAgIDQwAEQDxS1zFFmYsSa8kenFu1RIAJ3PDIT6ymuRi8DNN6TTfzYs8RPVhh1n4u+Wvk5f8ZBGgv0nwL/wMH5Zt3BF0CIdSjggF2MIIBcjAOBgNVHQ8BAf8EBAMCBPAwEwYDVR0lBAwwCgYIKwYBBQUHAwIwHQYDVR0OBBYEFHso5gJTOu+5f8dvfmFWxWntPeSjMB8GA1UdIwQYMBaAFE6DPhRp7+xdepUrXxH+NzIWSVUrMFwGA1UdHwRVMFMwUaBPoE2GS2h0dHA6Ly90ZXN0Y2EuY3J5cHRvcHJvLnJ1L0NlcnRFbnJvbGwvQ1JZUFRPLVBSTyUyMFRlc3QlMjBDZW50ZXIlMjAyKDEpLmNybDCBrAYIKwYBBQUHAQEEgZ8wgZwwZAYIKwYBBQUHMAKGWGh0dHA6Ly90ZXN0Y2EuY3J5cHRvcHJvLnJ1L0NlcnRFbnJvbGwvdGVzdC1jYS0yMDE0X0NSWVBUTy1QUk8lMjBUZXN0JTIwQ2VudGVyJTIwMigxKS5jcnQwNAYIKwYBBQUHMAGGKGh0dHA6Ly90ZXN0Y2EuY3J5cHRvcHJvLnJ1L29jc3Avb2NzcC5zcmYwCAYGKoUDAgIDA0EAn9V3jpu4H9lej5c061KIHcN6eAv3nVGCrilkXN29IZxYe7CqcZmJKQ7s70GpRdREFNvCF/ECrzmf1cA1Yo6eEQ==</wsse:BinarySecurityToken>
+            <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+                <SignedInfo>
+                    <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    <SignatureMethod
+                        Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/>
+                    <Reference URI="#body">
+                        <Transforms>
+                            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                        </Transforms>
+                        <DigestMethod
+                            Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+                        <DigestValue>GqRv79mIDXFHsejkFXjqEkAeKAFDemGquh7LIttGYDE=</DigestValue>
+                    </Reference>
+                    <Reference URI="#id-messageid">
+                        <Transforms>
+                            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                        </Transforms>
+                        <DigestMethod
+                            Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+                        <DigestValue>cHaEn1IsMPX58BSAUk9VJHYXe7ZIH12ZQ1/e8/+/w7Y=</DigestValue>
+                    </Reference>
+                    <Reference URI="#id-replyto">
+                        <Transforms>
+                            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                        </Transforms>
+                        <DigestMethod
+                            Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+                        <DigestValue>qPyhPep6OWjIZst4MDPI/5+49TbRHr9Y2dz2pnuErFQ=</DigestValue>
+                    </Reference>
+                    <Reference URI="#id-to">
+                        <Transforms>
+                            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                        </Transforms>
+                        <DigestMethod
+                            Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+                        <DigestValue>g5qtxq2dZ/55/xNkRquZL3h/6KkdR9JYfLXLq6mw3Ak=</DigestValue>
+                    </Reference>
+                    <Reference URI="#id-action">
+                        <Transforms>
+                            <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                        </Transforms>
+                        <DigestMethod
+                            Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+                        <DigestValue>a+9SJBjROPD76mnIAbeXEZpnfeor+wU4zH1SNPLPbbk=</DigestValue>
+                    </Reference>
+                </SignedInfo>
+                <SignatureValue>67M8Z7Vrl5Bw39A69NyfHUzoKjjh0w4CUF4GUG87oQoJxAxK79vyIfiPdZ7N+Zx6CCpFlyI7ZEYyuonDw1SdcQ==</SignatureValue>
+                <KeyInfo>
+                    <wsse:SecurityTokenReference>
+                        <wsse:Reference
+                            ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"
+                            URI="#id-x509"/>
+                    </wsse:SecurityTokenReference>
+                </KeyInfo>
+            </Signature>
+        </wsse:Security>
+    </S:Header>
+    <S:Body wsu:Id="body">
+        <checkStatus xmlns="http://vimis.rosminzdrav.ru/">
+            <msg_id xmlns="">66966cdb-0178-402a-bed2-f0447848dad0</msg_id>
+        </checkStatus>
+    </S:Body>
+</S:Envelope>

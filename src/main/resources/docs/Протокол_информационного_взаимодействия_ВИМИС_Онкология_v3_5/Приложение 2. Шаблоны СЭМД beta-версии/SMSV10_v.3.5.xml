@@ -1,0 +1,1541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 Infrastructure/CDA.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- ЗАГОЛОВОК ДОКУМЕНТА "Протокол оперативного вмешательства" -->
+	<!---->
+	<!-- R [1..] Требуемый элемент. Элемент обязан иметь непустое наполнение, nullFlavor не разрешён -->
+	<!-- [1..] Обязательный элемент. Элемент обязан присутствовать, но может иметь пустое наполнение с указанием причины отсутствия информации через nullFlavor -->
+	<!-- [0..] Не обязательный элемент. Элемент может отсутствовать -->
+	<!-- R [1..1] Область применения документа (Страна) -->
+	<realmCode code="RU"/>
+	<!-- R [1..1] Указатель на использование CDA R2 -->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- R [1..1] Идентификатор Шаблона документа "Протокол оперативного вмешательства" -->
+	<!-- по справочнику "Шаблоны CDA документов" (OID: 1.2.643.5.1.13.13.11.1118) / Для целей взаимодействия с ВИМИС передавать "0" -->
+	<templateId root="0"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.51 extension = идентификатор документа -->
+	<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.51" extension="144632"/>
+	<!-- R [1..1] Тип документа -->
+	<code code="SMSV10" codeSystem="1.2.643.5.1.13.13.99.2.592"  codeSystemVersion="1.0"  codeSystemName="ВИМИС ОНКО. Типы структурированных медицинских сведений" displayName="Протокол оперативного вмешательства"/>
+	<!-- R [1..1] Заголовок документа -->
+	<title>Протокол оперативного вмешательства</title>
+	<!-- R [1..1] Дата создания документа-->
+	<effectiveTime value="202009251600+0300"/>
+	<!-- R [1..1] Уровень конфиденциальности документа -->
+	<confidentialityCode code="N" codeSystem="1.2.643.5.1.13.13.99.2.285"  codeSystemVersion="1.1" codeSystemName="Уровень конфиденциальности документа" displayName="Обычный"/>
+	<!-- R [1..1] Язык документа -->
+	<languageCode code="ru-RU"/>
+	<!-- R [1..1] Уникальный идентификатор набора версий документа -->
+	<!-- по псравилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.50 extension = идентификатор набора версий документа -->
+	<setId root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.50" extension="163725"/>
+	<!-- R [1..1] Номер версии данного документа -->
+	<versionNumber value="1"/>
+	<!-- R [1..1] ДАННЫЕ О ПАЦИЕНТЕ-->
+	<recordTarget>
+		<!-- R [1..1] ПАЦИЕНТ (роль) -->
+		<patientRole>
+			<!-- R [1..1] Уникальный идентификатор пациента в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.10 extension = идентификатор пациента -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.10" extension="735486"/>
+			<!-- R [1..1] СНИЛС пациента -->
+			<id root="1.2.643.100.3" extension="254-636-254 26"/>
+			<!-- [1..1] Документ, удостоверяющий личность пациента, серия, номер, кем выдан. -->
+			<id root="1.2.643.5.1.13.13.11.1011.1" extension="4509 395643" assigningAuthorityName='ОВД "Твардовское" ОУФМС России по гор. Москве. Код подразделения: 770-095. Дата выдачи: 18.02.2005'/>
+			<!-- [1..1] ВИМИС: Признак жителя города или села -->
+			<id root="1.2.643.5.1.13.13.11.1042" extension="1" />
+			<!-- [1..1] Адрес постоянной регистрации пациента -->
+			<addr use="H">
+				<!-- R [1..1] Адрес текстом -->
+				<streetAddressLine>123592, Россия, г. Москва, ул. Твардовского, д. 5, кв. 42</streetAddressLine>
+				<!-- R [1..1] Регион РФ (республика, край, область)-->
+				<state>77</state>
+				<!-- [1..1] ВИМИС: AOGUID населенного пункта -->
+				<city>62aa8ac8-37fc-473a-828a-b9f9b7877d3f</city>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта улицы -->
+				<streetNameBase>212d3123-9c4d-4579-b31a-b5c6e9632b04</streetNameBase>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта дома -->
+				<houseNumber>2a452fcf-d9f7-4e48-9ac4-0986eb057ad0</houseNumber>
+				<!-- [1..1] ВИМИС: Номер дома, если отсутствует GUID адресного объекта дома  -->
+				<houseNumberNumeric>5</houseNumberNumeric>
+				<!-- [0..1] ВИМИС: Номер квартиры -->
+				<unitID>1</unitID>
+			</addr>
+			<!-- R [1..1] Адрес фактического места жительства пациента -->
+			<addr use="HP">
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>123592, Россия, г. Москва, ул. Твардовского, д. 5, кв. 42</streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+				<!-- [1..1] ВИМИС: AOGUID населенного пункта -->
+				<city>62aa8ac8-37fc-473a-828a-b9f9b7877d3f</city>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта улицы -->
+				<streetNameBase>212d3123-9c4d-4579-b31a-b5c6e9632b04</streetNameBase>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта дома -->
+				<houseNumber>2a452fcf-d9f7-4e48-9ac4-0986eb057ad0</houseNumber>
+				<!-- [1..1] ВИМИС: Номер дома, если отсутствует GUID адресного объекта дома  -->
+				<houseNumberNumeric>5</houseNumberNumeric>
+				<!-- [0..1] ВИМИС: Номер квартиры -->
+				<unitID>1</unitID>
+			</addr>
+			<!-- [0..1] Телефон пациента -->
+			<telecom value="tel:+74951953745"/>
+			<!-- [0..*] Прочие контакты пациента (мобильный телефон) -->
+			<telecom use="MC" value="tel:+790347523647"/>
+			<!-- [0..*] Прочие контакты пациента (электронная почта) -->
+			<telecom value="mailto: selchen.m.v@mail.ru"/>
+			<!-- R [1..1] Пациент (человек)  -->
+			<patient>
+				<!-- R [1..1] ФИО пациента -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Сельченков</family>
+					<!-- R [1..1] Имя -->
+					<given>Михаил</given>
+					<!-- [0..1] Отчество -->
+					<given>Владимирович</given>
+				</name>
+				<!-- R [1..1] Пол пациента -->
+				<administrativeGenderCode code="1" codeSystem="1.2.643.5.1.13.13.11.1040" codeSystemVersion="2.1" codeSystemName="Пол пациента" displayName="Мужской"/>
+				<!-- R [1..1] Дата рождения пациента -->
+				<birthTime value="19800217"/>
+			</patient>
+			<!-- R [1..1] Медицинская организация, в которой пациенту проводили оперативное вмешательство -->
+			<providerOrganization>
+				<!-- R [1..1] Идентификатор медицинской организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование медицинской организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953754826" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- R [1..1] ДАННЫЕ ОБ АВТОРЕ ДОКУМЕНТА -->
+	<author>
+		<!-- R [1..1] Специальность автора -->
+		<functionCode code="118" codeSystem="1.2.643.5.1.13.13.11.1066" codeSystemVersion="4.1" codeSystemName="Номенклатура специальностей специалистов со средним, высшим и послевузовским медицинским и фармацевтическим образованием в сфере здравоохранения" displayName="Кардиология"/>
+		<!-- R [1..1] Дата подписи документа автором – врач-кардиолог -->
+		<time value="202009251600+0300"/>
+		<!-- R [1..1] АВТОР (роль) -->
+		<assignedAuthor>
+			<!-- R [1..1] Уникальный идентификатор автора в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.70" extension="542174"/>
+			<!-- R [1..1] СНИЛС автора -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- R [1..1] Код должности автора-->
+			<code code="50" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="6.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="врач-онколог"/>
+			<!-- [0..1] Адрес автора документа -->
+			<addr>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>119334, Россия, г. Москва, ул. Косыгина, д. 13, кв. 33</streetAddressLine>
+			</addr>
+			<!-- [0..1] Телефон автора -->
+			<telecom value="tel:+74957443256"/>
+			<!-- [0..*] Прочие контакты автора (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79267352628"/>
+			<!-- [0..*] Прочие контакты автора (электронная почта) -->
+			<telecom value="mailto:smirnov.a.i@rambler.ru"/>
+			<!-- R [1..1] АВТОР (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<given>Игоревич</given>
+				</name>
+			</assignedPerson>
+			<!-- R [1..1] Место работы автора  -->
+			<representedOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- R [1..1] ДАННЫЕ ОБ ОРГАНИЗАЦИИ-ВЛАДЕЛЬЦЕ ДОКУМЕНТА -->
+	<custodian>
+		<!-- R [1..1] Организация-владелец документа (роль) -->
+		<assignedCustodian>
+			<!-- R [1..1] Организация-владелец документа (организация) -->
+			<representedCustodianOrganization>
+				<!-- R [1..1] Идентификатор медицинской организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации-владельца документа -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- R [1..1] ДАННЫЕ О ПОЛУЧАТЕЛЕ ДОКУМЕНТА -->
+	<informationRecipient>
+		<!-- R [1..1] Получатель документа (роль) -->
+		<intendedRecipient>
+			<!-- R [1..1] Получатель документа (организация) -->
+			<receivedOrganization>
+				<!-- R [1..1] Идентификатор получающей организации -->
+				<id root="1.2.643.5.1.13.13.12.2.77.7799"/>
+				<!-- R [1..1] Наименование получающей организации-->
+				<name>ФГБУ "НМИЦ онкологии им. Н.Н.Блохина" Минздрава России</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- R [1..1] ДАННЫЕ О ЛИЦЕ, ПРИДАВШЕМ ЮРИДИЧЕСКУЮ СИЛУ ДОКУМЕНТУ -->
+	<legalAuthenticator>
+		<!-- R [1..1] Дата подписи документа лицом, придавшем юридическую силу документу -->
+		<time value="202009251600+0300"/>
+		<!-- R [1..1] Факт наличия подписи на документе -->
+		<signatureCode code="S"/>
+		<!-- R [1..1] Лицо, придавшее юридическую силу документу (роль) -->
+		<assignedEntity>
+			<!-- R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.70" extension="542174"/>
+			<!-- R [1..1] СНИЛС лица, придавшего юридическую силу документу -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- R [1..1] Код должности лица, придавшего юридическую силу документу -->
+			<code code="50" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="2.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="врач-онколог"/>
+			<!-- [0..1] Адрес лица, придавшего юридическую силу документу -->
+			<addr>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine> 119334, Россия, г. Москва, ул. Косыгина, д.13, кв.33 </streetAddressLine>
+			</addr>
+			<!-- [0..1] Телефон лица, придавшего юридическую силу документу -->
+			<telecom value="tel:+74957443256"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79267352628"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (электронная почта) -->
+			<telecom value="mailto:smirnov.a.i@rambler.ru"/>
+			<!-- R [1..1] Лицо, придавшее юридическую силу документу (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество лица, придавшего юридическую силу документу -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<given>Игоревич</given>
+				</name>
+			</assignedPerson>
+			<!-- R [1..1] Место работы лица, придавшего юридическую силу документу -->
+			<representedOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- [0..1] СВЕДЕНИЯ О СТРАХОВОМ ПОЛИСЕ ОМС -->
+	<participant typeCode='HLD'>
+		<!-- R [1..1] Полис ОМС -->
+		<associatedEntity classCode='POLHOLD'>
+			<!-- R [1..1] Полис ОМС (нового образца) пациента -->
+			<id root="1.2.643.5.1.13.2.7.100.2" extension="7712958452351689"/>
+			<!-- R [1..1] Указание, что держателем полиса является сам пациент -->
+			<code code='SELF' codeSystem='2.16.840.1.113883.5.111'/>
+			<scopingOrganization>
+				<!-- R [1..1] Уникальный идентификатор страховой компании -->
+				<id root="1.2.643.5.1.13.13.99.2.183" extension="112"/>
+				<!-- R [1..1] Наименование страховой компании -->
+				<name>ООО "РОСНО-МС"</name>
+				<!-- R [1..1] Телефон страховой компании -->
+				<telecom nullFlavor="NI"/>				
+				<!-- R [1..1] Адрес страховой компании -->
+				<addr>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>129090, Россия, г. Москва, Протопоповский переулок, д. 9</streetAddressLine>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- [0..1] СВЕДЕНИЯ О НАПРАВИВШЕМ ЛИЦЕ И ОРГАНИЗАЦИИ -->
+	<participant typeCode="REF">
+		<associatedEntity classCode='PROV'>
+			<!-- R [1..1] Уникальный идентификатор направившего лица -->
+			<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.70" extension="183640"/>
+			<!-- R [1..1] СНИЛС направившего лица -->
+			<id root="1.2.643.100.3" extension="000-000-000 00"/>
+			<!-- R [1..1] Код должности направившего лица -->
+			<code code="50" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="2.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="врач-онколог"/>
+			<!-- [1..1] Адрес направившего лица -->
+			<addr>
+				<!-- [1..1] адрес текстом -->
+				<streetAddressLine nullFlavor="UNK"/>
+				<!-- [1..1] Регион РФ -->
+				<state nullFlavor="UNK"/>
+			</addr>
+			<!-- [0..1] Телефон направившего лица -->
+			<telecom value='tel:+79065184597' use='WP'/>
+			<!-- R [1..1] Направивший врач (человек) -->
+			<associatedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество направившего врача -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Кузнецов</family>
+					<!-- R [1..1] Имя -->
+					<given>Дмитрий</given>
+					<!-- [0..1] Отчество -->
+					<given>Олегович</given>
+				</name>
+			</associatedPerson>
+			<!-- R [1..1] Место работы направившего врача -->
+			<scopingOrganization>
+				<!-- R [1..1] Уникальный идентификатор направившего учреждения -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.3.25.77.50"/>
+				<!-- R [1..1] Наименование направившего учреждения -->
+				<name>ГБУЗ "Городская поликлиника № 25 Департамента здравоохранения города Москвы"</name>
+				<!-- R [1..1] Телефон направившего учреждения -->
+				<telecom nullFlavor="NI"/>
+				<!-- R [1..1] Адрес направившего учреждения -->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>117198, Россия, г. Москва, ул. Миклухо-Маклая, д. 10</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- [1..1] СВЕДЕНИЯ О НАПРАВЛЕНИИ -->
+	<inFulfillmentOf>
+		<!-- R [1..1] Направление -->
+		<order>
+			<!-- R [1..1] Уникальный идентификатор направления на проведение консультации -->			
+			<!-- В extension указывается уникальный идентификатор набора версий документа -->
+			<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="659481548"/>
+		</order>
+	</inFulfillmentOf>
+	<!-- R [1..1] СВЕДЕНИЯ О СЛУЧАЕ ОКАЗАНИЯ МЕДИЦИНСКОЙ ПОМОЩИ -->
+	<componentOf>
+		<!-- R [1..1] Случай оказания медицинской помощи -->
+		<encompassingEncounter>
+			<!-- R [1..1] Уникальный идентификатор случая оказания медицинской помощи -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.15" extension="5469-16"/>
+			<!-- R [1..1] Даты случая -->
+			<effectiveTime>
+				<!-- R [1..1] Дата начала случая -->
+				<low value="202009251530+0300"/>
+			</effectiveTime>
+		</encompassingEncounter>
+	</componentOf>
+	<!-- ТЕЛО ДОКУМЕНТА -->
+	<component>
+		<!-- R [1..1] Структурированное тело документа -->
+		<structuredBody>
+			<!-- [0..1] ВИМИС: Секция связанных документов (сформированных в рамках события оперативного вмешательства)-->
+			<component>
+				<section>
+					<!-- R [1..1] Код секции связанных документов -->
+					<code code="vimisReferenceDocs" codeSystem="vimis1" />
+					<!-- R [1..1] заголовок секции -->
+					<title>Связанные документы</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<list>
+							<item><content ID="VREFERENCE_1001">Лечение в условиях стационара (дневного стационара)</content>, 25.03.2020</item>
+							<item><content ID="VREFERENCE_1002">Направление на оказание медицинских услуг</content><br/><content ID="VREFERENCE_1003">На прижизненное патолого-анатомическое исследование биопсийного (операционного) материала </content>, 25.03.2020
+								<list>
+									<item><content ID="VREFERENCE_1004">A08.06.002.001</content>Патолого-анатомическое исследование биопсийного (операционного) материала лимфоузла с применением иммуногистохимических методов</item>
+								</list>
+							</item>
+						</list>						
+					</text>
+					<!-- [0..1] Уникальный идентификатор лечения в стационаре -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор документа -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.51" extension="659481548"/>
+							<!-- R [1..1] Код СМС по справочнику 1.2.643.5.1.13.13.99.2.592 / Код СЭМД по справочнику 1.2.643.5.1.13.13.99.2.195 -->
+							<code code="SMSV8" codeSystem="1.2.643.5.1.13.13.99.2.592" codeSystemName="ВИМИС ОНКО. Типы структурированных медицинских сведений" displayName="Лечение в условиях стационара (дневного стационара)">
+								<originalText>
+									<reference value="#VREFERENCE_1001"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Дата создания документа  -->
+							<effectiveTime value="202009251600+0300" />
+						</observation>
+					</entry>	
+					<!-- [0..*] ВИМИС: Связанный документ - Направление на оказание медицинских услуг сформированное в рамках события оперативного вмешательства  -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор документа -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.51" extension="659481548"/>
+							<!-- R [1..1] Код СМС по справочнику 1.2.643.5.1.13.13.99.2.592 / Код СЭМД по справочнику 1.2.643.5.1.13.13.99.2.195 -->
+							<code code="SMSV1" codeSystem="1.2.643.5.1.13.13.99.2.592" codeSystemName="ВИМИС ОНКО. Типы структурированных медицинских сведений" displayName="Направление на оказание медицинских услуг">
+								<originalText>
+									<reference value="#VREFERENCE_1002"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..1] Дата создания документа -->
+							<effectiveTime value="202009251600+0300" />
+							<!-- [0..1] Вид направления -->
+							<value xsi:type="CD" code="11" codeSystem="1.2.643.5.1.13.13.11.1009" codeSystemVersion="1.1" codeSystemName="Виды медицинских направлений" displayName="	На прижизненное патолого-анатомическое исследование биопсийного (операционного) материала ">
+								<originalText>
+									<reference value="#VREFERENCE_1003"></reference>
+								</originalText>
+							</value>
+							<!-- [0..*] Массив услуг в рамках документа -->
+							<value xsi:type="CD" code="A08.06.002.001" displayName="Патолого-анатомическое исследование биопсийного (операционного) материала лимфоузла с применением иммуногистохимических методов" codeSystem="1.2.643.5.1.13.13.11.1070" codeSystemVersion="2.2" codeSystemName="Номенклатура медицинских услуг">
+								<originalText>
+									<reference value="#VREFERENCE_1004"></reference>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>	
+			<!--  R [1..1] ВИМИС: Состояние пациента до оперативного вмешательства -->		
+			<component>
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="STATE" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.6"  codeSystemName="Секции электронных медицинских документов" displayName="Состояние пациента"/>
+					<!-- R [1..1] Заголовок секции -->
+					<title>Состояние пациента</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<paragraph><caption>Признак подозрения на злокачественнное новообразование</caption></paragraph>
+						<table width="100%">
+                            <col width="50%"/>
+                            <col width="50%"/>
+							<tbody>
+								<tr>
+									<th>Наличие подозрения на злокачественнное новообразование</th>
+									<td>Да</td>
+								</tr>
+								<tr>
+									<th>Заболевание (состояние) - злокачественное новообразование, на которое имеется подозрение</th>
+									<td ID="VREFERENCE_25025">C16.1 Злокачественное новообразование дна желудка</td>
+								</tr>	
+								<tr>
+									<th>Дата установления признака подозрения на злокачественное новообразование</th>
+									<td>25.01.2021</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph><caption>Диагноз</caption></paragraph>
+						<table width="100%">
+                            <col width="50%"/>
+                            <col width="50%"/>
+							<tbody>
+								<tr>
+									<th>Дата установления диагноза (для нозологической едицины)</th>
+									<td>10.08.2020</td>
+								</tr>
+								<tr>
+									<th>Степень обоснованности диагноза</th>
+									<td ID="VREFERENCE_25000">Заключительный диагноз</td>
+								</tr>
+								<tr>
+									<th>Вид нозологической единицы диагноза</th>
+									<td ID="VREFERENCE_25001">Основное заболевание</td>
+								</tr>
+								<tr>
+									<th>Заболевание (состояние) по МКБ-10</th>
+									<td ID="VREFERENCE_25002">C16.1 Злокачественное новообразование дна желудка</td>
+								</tr>
+								<tr>
+									<th>Клинический диагноз</th>
+									<td>Описание...Клинический диагноз</td>
+								</tr>
+								<tr>
+									<th>Характер заболевания</th>
+									<td ID="VREFERENCE_25003">Острое</td>
+								</tr>
+								<tr>
+									<th>Вид первично-множественной опухоли</th>
+									<td ID="VREFERENCE_25004">нет</td>
+								</tr>
+								<tr>
+									<th>TNM. Описание категорий: Т</th>
+									<td ID="VREFERENCE_25005">T4a - Опухоль прорастает через висцеральную брюшину</td>
+								</tr>
+								<tr>
+									<th>TNM. Описание категорий: N</th>
+									<td ID="VREFERENCE_25006">N0 - Нет метастазов в регионарных лимфатических узлах</td>
+								</tr>
+								<tr>
+									<th>TNM. Описание категорий: M</th>
+									<td ID="VREFERENCE_25007">M1 - Есть отдалённый метастаз или диссеминация опухоли по брюшине </td>
+								</tr>
+								<tr>
+									<th>TNM. Описание категорий: G</th>
+									<td ID="VREFERENCE_25008">G1 - Высокодифференцированная опухоль. Слизистая (муцинозная) карцинома низкой степени злокачественности</td>
+								</tr>
+								<tr>
+									<th>TNM. Стадирование злокачественных опухолей</th>
+									<td ID="VREFERENCE_25009">IVB</td>
+								</tr>
+								<tr>
+									<th>Сторона поражения</th>
+									<td ID="VREFERENCE_25010">неприменимо</td>
+								</tr>
+								<tr>
+									<th>Морфологический тип опухоли </th>
+									<td ID="VREFERENCE_25011">M-8000/0 Новообразование, доброкачественное</td>
+								</tr>
+								<tr>
+									<th>Топография опухоли</th>
+									<td ID="VREFERENCE_25012">C15.0 Шейный отдел пищевода</td>
+								</tr>
+								<tr>
+									<th>Стадия опухолевого процесса</th>
+									<td ID="VREFERENCE_25013">Ia</td>
+								</tr>
+								<tr>
+									<th>Локализация метастазов</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_25014">Желудок</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Локализация отдаленных метастазов (при IV стадии заболевания)</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_25016">неизвестна</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Метод подтверждения диагноза</th>
+									<td ID="VREFERENCE_25017">морфологический</td>
+								</tr>
+								<tr>
+									<th>Порядковый номер данной опухоли у данного больного</th>
+									<td ID="VREFERENCE_25018">1</td>
+								</tr>
+								<tr>
+									<th>Признак основной опухоли</th>
+									<td ID="VREFERENCE_25019">Да</td>
+								</tr>
+								<tr>
+									<th>Клиническая группа</th>
+									<td ID="VREFERENCE_25020">IIа</td>
+								</tr>
+								<tr>
+									<th>Обстоятельства выявления опухоли</th>
+									<td ID="VREFERENCE_25021">активно, при профосмотре</td>
+								</tr>
+								<tr>
+									<th>Фаза течения хронического миелолейкоза</th>
+									<td ID="VREFERENCE_25022">Хроническая фаза</td>
+								</tr>
+								<tr>
+									<th>Форма бластного криза</th>
+									<td ID="VREFERENCE_25023">Миелобластная</td>
+								</tr>
+								<tr>
+									<th>Возраст пациента на дату диагноза</th>
+									<td ID="VREFERENCE_25026">35</td>
+								</tr>
+								<tr>
+									<th>Впервые в жизни установленный диагноз</th>
+									<td>
+										<list>
+											<item>
+												<content>Дата установления диагноза впервые в жизни - 25.01.2021</content><br/>
+											</item>
+											<item>
+												<content ID="VREFERENCE_250026">Достоверность подтверждения даты установления диагноза впервые в жизни - Со слов пациента</content>
+											</item>
+										</list>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] кодирование состояния пациента -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Условия оказания медицинской помощи -->
+							<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.322" codeSystemVersion="1.2"  codeSystemName="Условия оказания медицинской помощи" displayName="Амбулаторно">
+								<originalText>
+									<reference value="#VREFERENCE_301"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Показания к проведению оперативного вмешательства -->
+							<value xsi:type="CV" codeSystem="indicationsSurgery">
+								<originalText>
+									<reference value="#VREFERENCE_302"></reference>
+								</originalText>
+							</value>							
+						</observation>
+					</entry>
+					<!-- R [1..1] Кодирование диагноза до оперативного вмешательства -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- R [1..1] Степень обоснованности диагноза -->
+							<code code="3" codeSystem="1.2.643.5.1.13.13.11.1076" codeSystemVersion="1.2" codeSystemName="Степень обоснованности диагноза" displayName="Заключительный клинический диагноз" >
+								<originalText>
+									<reference value="#VREFERENCE_25000"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..*] Кодирование диагноза -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Кодирование вида нозологической единицы диагноза -->
+									<code code="1" codeSystem="1.2.643.5.1.13.13.11.1077" codeSystemVersion="1.2" displayName="Основное заболевание" codeSystemName="Виды нозологических единиц диагноза">
+										<originalText>
+											<reference value="#VREFERENCE_25001"></reference>
+										</originalText>
+									</code>
+									<!-- R [1..1] Клинический диагноз -->
+									<text>Описание...Клинический диагноз</text>
+									<!-- R [1..1] Дата установления диагноза (для нозологической едицины)  -->
+									<effectiveTime value="202008101600+0300"/>
+									<!-- R [1..1] Заболевание (состояние) по МКБ-10 -->
+									<value xsi:type="CD" code="C16.1" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.9" codeSystemName="Международная классификация болезней и состояний, связанных со здоровьем 10 пересмотра. Версия 4" displayName="Злокачественное новообразование дна желудка" >
+										<originalText>
+											<reference value="#VREFERENCE_25002"></reference>
+										</originalText>
+									</value>
+									<!-- R [1..1] Характер заболевания -->
+									<value xsi:type="CD" code="3" codeSystem="1.2.643.5.1.13.13.11.1049" codeSystemVersion="2.1" codeSystemName="Характер заболевания" displayName="Острое" >
+										<originalText>
+											<reference value="#VREFERENCE_25003"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Вид первично-множественной опухоли -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.141" codeSystemVersion="2.1" codeSystemName="РР. Виды первично-множественных опухолей" displayName="нет" >
+										<originalText>
+											<reference value="#VREFERENCE_25004"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Описание категорий: Т -->
+									<value xsi:type="CD" code="699" codeSystem="1.2.643.5.1.13.13.99.2.547" codeSystemVersion="2.7" codeSystemName="TNM. Описание категорий" displayName="T4a - Опухоль прорастает через висцеральную брюшину" >
+										<originalText>
+											<reference value="#VREFERENCE_25005"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Описание категорий: N -->
+									<value xsi:type="CD" code="702" codeSystem="1.2.643.5.1.13.13.99.2.547" codeSystemVersion="2.7" codeSystemName="TNM. Описание категорий" displayName="N0 - Нет метастазов в регионарных лимфатических узлах" >
+										<originalText>
+											<reference value="#VREFERENCE_25006"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Описание категорий: M -->
+									<value xsi:type="CD" code="709" codeSystem="1.2.643.5.1.13.13.99.2.547" codeSystemVersion="2.7" codeSystemName="TNM. Описание категорий" displayName="M1 - Есть отдалённый метастаз или диссеминация опухоли по брюшине" >
+										<originalText>
+											<reference value="#VREFERENCE_25007"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Описание категорий: G -->
+									<value xsi:type="CD" code="2176" codeSystem="1.2.643.5.1.13.13.99.2.547" codeSystemVersion="2.7" codeSystemName="TNM. Описание категорий" displayName="G1 - Высокодифференцированная опухоль. Слизистая (муцинозная) карцинома низкой степени злокачественности" >
+										<originalText>
+											<reference value="#VREFERENCE_25008"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Стадирование злокачественных опухолей -->
+									<value xsi:type="CD" code="3573" codeSystem="1.2.643.5.1.13.13.99.2.546" codeSystemVersion="3.4" codeSystemName="TNM. Стадирование злокачественных опухолей" displayName="IVB" >
+										<originalText>
+											<reference value="#VREFERENCE_25009"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Сторона поражения -->
+									<value xsi:type="CD" code="4" codeSystem="1.2.643.5.1.13.13.99.2.143" codeSystemVersion="2.1" codeSystemName="РР. Стороны поражения" displayName="неприменимо" >
+										<originalText>
+											<reference value="#VREFERENCE_25010"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Морфологический тип опухоли -->
+									<value xsi:type="CD" code="M-8000/0" codeSystem="1.2.643.5.1.13.13.11.1486" codeSystemVersion="1.1" codeSystemName="Международная классификация болезней – Онкология (3 издание). Морфологические коды" displayName="Новообразование, доброкачественное" >
+										<originalText>
+											<reference value="#VREFERENCE_25011"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Топография опухоли -->
+									<value xsi:type="CD" code="C15.0" codeSystem="1.2.643.5.1.13.13.11.1487" codeSystemVersion="1.1" codeSystemName="Международная классификация болезней – Онкология (3 издание). Топографические коды" displayName="Шейный отдел пищевода" >
+										<originalText>
+											<reference value="#VREFERENCE_25012"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Стадия опухолевого процесса -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.126" codeSystemVersion="2.1" codeSystemName="РР. Стадии опухолевого процесса" displayName="Ia" >
+										<originalText>
+											<reference value="#VREFERENCE_25013"></reference>
+										</originalText>
+									</value>
+									<!-- [0..*] Локализация метастазов -->
+									<value xsi:type="CD" code="30" codeSystem="1.2.643.5.1.13.13.11.1477" codeSystemVersion="2.3" codeSystemName="Анатомические локализации" displayName="Желудок" >
+										<originalText>
+											<reference value="#VREFERENCE_25014"></reference>
+										</originalText>
+									</value>
+									<!-- [0..*] Локализация отдаленных метастазов (при IV стадии заболевания) -->
+									<value xsi:type="CD" code="13" codeSystem="1.2.643.5.1.13.13.99.2.127" codeSystemVersion="2.1" codeSystemName="РР. Локализации отдаленных метастазов (при IV стадии заболевания)" displayName="неизвестна" >
+										<originalText>
+											<reference value="#VREFERENCE_25016"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Метод подтверждения диагноза -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.128" codeSystemVersion="2.1" codeSystemName="РР. Методы подтверждения диагноза" displayName="морфологический" >
+										<originalText>
+											<reference value="#VREFERENCE_25017"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Порядковый номер данной опухоли у данного больного -->
+									<value xsi:type="CV" codeSystem="orderNumber" code="1" displayName="1">
+										<originalText>
+											<reference value="#VREFERENCE_25018"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Признак основной опухоли -->
+									<value xsi:type="CV" codeSystem="mainSymptom" code="true" displayName="Да">
+										<originalText>
+											<reference value="#VREFERENCE_25019"></reference>
+										</originalText>
+									</value>									
+									<!-- [1..1] Клиническая группа -->
+									<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.13.99.2.146" codeSystemVersion="1.0" codeSystemName="РР. Клинические группы больных злокачественными новообразованиями" displayName="IIа" >
+										<originalText>
+											<reference value="#VREFERENCE_25020"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] Обстоятельства выявления опухоли -->
+									<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.13.99.2.129" codeSystemName="РР. Обстоятельства выявления опухоли" displayName="активно, при профосмотре">
+										<originalText>
+											<reference value="#VREFERENCE_25021"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Форма бластного криза -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.761" codeSystemVersion="1.1" codeSystemName="ВИМИС. Формы бластного криза" displayName="Миелобластная" >
+										<originalText>
+											<reference value="#VREFERENCE_25022"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Фаза течения хронического миелолейкоза -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.760" codeSystemVersion="1.1" codeSystemName="ВИМИС. Фазы хронического миелолейкоза" displayName="Хроническая фаза" >
+										<originalText>
+											<reference value="#VREFERENCE_25023"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Возраст пациента на дату диагноза  -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="1" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Возраст пациента на дату диагноза"/>
+											<text><reference value="#VREFERENCE_250024"/></text>
+											<value xsi:type="INT" value="35"/>
+										</observation>
+									</entryRelationship>
+									<!-- [1..1] Признак подозрения на злокачественнное новообразование -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="317" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Признак подозрения на злокачественнное новообразование">
+												<!-- [0..1] Заболевание (состояние) -  злокачественное новообразование, на которое имеется подозрение -->
+												<qualifier>
+													<!-- R [1..1] Заболевание (состояние) -  злокачественное новообразование, на которое имеется подозрение -->
+													<value xsi:type="CD" code="C16.1" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.9" codeSystemName="Международная классификация болезней и состояний, связанных со здоровьем 10 пересмотра. Версия 4" displayName="Злокачественное новообразование дна желудка"/>
+												</qualifier>
+											</code>											
+											<text><reference value="#VREFERENCE_250025"/></text>
+											<!-- [1..1] Дата установления признака подозрения на злокачественное новообразование -->
+											<effectiveTime value="202101251535+0300"/>
+											<!-- [1..1] Наличие подозрения на злокачественнное новообразование -->
+											<value xsi:type="BL" value="true"/>
+										</observation>
+									</entryRelationship>
+									<!-- R [1..1] Впервые в жизни установленный диагноз -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="318" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Впервые в жизни установленный диагноз"/>											
+											<text><reference value="#VREFERENCE_250026"/></text>
+											<!-- R [1..1] Дата установления диагноза впервые в жизни -->
+											<effectiveTime value="20210125"/>
+											<!-- R [1..1] Достоверность подтверждения даты установления диагноза впервые в жизни -->
+											<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.770" codeSystemVersion="1.1" codeSystemName="Источник медицинской информации" displayName="Со слов пациента"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>			
+			<!-- R [1..1] СЕКЦИЯ: ХИРУРГИЧЕСКИЕ ВМЕШАТЕЛЬСТВА  -->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="SUR" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.2"  codeSystemName="Секции электронных медицинских документов" displayName="Операции"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>Хирургические вмешательства</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table width="100%">
+							<col width="10%"/>
+							<col width="10%"/>
+							<col width="55%"/>
+							<col width="15%"/>
+							<col width="10%"/>
+							<thead>
+								<tr>
+									<th>Дата</th>
+									<th>Название</th>
+									<th>Вид анестезии</th>
+									<th>Описание хода операции</th>
+									<th>Описание препарата (удаленного органа, части органа)</th>
+									<th>Хирург</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>19.05.2020<br/>11:21</td>
+									<td ID="VREFERENCE_4001">Биопсия желудка оперативная</td>
+									<td ID="VREFERENCE_4002">Местная</td>
+									<td ID="VREFERENCE_4003">Произвольный текст</td>
+									<td ID="VREFERENCE_4004">Произвольный текст</td>	
+									<td>Врач-хирург<br/>Привалов А.И.</td>									
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..*] Кодирование операции -->
+					<entry>
+						<procedure classCode="PROC" moodCode="EVN">
+							<!-- [1..1] ВИМИС: Идентификатор медицинской организации, в которой проводилось хирургическое лечение -->
+							<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+							<!-- R [1..1] Код операции -->
+							<code code="A11.16.004" displayName="Биопсия желудка оперативная" codeSystem="1.2.643.5.1.13.13.11.1070"  codeSystemVersion="2.2" codeSystemName="Номенклатура медицинских услуг">
+								<originalText>
+									<reference value="#VREFERENCE_4001"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..1] Текстовое описание операции -->
+							<text>Биопсия желудка</text>
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата операции -->
+							<effectiveTime>
+								<!-- R [1..1] Дата со временем начала оперативного вмешательства -->
+								<low value="202005191121+0300"/>
+								<!-- [0..1] Дата со временем окончания оперативного вмешательства -->
+								<high value="202005191151+0300"/>
+							</effectiveTime>							
+							<!-- [0..*] исполнитель (роль) -->
+							<performer>
+								<assignedEntity>
+									<!-- R [1..1] Уникальный идентификатор исполнителя -->
+									<id root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.70" extension="4489"/>
+									<!-- R [1..1] СНИЛС исполнителя -->
+									<id root="1.2.643.100.3" extension="445-784-201 10"/>
+									<!-- R [1..1] Код должности исполнителя -->
+									<code code="122" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="6.2"  codeSystemName="Должности работников организаций медицинского и фармацевтического профиля" displayName="врач-хирург"/>
+									<!-- R [1..1] исполнитель (человек) -->
+									<assignedPerson>
+										<!-- R [1..1] Фамилия, Имя, Отчество исполнителя -->
+										<name>
+											<!-- R [1..1] Фамилия -->
+											<family>Катков</family>
+											<!-- R [1..1] Имя -->
+											<given>Александр</given>
+											<!-- [0..1] Отчество -->
+											<given>Борисович</given>
+										</name>
+									</assignedPerson>
+									<!-- R [1..1] Место работы исполнителя -->
+									<representedOrganization>
+										<!-- R [1..1] Идентификатор организации исполнителя -->
+										<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+										<id root="1.2.643.5.1.13.13.12.2.77.8481"/>
+										<!-- R [1..1] Наименование организации -->
+										<name>Филиал ГАУЗ "МГОБ №62 ДЗМ", ОД2</name>
+										<!-- [1..1] Телефон организации -->
+										<telecom value="tel:+74955360200" use="WP"/>
+										<!-- [0..*] Прочие контакты организации (факс) -->
+										<telecom value="fax:+74955360123" use="WP"/>
+										<!-- [0..*] Прочие контакты организации (веб-сайт) -->
+										<telecom value="http://od2.onco62.ru/"/>
+										<!-- [1..1] Адрес организации -->
+										<addr>
+											<!-- R [1..1] адрес текстом -->
+											<streetAddressLine>125130, г. Москва, Старопетровский пр., д. 6</streetAddressLine>
+											<!-- R [1..1] Регион РФ -->
+											<state>77</state>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<!-- [0..*] исполнитель (роль) -->
+							<performer>
+								<assignedEntity>
+									<!-- R [1..1] Уникальный идентификатор исполнителя -->
+									<id root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.70" extension="4490"/>
+									<!-- R [1..1] СНИЛС исполнителя -->
+									<id root="1.2.643.100.3" extension="445-784-202 10"/>
+									<!-- R [1..1] Код должности исполнителя -->
+									<code code="182" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="6.2" codeSystemName="Должности работников организаций медицинского и фармацевтического профиля" displayName="операционная медицинская сестра"/>
+									<!-- R [1..1] исполнитель (человек) -->
+									<assignedPerson>
+										<!-- R [1..1] Фамилия, Имя, Отчество исполнителя -->
+										<name>
+											<!-- R [1..1] Фамилия -->
+											<family>Землянникова Е.Ю.</family>
+											<!-- R [1..1] Имя -->
+											<given>Елена</given>
+											<!-- [0..1] Отчество -->
+											<given>Юрьевна</given>
+										</name>
+									</assignedPerson>
+									<!-- R [1..1] Место работы исполнителя -->
+									<representedOrganization>
+										<!-- R [1..1] Идентификатор организации исполнителя -->
+										<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+										<id root="1.2.643.5.1.13.13.12.2.77.8481"/>
+										<!-- R [1..1] Наименование организации -->
+										<name>Филиал ГАУЗ "МГОБ №62 ДЗМ", ОД2</name>
+										<!-- [1..1] Телефон организации -->
+										<telecom value="tel:+74955360200" use="WP"/>
+										<!-- [0..*] Прочие контакты организации (факс) -->
+										<telecom value="fax:+74955360123" use="WP"/>
+										<!-- [0..*] Прочие контакты организации (веб-сайт) -->
+										<telecom value="http://od2.onco62.ru/"/>
+										<!-- [1..1] Адрес организации -->
+										<addr>
+											<!-- R [1..1] адрес текстом -->
+											<streetAddressLine>125130, г. Москва, Старопетровский пр., д. 6</streetAddressLine>
+											<!-- R [1..1] Регион РФ -->
+											<state>77</state>
+										</addr>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<!-- [0..*] Уточнение операции: использование аппаратуры -->
+							<participant typeCode="DEV">
+								<participantRole classCode="MNT">
+									<playingDevice>
+										<code code="2" codeSystem="1.2.643.5.1.13.13.11.1048" codeSystemVersion="1.1" codeSystemName="Учетные группы аппаратуры, используемой при операциях" displayName="Криогенная"/>
+									</playingDevice>
+								</participantRole>
+							</participant>
+							<!-- [0..*] Уточнение операции: использование устройств и имплантов -->
+							<participant typeCode="DEV">
+								<participantRole classCode="MANU">
+									<playingDevice>
+										<code code="28" codeSystem="1.2.643.5.1.13.13.11.1079" codeSystemVersion="1.1" codeSystemName="Виды имплантируемых медицинских изделий и вспомогательных устройств для пациентов с ограниченными возможностями" displayName="Мешок дренажный раневый"/>
+									</playingDevice>
+								</participantRole>
+							</participant>
+							<!-- R [1..1] ВИМИС: Уточнение операции -->
+							<entryRelationship typeCode="COMP">
+									<observation classCode="OBS" moodCode="EVN">	
+									<!-- [1..1] ВИМИС: Срочность проведения оперативного вмешательства -->
+										<code code="3" codeSystem="1.2.643.5.1.13.13.11.1503" codeSystemVersion="1.1" codeSystemName="Срочность оперативного вмешательства" displayName="Плановое" />										
+									<!-- [1..1] ВИМИС: Уточнение операции: название (тип хирургического вмешательства)-->
+										<value xsi:type="CD" code="178" codeSystem="1.2.643.5.1.13.13.99.2.413" codeSystemVersion="1.0" codeSystemName="Номенклатура типов хирургических вмешательств и физических методов воздействия при онкологических заболеваниях" displayName="А08.17. Проксимальная субтотальная резекция желудка"/>
+									<!-- [1..1] ВИМИС: Описание хода операции -->
+										<value xsi:type="CV" codeSystem="operationProgress">
+											<originalText>
+												<reference value="#VREFERENCE_4003"></reference>	
+											</originalText>
+										</value>											
+									<!-- [0..1] ВИМИС: Описание препарата (удаленного органа, части органа) -->
+										<value xsi:type="CV" codeSystem="descriptionDrug">
+											<originalText>
+												<reference value="#VREFERENCE_4004"></reference>	
+											</originalText>
+										</value>
+									<!-- [0..1] ВИМИС: Уточнение операции: Виды хирургического лечения злокачественных новообразований-->
+										<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.13.99.2.574" codeSystemVersion="1.1" codeSystemName="ВИМИС ОНКО. Виды хирургического лечения злокачественных новообразований" displayName="Радикальная операция" />
+										<!-- [0..*] ВИМИС: Массив данных об осложнениях при операции -->
+										<entryRelationship typeCode="SPRT">
+											<act classCode="ACT" moodCode="EVN">
+												<!-- R [1..1]  Осложнение -->
+												<code code="100" codeSystem="1.2.643.5.1.13.13.99.2.139" codeSystemVersion="2.1" codeSystemName="РР. Осложнения лечения злокачественных новообразований" displayName="Аррозивное кровотечение из сосудов средостения" />
+											</act>
+										</entryRelationship>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] Уточнение операции: использованная анестезия -->
+							<entryRelationship typeCode="COMP">
+								<substanceAdministration classCode="SBADM" moodCode="EVN">
+									<consumable typeCode="CSM">
+										<manufacturedProduct classCode="MANU">
+											<manufacturedLabeledDrug>
+												<code code="2" codeSystem="1.2.643.5.1.13.13.11.1033" codeSystemVersion="3.1" codeSystemName="Виды анестезии" displayName="Местная">
+													<originalText>
+														<reference value="#VREFERENCE_4002"></reference>
+													</originalText>
+												</code>
+											</manufacturedLabeledDrug>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] ВИМИС: Диагнозы после оперативного вмешательства (с кодированными элементами) -->
+			<component>
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="DGN" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.2"  codeSystemName="Секции CDA документов" displayName="Диагнозы"/>
+					<!-- R [1..1] Заголовок секции -->
+					<title>Диагнозы</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<paragraph><caption>Признак подозрения на злокачественнное новообразование</caption></paragraph>
+						<table width="100%">
+                            <col width="50%"/>
+                            <col width="50%"/>
+							<tbody>
+								<tr>
+									<th>Наличие подозрения на злокачественнное новообразование</th>
+									<td>Да</td>
+								</tr>
+								<tr>
+									<th>Заболевание (состояние) - злокачественное новообразование, на которое имеется подозрение</th>
+									<td ID="VREFERENCE_26024">C16.1 Злокачественное новообразование дна желудка</td>
+								</tr>	
+								<tr>
+									<th>Дата установления признака подозрения на злокачественное новообразование</th>
+									<td>25.01.2021</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph><caption>Диагноз</caption></paragraph>
+						<table width="100%">
+                            <col width="50%"/>
+                            <col width="50%"/>
+							<tbody>
+								<tr>
+									<th>Дата установления диагноза (для нозологической едицины)</th>
+									<td>10.08.2020</td>
+								</tr>
+								<tr>
+									<th>Степень обоснованности диагноза</th>
+									<td ID="VREFERENCE_26000">Заключительный диагноз</td>
+								</tr>
+								<tr>
+									<th>Вид нозологической единицы диагноза</th>
+									<td ID="VREFERENCE_26001">Основное заболевание</td>
+								</tr>
+								<tr>
+									<th>Заболевание (состояние) по МКБ-10</th>
+									<td ID="VREFERENCE_26002">C16.1 Злокачественное новообразование дна желудка</td>
+								</tr>
+								<tr>
+									<th>Клинический диагноз</th>
+									<td>Описание...Клинический диагноз</td>
+								</tr>
+								<tr>
+									<th>Характер заболевания</th>
+									<td ID="VREFERENCE_26003">Острое</td>
+								</tr>
+								<tr>
+									<th>Вид первично-множественной опухоли</th>
+									<td ID="VREFERENCE_26004">нет</td>
+								</tr>
+								<tr>
+									<th>TNM. Описание категорий: Т</th>
+									<td ID="VREFERENCE_26005">T4a - Опухоль прорастает через висцеральную брюшину</td>
+								</tr>
+								<tr>
+									<th>TNM. Описание категорий: N</th>
+									<td ID="VREFERENCE_26006">N0 - Нет метастазов в регионарных лимфатических узлах</td>
+								</tr>
+								<tr>
+									<th>TNM. Описание категорий: M</th>
+									<td ID="VREFERENCE_26007">M1 - Есть отдалённый метастаз или диссеминация опухоли по брюшине </td>
+								</tr>
+								<tr>
+									<th>TNM. Описание категорий: G</th>
+									<td ID="VREFERENCE_26008">G1 - Высокодифференцированная опухоль. Слизистая (муцинозная) карцинома низкой степени злокачественности</td>
+								</tr>
+								<tr>
+									<th>TNM. Стадирование злокачественных опухолей</th>
+									<td ID="VREFERENCE_26009">IVB</td>
+								</tr>
+								<tr>
+									<th>Сторона поражения</th>
+									<td ID="VREFERENCE_26010">неприменимо</td>
+								</tr>
+								<tr>
+									<th>Морфологический тип опухоли </th>
+									<td ID="VREFERENCE_26011">M-8000/0 Новообразование, доброкачественное</td>
+								</tr>
+								<tr>
+									<th>Топография опухоли</th>
+									<td ID="VREFERENCE_26012">C15.0 Шейный отдел пищевода</td>
+								</tr>
+								<tr>
+									<th>Стадия опухолевого процесса</th>
+									<td ID="VREFERENCE_26013">Ia</td>
+								</tr>
+								<tr>
+									<th>Локализация метастазов</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_26014">Желудок</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Локализация отдаленных метастазов (при IV стадии заболевания)</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_26015">неизвестна</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Метод подтверждения диагноза</th>
+									<td ID="VREFERENCE_26016">морфологический</td>
+								</tr>
+								<tr>
+									<th>Порядковый номер данной опухоли у данного больного</th>
+									<td ID="VREFERENCE_26017">1</td>
+								</tr>
+								<tr>
+									<th>Признак основной опухоли</th>
+									<td ID="VREFERENCE_26018">Да</td>
+								</tr>
+								<tr>
+									<th>Клиническая группа</th>
+									<td ID="VREFERENCE_26019">IIа</td>
+								</tr>
+								<tr>
+									<th>Обстоятельства выявления опухоли</th>
+									<td ID="VREFERENCE_26020">активно, при профосмотре</td>
+								</tr>
+								<tr>
+									<th>Фаза течения хронического миелолейкоза</th>
+									<td ID="VREFERENCE_26021">Хроническая фаза</td>
+								</tr>
+								<tr>
+									<th>Форма бластного криза</th>
+									<td ID="VREFERENCE_26022">Миелобластная</td>
+								</tr>
+								<tr>
+									<th>Возраст пациента на дату диагноза</th>
+									<td ID="VREFERENCE_26023">35</td>
+								</tr>
+								<tr>
+									<th>Впервые в жизни установленный диагноз</th>
+									<td>
+										<list>
+											<item>
+												<content>Дата установления диагноза впервые в жизни - 25.01.2021</content><br/>
+											</item>
+											<item>
+												<content ID="VREFERENCE_26025">Достоверность подтверждения даты установления диагноза впервые в жизни - Со слов пациента</content>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Сопутствующая патология:</th>
+								</tr>
+								<tr>
+									<th>Дата установления диагноза</th>
+									<td>25.03.2020</td>
+								</tr>
+								<tr>
+									<th>Кодирование вида нозологической единицы диагноза</th>
+									<td ID="VREFERENCE_26026">Сопутствующее заболевание</td>
+								</tr>
+								<tr>
+									<th>Сопутствующая патология</th>
+									<td ID="VREFERENCE_26027">I25.1 Атеросклеротическая болезнь сердца</td>
+								</tr>
+								<tr>
+									<th>Клинический диагноз</th>
+									<td>ИБС, стенокардия напряжения, 3ФК. Атеросклеротический кардиосклероз, постоянная форма мерцательной аритмии, ХСН 2А. 3ФК. Гипертоническая болезнь 2 стадии, АГ 2 степени, риск 4. Ожирение 1 степени.</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] Кодирование заключительного диагноза -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- R [1..1] Степень обоснованности диагноза -->
+							<code code="3" codeSystem="1.2.643.5.1.13.13.11.1076" codeSystemVersion="1.2" codeSystemName="Степень обоснованности диагноза" displayName="Заключительный клинический диагноз" >
+								<originalText>
+									<reference value="#VREFERENCE_26000"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..*] Кодирование диагноза -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Кодирование вида нозологической единицы диагноза -->
+									<code code="1" codeSystem="1.2.643.5.1.13.13.11.1077" codeSystemVersion="1.2" displayName="Основное заболевание" codeSystemName="Виды нозологических единиц диагноза">
+										<originalText>
+											<reference value="#VREFERENCE_26001"></reference>
+										</originalText>
+									</code>
+									<!-- R [1..1] Клинический диагноз -->
+									<text>Описание...Клинический диагноз</text>
+									<!-- R [1..1] Дата установления диагноза (для нозологической едицины)  -->
+									<effectiveTime value="202008101600+0300"/>
+									<!-- R [1..1] Заболевание (состояние) по МКБ-10 -->
+									<value xsi:type="CD" code="C16.1" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.9" codeSystemName="Международная классификация болезней и состояний, связанных со здоровьем 10 пересмотра. Версия 4" displayName="Злокачественное новообразование дна желудка" >
+										<originalText>
+											<reference value="#VREFERENCE_26002"></reference>
+										</originalText>
+									</value>
+									<!-- R [1..1] Характер заболевания -->
+									<value xsi:type="CD" code="3" codeSystem="1.2.643.5.1.13.13.11.1049" codeSystemVersion="2.1" codeSystemName="Характер заболевания" displayName="Острое" >
+										<originalText>
+											<reference value="#VREFERENCE_26003"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Вид первично-множественной опухоли -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.141" codeSystemVersion="2.1" codeSystemName="РР. Виды первично-множественных опухолей" displayName="нет" >
+										<originalText>
+											<reference value="#VREFERENCE_26004"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Описание категорий: Т -->
+									<value xsi:type="CD" code="699" codeSystem="1.2.643.5.1.13.13.99.2.547" codeSystemVersion="2.7" codeSystemName="TNM. Описание категорий" displayName="T4a - Опухоль прорастает через висцеральную брюшину" >
+										<originalText>
+											<reference value="#VREFERENCE_26005"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Описание категорий: N -->
+									<value xsi:type="CD" code="702" codeSystem="1.2.643.5.1.13.13.99.2.547" codeSystemVersion="2.7" codeSystemName="TNM. Описание категорий" displayName="N0 - Нет метастазов в регионарных лимфатических узлах" >
+										<originalText>
+											<reference value="#VREFERENCE_26006"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Описание категорий: M -->
+									<value xsi:type="CD" code="709" codeSystem="1.2.643.5.1.13.13.99.2.547" codeSystemVersion="2.7" codeSystemName="TNM. Описание категорий" displayName="M1 - Есть отдалённый метастаз или диссеминация опухоли по брюшине" >
+										<originalText>
+											<reference value="#VREFERENCE_26007"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Описание категорий: G -->
+									<value xsi:type="CD" code="2176" codeSystem="1.2.643.5.1.13.13.99.2.547" codeSystemVersion="2.7" codeSystemName="TNM. Описание категорий" displayName="G1 - Высокодифференцированная опухоль. Слизистая (муцинозная) карцинома низкой степени злокачественности" >
+										<originalText>
+											<reference value="#VREFERENCE_26008"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] TNM. Стадирование злокачественных опухолей -->
+									<value xsi:type="CD" code="3573" codeSystem="1.2.643.5.1.13.13.99.2.546" codeSystemVersion="3.4" codeSystemName="TNM. Стадирование злокачественных опухолей" displayName="IVB" >
+										<originalText>
+											<reference value="#VREFERENCE_26009"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Сторона поражения -->
+									<value xsi:type="CD" code="4" codeSystem="1.2.643.5.1.13.13.99.2.143" codeSystemVersion="2.1" codeSystemName="РР. Стороны поражения" displayName="неприменимо" >
+										<originalText>
+											<reference value="#VREFERENCE_26010"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Морфологический тип опухоли -->
+									<value xsi:type="CD" code="M-8000/0" codeSystem="1.2.643.5.1.13.13.11.1486" codeSystemVersion="1.1" codeSystemName="Международная классификация болезней – Онкология (3 издание). Морфологические коды" displayName="Новообразование, доброкачественное" >
+										<originalText>
+											<reference value="#VREFERENCE_26011"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Топография опухоли -->
+									<value xsi:type="CD" code="C15.0" codeSystem="1.2.643.5.1.13.13.11.1487" codeSystemVersion="1.1" codeSystemName="Международная классификация болезней – Онкология (3 издание). Топографические коды" displayName="Шейный отдел пищевода" >
+										<originalText>
+											<reference value="#VREFERENCE_26012"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Стадия опухолевого процесса -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.126" codeSystemVersion="2.1" codeSystemName="РР. Стадии опухолевого процесса" displayName="Ia" >
+										<originalText>
+											<reference value="#VREFERENCE_26013"></reference>
+										</originalText>
+									</value>
+									<!-- [0..*] Локализация метастазов -->
+									<value xsi:type="CD" code="30" codeSystem="1.2.643.5.1.13.13.11.1477" codeSystemVersion="2.3" codeSystemName="Анатомические локализации" displayName="Желудок" >
+										<originalText>
+											<reference value="#VREFERENCE_26014"></reference>
+										</originalText>
+									</value>
+									<!-- [0..*] Локализация отдаленных метастазов (при IV стадии заболевания) -->
+									<value xsi:type="CD" code="13" codeSystem="1.2.643.5.1.13.13.99.2.127" codeSystemVersion="2.1" codeSystemName="РР. Локализации отдаленных метастазов (при IV стадии заболевания)" displayName="неизвестна" >
+										<originalText>
+											<reference value="#VREFERENCE_26015"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Метод подтверждения диагноза -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.128" codeSystemVersion="2.1" codeSystemName="РР. Методы подтверждения диагноза" displayName="морфологический" >
+										<originalText>
+											<reference value="#VREFERENCE_26016"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Порядковый номер данной опухоли у данного больного -->
+									<value xsi:type="CV" codeSystem="orderNumber" code="1" displayName="1">
+										<originalText>
+											<reference value="#VREFERENCE_26017"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Признак основной опухоли -->
+									<value xsi:type="CV" codeSystem="mainSymptom" code="true" displayName="Да">
+										<originalText>
+											<reference value="#VREFERENCE_26018"></reference>
+										</originalText>
+									</value>									
+									<!-- [1..1] Клиническая группа -->
+									<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.13.99.2.146" codeSystemVersion="1.0" codeSystemName="РР. Клинические группы больных злокачественными новообразованиями" displayName="IIа" >
+										<originalText>
+											<reference value="#VREFERENCE_26019"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] Обстоятельства выявления опухоли -->
+									<value xsi:type="CD" code="2" codeSystem="1.2.643.5.1.13.13.99.2.129" codeSystemName="РР. Обстоятельства выявления опухоли" displayName="активно, при профосмотре">
+										<originalText>
+											<reference value="#VREFERENCE_26020"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Форма бластного криза -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.761" codeSystemVersion="1.1" codeSystemName="ВИМИС. Формы бластного криза" displayName="Миелобластная" >
+										<originalText>
+											<reference value="#VREFERENCE_26022"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Фаза течения хронического миелолейкоза -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.760" codeSystemVersion="1.1" codeSystemName="ВИМИС. Фазы хронического миелолейкоза" displayName="Хроническая фаза" >
+										<originalText>
+											<reference value="#VREFERENCE_26021"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Возраст пациента на дату диагноза  -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="1" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Возраст пациента на дату диагноза"/>
+											<text><reference value="#VREFERENCE_26023"/></text>
+											<value xsi:type="INT" value="35"/>
+										</observation>
+									</entryRelationship>
+									<!-- [1..1] Признак подозрения на злокачественнное новообразование -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="317" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Признак подозрения на злокачественнное новообразование">
+												<!-- [0..1] Заболевание (состояние) -  злокачественное новообразование, на которое имеется подозрение -->
+												<qualifier>
+													<!-- R [1..1] Заболевание (состояние) -  злокачественное новообразование, на которое имеется подозрение -->
+													<value xsi:type="CD" code="C16.1" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.9" codeSystemName="Международная классификация болезней и состояний, связанных со здоровьем 10 пересмотра. Версия 4" displayName="Злокачественное новообразование дна желудка"/>
+												</qualifier>
+											</code>											
+											<text><reference value="#VREFERENCE_26024"/></text>
+											<!-- [1..1] Дата установления признака подозрения на злокачественное новообразование -->
+											<effectiveTime value="202101251535+0300"/>
+											<!-- [1..1] Наличие подозрения на злокачественнное новообразование -->
+											<value xsi:type="BL" value="true"/>
+										</observation>
+									</entryRelationship>
+									<!-- R [1..1] Впервые в жизни установленный диагноз -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="318" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Впервые в жизни установленный диагноз"/>											
+											<text><reference value="#VREFERENCE_26025"/></text>
+											<!-- R [1..1] Дата установления диагноза впервые в жизни -->
+											<effectiveTime value="20210125"/>
+											<!-- R [1..1] Достоверность подтверждения даты установления диагноза впервые в жизни -->
+											<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.770" codeSystemVersion="1.1" codeSystemName="Источник медицинской информации" displayName="Со слов пациента"/>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+							<!-- [0..*] Кодирование осложнения заключительного диагноза -->
+							<!-- [0..*] Кодирование сопутствующей патологии заключительного диагноза -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Кодирование вида нозологической единицы диагноза -->
+									<code code="3" codeSystem="1.2.643.5.1.13.13.11.1077" codeSystemVersion="1.2" displayName="Сопутствующее заболевание" codeSystemName="Виды нозологических единиц диагноза">
+										<originalText>
+											<reference value="#VREFERENCE_26026"></reference>
+										</originalText>
+									</code>
+									<!-- R [1..1] Клинический диагноз -->
+									<text>ИБС, стенокардия напряжения, 3ФК. Атеросклеротический кардиосклероз, постоянная форма мерцательной аритмии, ХСН 2А. 3ФК. Гипертоническая болезнь 2 стадии, АГ 2 степени, риск 4. Ожирение 1 степени.</text>
+									<!-- R [1..1] Дата установления диагноза  -->
+									<effectiveTime value="202008101600+0300"/>
+									<!-- R [1..1] Сопутствующая патология -->
+									<value xsi:type="CD" code="I25.1" codeSystem="1.2.643.5.1.13.13.11.1005"  codeSystemVersion="2.4"  codeSystemName="Международная классификация болезней и состояний, связанных со здоровьем 10 пересмотра. Версия 4" displayName="Атеросклеротическая болезнь сердца">
+										<originalText>
+											<reference value="#VREFERENCE_26027"></reference>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] ВИМИС: Данные о медицинских картах пациента  -->
+			<component>
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="vimisMedicalCard" codeSystem="vimis1" />
+					<!-- R [1..1] Заголовок секции -->
+					<title>Данные о медицинских картах пациента</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<paragraph><caption ID="VREFERENCE_100">Медицинская карта стационарного больного</caption></paragraph>
+						<table>
+							<tbody>
+								<tr>
+									<th>Номер</th>
+									<td ID="VREFERENCE_101">КВ-567/3.4</td>
+								</tr>
+								<tr>
+									<th>Дата создания</th>
+									<td ID="VREFERENCE_102">25.09.2020</td>
+								</tr>
+								<tr>
+									<th>Группа крови</th>
+									<td ID="VREFERENCE_103">0(I)</td>
+								</tr>
+								<tr>
+									<th>Резус-фактор</th>
+									<td ID="VREFERENCE_104">Rh(D)+, положительный резус-фактор</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph><caption ID="VREFERENCE_110">Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях</caption></paragraph>
+						<table>
+							<tbody>
+								<tr>
+									<th>Номер</th>
+									<td ID="VREFERENCE_111">КВ-567/3.4</td>
+								</tr>
+								<tr>
+									<th>Дата создания</th>
+									<td ID="VREFERENCE_112">25.09.2020</td>
+								</tr>
+								<tr>
+									<th>Группа крови</th>
+									<td ID="VREFERENCE_113">0(I)</td>
+								</tr>
+								<tr>
+									<th>Резус-фактор</th>
+									<td ID="VREFERENCE_114">Rh(D)+, положительный резус-фактор</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..*] Информация о мед.карте -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор медицинской карты -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="659481548"/>
+							<!-- R [1..1] Тип медицинской карты -->
+							<code code="53" codeSystem="1.2.643.5.1.13.13.11.1507" codeSystemVersion="1" codeSystemName="Тип медицинской карты" displayName="Медицинская карта стационарного больного" >
+								<originalText>
+									<reference value="#VREFERENCE_100"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Номер медицинской карты -->
+							<text>
+								<reference value="#VREFERENCE_101"></reference>
+								КВ-567/3.4
+							</text>
+							<!-- [0..1] Дата создания медицинской карты  -->
+							<effectiveTime value="202009251600+0300"/>
+							<!-- [0..1] Группа крови -->
+							<value xsi:type="CD" code="101" codeSystem="1.2.643.5.1.13.13.11.1061" codeSystemVersion="1.3" codeSystemName="Группы крови для учета сигнальной информации о пациенте" displayName="0(I)" >
+								<originalText>
+									<reference value="#VREFERENCE_103"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Резус-фактор -->
+							<value xsi:type="CD" code="211" codeSystem="1.2.643.5.1.13.13.11.1061" codeSystemVersion="1.3" codeSystemName="Группы крови для учета сигнальной информации о пациенте" displayName="Rh(D)+, положительный резус-фактор" >
+								<originalText>
+									<reference value="#VREFERENCE_104"></reference>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..*] Информация о мед.карте -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор медицинской карты -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="659481548"/>
+							<!-- R [1..1] Тип медицинской карты -->
+							<code code="51" codeSystem="1.2.643.5.1.13.13.11.1507" codeSystemVersion="1" codeSystemName="Тип медицинской карты" displayName="Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях" >
+								<originalText>
+									<reference value="#VREFERENCE_110"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Номер медицинской карты -->
+							<text>
+								<reference value="#VREFERENCE_111"></reference>
+								КВ-568/3.4
+							</text>
+							<!-- [0..1] Дата создания медицинской карты  -->
+							<effectiveTime value="202009251600+0300"/>
+							<!-- [0..1] Группа крови -->
+							<value xsi:type="CD" code="101" codeSystem="1.2.643.5.1.13.13.11.1061" codeSystemVersion="1.3" codeSystemName="Группы крови для учета сигнальной информации о пациенте" displayName="0(I)" >
+								<originalText>
+									<reference value="#VREFERENCE_113"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Резус-фактор -->
+							<value xsi:type="CD" code="211" codeSystem="1.2.643.5.1.13.13.11.1061" codeSystemVersion="1.3" codeSystemName="Группы крови для учета сигнальной информации о пациенте" displayName="Rh(D)+, положительный резус-фактор" >
+								<originalText>
+									<reference value="#VREFERENCE_114"></reference>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

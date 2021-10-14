@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://callback.mis.vimis.rosminzdrav.ru/" elementFormDefault="unqualified"
+           targetNamespace="http://callback.mis.vimis.rosminzdrav.ru/" version="1.0">
+    <xs:element name="sendResult" type="tns:sendResult"/>
+    <xs:element name="sendInterimMsg" type="tns:sendInterimMsg"/>
+    <xs:complexType name="sendResult">
+        <xs:sequence>
+            <xs:element name="msg_id" type="xs:string"/>
+            <xs:element name="status" type="xs:int"/>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="sendInterimMsg">
+        <xs:sequence>
+            <xs:element name="msg_id" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

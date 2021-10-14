@@ -1,0 +1,92 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://vimis.rosminzdrav.ru/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="receiver" targetNamespace="http://vimis.rosminzdrav.ru/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://vimis.rosminzdrav.ru/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://vimis.rosminzdrav.ru/">
+            <xs:element name="sendDocument" type="tns:sendDocument"/>
+            <xs:element name="returnMsgId" type="tns:returnMsgId"/>
+            <xs:element name="checkStatus" type="tns:checkStatus"/>
+            <xs:element name="checkStatusResponse" type="tns:checkStatusResponse"/>
+            <xs:complexType name="sendDocument">
+                <xs:sequence>
+                    <xs:element name="vmcl" minOccurs="0" type="xs:int"/>
+                    <xs:element name="docType" type="xs:int"/>
+                    <xs:element name="docTypeVersion" type="xs:string"/>
+                    <xs:element name="triggerPoint" minOccurs="0" type="xs:int"/>
+                    <xs:element name="interimMsg" minOccurs="0" type="xs:int"/>
+                    <xs:element name="signature" minOccurs="0" type="tns:signature"/>
+                    <xs:element name="document" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="returnMsgId">
+                <xs:sequence>
+                    <xs:element name="msg_id" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="signature">
+                <xs:sequence>
+                    <xs:element name="data" type="xs:string"/>
+                    <xs:element name="checksum" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="checkStatus">
+                <xs:sequence>
+                    <xs:element name="msg_id" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="checkStatusResponse">
+                <xs:sequence>
+                    <xs:element name="status" type="xs:int"/>
+                    <xs:element name="description" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="sendDocument">
+        <wsdl:part element="tns:sendDocument" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="returnMsgId">
+        <wsdl:part element="tns:returnMsgId" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="checkStatus">
+        <wsdl:part element="tns:checkStatus" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="checkStatusResponse">
+        <wsdl:part element="tns:checkStatusResponse" name="parameters"/>
+    </wsdl:message>
+    <wsdl:portType name="Receiver">
+        <wsdl:operation name="sendDocument">
+            <wsdl:input message="tns:sendDocument" name="sendDocument" wsam:Action="sendDocument" wsaw:Action="sendDocument"/>
+            <wsdl:output message="tns:returnMsgId" name="returnMsgId" wsam:Action="http://vimis.rosminzdrav.ru/Receiver/returnMsgId" wsaw:Action="http://vimis.rosminzdrav.ru/Receiver/returnMsgId"/>
+        </wsdl:operation>
+        <wsdl:operation name="checkStatus">
+            <wsdl:input message="tns:checkStatus" name="checkStatus" wsam:Action="checkStatus" wsaw:Action="checkStatus"/>
+            <wsdl:output message="tns:checkStatusResponse" name="checkStatusResponse" wsam:Action="http://vimis.rosminzdrav.ru/Receiver/checkStatusResponse" wsaw:Action="http://vimis.rosminzdrav.ru/Receiver/checkStatusResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="receiverSoapBinding" type="tns:Receiver">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsaw:UsingAddressing xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsdl:required="false"/>
+        <wsdl:operation name="sendDocument">
+            <soap:operation soapAction="sendDocument" style="document"/>
+            <wsdl:input name="sendDocument">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="returnMsgId">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="checkStatus">
+            <soap:operation soapAction="checkStatus" style="document"/>
+            <wsdl:input name="checkStatus">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="checkStatusResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="receiver">
+        <wsdl:port binding="tns:receiverSoapBinding" name="ReceiverPort">
+            <soap:address location="https://ips-test.rosminzdrav.ru/386f2299dd31b"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

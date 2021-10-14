@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do NOT edit this HTML directly: it was generated via an XSLT transformation from a CDA Release 2 or 3 XML document. -->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Протокол прижизненного патолого-анатомического исследования биопсийного (операционного) материала (May 26, 2020, 18:35 +0300)</title>
+      <!-- General CSS -->
+      <style type="text/css" media="all">
+                    *{
+                        font-family: Verdana, Tahoma, sans-serif;
+                        font-size: 9pt;
+                    }
+                    body{
+                        padding: 2px;
+                        color: #003366;
+                        background-color: white;
+                        font-size: 9pt;
+                    }
+                    #documentheader,
+                    #documentbody,
+                    #documentfooter{
+                        width: 100%;
+                    }
+                    #documentheader{
+                        border-bottom: 1px solid grey;
+                        margin-bottom: 1em;
+                    }
+                    #documentfooter{
+                        border-top: 1px solid grey;
+                        margin-top: 1em;
+                    }
+                    a{
+                        color: #003366;
+                        background-color: white;
+                    }
+                    h1{
+                        font-size: 12pt;
+                        font-weight: bold;
+                    }
+                    h1.title{
+                        text-align: center;
+                    }
+                    h2{
+                        font-size: 11pt;
+                        font-weight: bold;
+                    }
+                    h3{
+                        font-size: 10pt;
+                        font-weight: bold;
+                    }
+                    h4{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    h5{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    h6{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    hr{
+                        width: 100%;
+                    }
+                    span {
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        display: inline; /* IE8 hack: would go to next line otherwise */
+                    }
+                    table{
+                        line-height: 10pt;
+                        width: 100%;
+                    }
+                    thead tr, th{
+                        background-color: LightGrey;
+                    }
+                    tbody tr{
+                        background-color: #f2f2f2;
+                    }
+                    td{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        padding: 0.1cm 0.2cm;
+                        vertical-align: top;
+                    }
+                    .table_simple{
+                        width: auto;
+                        color: inherit;
+                        background-color: inherit;
+                    }
+                    .table_simple td{
+                        padding: 0;
+                    }
+                    .table_simple td.td_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: inherit;
+                        font-style: italic;
+                        padding-right: 0.2cm;
+                    }
+                    .header_table{
+                        border: 1pt solid #00008b;
+                    }
+                    .narr_table{
+                        width: 100%;
+                        margin: 0.3em 0;
+                    }
+                    .narr_tr{
+                        //background-color: #ffffcc;
+                    }
+                    .narr_th{
+                        background-color: LightGrey;
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                    }
+                    .narr_footnote{
+                        font-size: 8pt;
+                        font-style: italic;
+                    }
+                    .td_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: bold;
+                        background-color: LightGrey;
+                    }
+                    .td_label_width{
+                        width: 20%;
+                    }
+                    .span_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: bold;
+                    }
+                    .span_value{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: normal;
+                    }
+                    .revision_insert{
+                        text-decoration: underline overline;
+                    }
+                    .revision_insert_final{
+                    }
+                    .revision_delete{
+                        text-decoration: line-through;
+                    }
+                    .revision_delete_final{
+                        display: none;
+                    }
+                    .span_button {
+                        display: table-cell;
+                        cursor: pointer;
+                        border: 2pt inset #585858;
+                        border-radius: 15px;
+                        -moz-border-radius: 15px;
+                        padding: 0.1cm 0.2cm;
+                        background-color: #f2f2f2;
+                        font-weight: bold;
+                        vertical-align: baseline;
+                        width: 150px;
+                    }
+                    div.separator {
+                        height: 1em;
+                    }
+                    div.caption {
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                </style>
+      <!-- Stylecode CSS -->
+      <style type="text/css" media="all">
+                    .Bold{
+                        font-weight: bold;
+                    }
+                    .Italics{
+                        font-style: italic;
+                    }
+                    .Underline{
+                        text-decoration: underline;
+                    }
+                    .Emphasis{
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                    .Lrule{
+                        border-left-width: 2px;
+                        border-left-style: solid;
+                    }
+                    .Rrule{
+                        border-right-width: 2px;
+                        border-right-style: solid;
+                    }
+                    .Toprule{
+                        border-top-width: 2px;
+                        border-top-style: solid;
+                    }
+                    .Botrule{
+                        border-bottom-width: 2px;
+                        border-bottom-style: solid;
+                    }
+                    .Arabic{
+                        list-style: arabic;
+                    }
+                    .LittleRoman{
+                        list-style: lower-roman;
+                    }
+                    .BigRoman{
+                        list-style: upper-roman;
+                    }
+                    .LittleAlpha{
+                        list-style: lower-alpha;
+                    }
+                    .BigAlpha{
+                        list-style: upper-alpha
+                    }
+                    .Disc{
+                        list-style: disc;
+                    }
+                    .Circle{
+                        list-style: circle;
+                    }
+                    .Square{
+                        list-style: square;
+                    }</style>
+      <!-- Section Button Toggle CSS -->
+      <style type="text/css" media="screen">
+                    div.button.expandCollapse {
+                        float: left;
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                </style>
+      <!-- Revision Toggle CSS -->
+      <style type="text/css" media="print">
+                    button, 
+                    div.button,
+                    #buttontable {
+                        display: none;
+                    }
+                    div.section-content {
+                        display: block !important;
+                    }
+                    .print_visible {
+                        display: block;
+                        float: none;
+                        margin-right: 0;
+                    }
+                </style>
+      <!-- Table of Contents CSS -->
+      <style type="text/css" media="screen">
+                    #nav, #nav ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                    }
+                    
+                    #nav li {
+                        float: left;
+                        width: 300px;
+                    }
+                    #nav ul {
+                        position: absolute;
+                        width: 300px;
+                        left: -1000px;
+                    }
+                    #nav li ul li ul {
+                        display: none;
+                    }
+                    
+                    #nav li ul li:hover > ul {
+                        display: block;
+                        position: absolute;
+                        left: 50px !important;
+                    }
+                    #nav li ul li:hover > ul > li > a {
+                        border: 1px solid #585858;
+                    }
+                    
+                    #nav li:hover ul, #nav li.ie_does_hover ul {
+                        left: auto;
+                        background-position: 0 0;
+                    }
+                    
+                    #nav * a {
+                        display: block;
+                        padding: 2px 8px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 11px;
+                    }
+                    
+                    #nav ul * a {
+                        font-weight: bold;
+                        color: #585858;
+                        background-color: #f2f2f2;
+                        cursor: pointer;
+                    }
+                    
+                    #nav ul ul a:link, #nav ul ul a:visited {
+                        font-weight: normal;
+                        color: #585858;
+                        background-color: #f2f2f2;
+                        cursor: pointer;
+                    }
+                    
+                    #nav * li a:hover, #nav * li a:active,
+                    #nav * li * li a:hover, #nav * li * li a:active {
+                        /*font-weight: normal;*/
+                        color: white;
+                        background-color: #585858;
+                        cursor: pointer;
+                    }
+                    
+                    #nav * li {
+                        border-left: 2px solid white;
+                    }
+                    
+                    #nav * ul li {
+                        border-top: 2px solid white;
+                        border-left: 0;
+                    }
+                    
+                    /* IE only hack */
+                    * html ul li, * html ul ul li{
+                        border-bottom: 2px solid white;
+                    }
+                    
+                    * html ul ul li{
+                        border-top: 0;
+                    }
+                    /* End IE only hack */
+                </style>
+   </head>
+   <body>
+      <div id="documentheader">
+         <a id="_toc"> </a>
+         <h1 class="title">Протокол прижизненного патолого-анатомического исследования биопсийного (операционного) материала (May 26, 2020, 18:35 +0300)</h1>
+         <table class="header_table">
+            <tbody>
+               <tr>
+                  <td class="td_label">Patient</td>
+                  <td>
+                     <span class="span_value"> Коноплева Надежда Сергеевна</span>
+                     <span style="float: right; margin-left: 1em;">
+                        <span>
+                           <span class="span_label">Date of Birth: </span>
+                           <span class="span_value">March  31, 1981<span title="At document creation time"> (39yr)</span>
+                           </span>
+                        </span>
+                        <span class="span_label">Gender: </span>
+                        <span class="span_value">Женский</span>
+                     </span>
+                     <span style="float: right;" class="print_visible">
+                        <span class="span_label">Patient-ID: </span>
+                        <span class="span_value">
+                           <span>585233 (1.2.643.5.1.13.13.12.2.77.9638.100.1.1.10)</span>, <span>123-456-789 10 (1.2.643.100.3)</span>, <span title="ОВД 'Хорошевское' ОУФМС России по гор. Москве. Код подразделения: 123-456. Дата выдачи: 18.02.2005">1234 567890 (1.2.643.5.1.13.13.11.1011.1)</span>, <span>1 (1.2.643.5.1.13.13.11.1042)</span>
+                        </span>
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Encounter</td>
+                  <td>
+                     <span class="span_label">ID: </span>
+                     <span class="span_value">
+                        <span>908964234678 (1.2.643.5.1.13.13.12.2.77.9638.100.1.1.15)</span>, <span>7890\17 (1.2.643.5.1.13.13.12.2.77.9638.100.1.1.16)</span>
+                     </span>, <span class="span_label">Date/Time: </span>
+                     <span class="span_value">from May  13, 2020, 11:15 +0300 to May  25, 2020, 15:45 +0300</span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Documentation Of</td>
+                  <td>
+                     <span class="span_label">Date/Time: </span>
+                     <span class="span_value">from May  23, 2020, 18:01 +0300 to May  26, 2020, 18:35 +0300</span>, <span class="span_label">Primary Performer: </span>
+                     <span class="span_value"> Белов Алексей Иванович</span>, <span class="span_label">Supporting Performer: </span>
+                     <span class="span_value"> Добролюбова Валентина Николаевна</span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">In Fulfillment Of</td>
+                  <td>
+                     <span class="span_label">Order </span>
+                     <span class="span_label">ID: </span>
+                     <span class="span_value">
+                        <span>987964 (1.2.643.5.1.13.3.25.77.50.100.1.1.51)</span>
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Author</td>
+                  <td>
+                     <span class="span_value"> Белов Алексей Иванович</span>, <span class="span_value">врач-патологоанатом</span>, <span class="span_label">Organization: </span>
+                     <span class="span_value">ФГБУ «ГНЦК им. А.Н. Рыжих» Минздрава России</span>, <span class="span_label">Authored On: </span>
+                     <span class="span_value">May  26, 2020, 18:35 +0300</span>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="documentbody">
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_1"
+                   title="Регистрационные данные прижизненного патолого-анатомического исследования">РЕГИСТРАЦИОННЫЕ ДАННЫЕ ПРИЖИЗНЕННОГО ПАТОЛОГО-АНАТОМИЧЕСКОГО ИССЛЕДОВАНИЯ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption">Регистрационный номер случая</div>
+                        <span id="L16">17/48772-99</span>
+                     </p>
+                     <p>
+                        <div class="caption">Дата поступления материала</div>
+                        <span>23.05.2020 17:24</span>
+                     </p>
+                     <p>
+                        <div class="caption">Дата регистрации материала</div>
+                        <span>23.05.2020 18:01</span>
+                     </p>
+                     <p>
+                        <div class="caption">Диагноз заболевания (состояния) по данным направления</div>
+                        <span id="L09">Малигнизированная? ворсинчатая опухоль сигмовидной кишки до 6 см в диаметре</span>
+                     </p>
+                     <p>
+                        <div class="caption">Код МКБ-10</div>
+                        <span>C18.7</span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_2" title="Информация об исследованных материалах">ИНФОРМАЦИЯ ОБ ИССЛЕДОВАННЫХ МАТЕРИАЛАХ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <caption>Доставленные материалы для исследования</caption>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер флакона<br/>(пробы)</th>
+                              <th class="narr_th">Локализация</th>
+                              <th class="narr_th">Способ получения<br/>биоматериала</th>
+                              <th class="narr_th">Характер патологического<br/>процесса</th>
+                              <th class="narr_th">Количество<br/>объектов</th>
+                              <th class="narr_th">Дата забора<br/>биоматериала</th>
+                              <th class="narr_th">Материал доставлен<br/>в 10% формалине</th>
+                              <th class="narr_th">Материал<br/>загрязнен</th>
+                              <th class="narr_th">Упаковка<br/>сохрана</th>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>1</td>
+                              <td>
+                                 <span id="cut01">Фрагмент сигмовидной кишки с полипами и участком брюшины</span>
+                              </td>
+                              <td>Операционный материал</td>
+                              <td>
+                                 <span id="cut02">Полипы</span>
+                              </td>
+                              <td>1</td>
+                              <td>23.05.2020 15:11</td>
+                              <td>Нет</td>
+                              <td>Да</td>
+                              <td>Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>2</td>
+                              <td>Региональные лимфоузлы</td>
+                              <td>Операционная биопсия</td>
+                              <td>Внешне неизмененные</td>
+                              <td>4</td>
+                              <td>23.05.2020 15:42</td>
+                              <td>Да</td>
+                              <td>Нет</td>
+                              <td>Да</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <br/>
+                     <p>
+                        <div class="caption">Вырезка проводилась</div>
+                        <span>24.05.2020 08:31</span>
+                     </p>
+                     <p>
+                        <div class="caption">Макроскопическое описание</div>
+                        <span id="cut04">Фрагмент толстой кишки длиной 7 см с участком брыжейки шириной до 3 см. <br/>
+							На расстоянии по 3,5 см от обоих краев резекции - экзофитная опухоль диаметром 4 см на ножке длиной 1 см, серо-розового цвета, с крупно-бугристой поверхностью, мягкой эластичной консистенции с участками уплотнения. <br/>
+							У основания опухоли имеется поверхностный дефект слизистой размерами 3х2 см, с ровными краями, с серо-розовым дном. На расстоянии 1 см от экзофитной опухоли (2,5 см от одного из краев резекции) - полип размерами 2х1,2 см на ножке длиной 1,5 см, серо-розового цвет, с крупно-бугристой поверхностью, мягкой эластичной консистенции. <br/>
+							Слизистая кишки вне опухолей серо-розовая, умеренно складчатая. В брыжейке - без очаговых уплотнений.</span>
+                     </p>
+                     <p>
+                        <div class="caption">В проводку взято</div>
+                        <span>24 объекта</span>
+                     </p>
+                     <div style="font-weight:bold; ">
+                        <div class="caption">Номера гистологических блоков</div>
+                     </div>
+                     <ol>
+                        <li>Края резекции: [48772-73];</li>
+                        <li>Брыжейка: [48788-91], [48792-95];</li>
+                        <li>Стенка кишки: [48786], [48787];</li>
+                        <li>Опухоль: [48776], [48777], [48778], [48779], [48780], [48781], [48782], [48783], [48784], [48785];</li>
+                        <li>Полип: [48774], [48775]</li>
+                        <li>Регионарные лимфоузлы: [48796-99]</li>
+                     </ol>
+                     <div style="font-weight:bold; ">
+                        <div class="caption">Назначенные окраски (реакции, определения)</div>
+                     </div>
+                     <ul>
+                        <li>
+                           <span>гематоксилин-эозин</span>
+                        </li>
+                        <li>
+                           <span>окраска по Ван-Гизону</span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_3"
+                   title="Результаты прижизненного патолого-анатомического исследования">РЕЗУЛЬТАТЫ ПРИЖИЗНЕННОГО ПАТОЛОГО-АНАТОМИЧЕСКОГО ИССЛЕДОВАНИЯ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption">Микроскопическое описание</div>
+                        <span id="micro01">В экзофитной опухоли - клетки высокодифференцированной аденокарциномы с множественными митозами и крупным участком распада опухоли.<br/>
+							В основании экзофитной опухоли определяются неравномерно выраженный фиброз и проростание опухолевых клеток в подслизистый слой, а также группа кровеносных сосудов неоангиогенеза<br/>
+							В меньшем полипе - тубуло-ворсинчатая аденома с тяжелой дисплазией эпителия.  <br/>
+							Края резекции участка кишки интактны. Исследованные региональные лимфоузлы (в количестве 4) обычного строения.</span>
+                     </p>
+                     <p>
+                        <div class="caption">Заключение</div>
+                        <span id="concl01">Высокодифференцированная аденокарцинома сигмовидной кишки с прорастанием за пределы полипа, вероятно, являющимся первичным очагом. (<span id="pat01">МКБ-О: M-8140/3</span>)<br/>
+							Аденома сигмовидной кишки с тяжелой (<span id="pat02">high grade R3</span>) дисплазией эпителия.</span>
+                     </p>
+                     <div style="font-weight:bold; ">
+                        <div class="caption">Коды МКБ-10</div>
+                     </div>
+                     <ol>
+                        <li>
+                           <span>C18.7</span>
+                        </li>
+                        <li>
+                           <span>D12.5</span>
+                        </li>
+                     </ol>
+                     <p>
+                        <div class="caption">Категория сложности исследования</div>
+                        <span>Четвертая (IV)</span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_4" title="Прочие рекомендации">КОММЕНТАРИИ К ЗАКЛЮЧЕНИЮ И РЕКОМЕНДАЦИИ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-body">
+                  <div>Молекулярно-генетические исследование мутаций KRAS в клетках опухоли</div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_5" title="Оказанные услуги">МЕДИЦИНСКИЕ УСЛУГИ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="70%">
+                        <col width="10%"/>
+                        <col width="70%"/>
+                        <col width="10%"/>
+                        <col width="10%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата</th>
+                              <th class="narr_th">Услуга</th>
+                              <th class="narr_th">Код</th>
+                              <th class="narr_th">Количество</th>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>26.05.2020</td>
+                              <td>Морфологическое исследование препарата тканей ободочной и сигмовидной кишки </td>
+                              <td>A08.19.002</td>
+                              <td>24</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>26.05.2020</td>
+                              <td>Гистохимическое исследование препарата тканей сигмовидной кишки</td>
+                              <td>A08.19.002.001</td>
+                              <td>10</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_6" title="Диагнозы">Диагнозы</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption">Признак подозрения на злокачественнное новообразование</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="50%"/>
+                        <col width="50%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие подозрения на злокачественнное новообразование</th>
+                              <td>Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Заболевание (состояние) - злокачественное новообразование, на которое имеется подозрение</th>
+                              <td id="VREFERENCE_25024">C16.1 Злокачественное новообразование дна желудка</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата установления признака подозрения на злокачественное новообразование</th>
+                              <td>25.01.2021</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption">Диагноз</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="50%"/>
+                        <col width="50%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата установления диагноза (для нозологической едицины)</th>
+                              <td>10.08.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Степень обоснованности диагноза</th>
+                              <td id="VREFERENCE_25000">Предварительный диагноз</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Вид нозологической единицы диагноза</th>
+                              <td id="VREFERENCE_25001">Основное заболевание</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Заболевание (состояние) по МКБ-10</th>
+                              <td id="VREFERENCE_25002">C16.1 Злокачественное новообразование дна желудка</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Клинический диагноз</th>
+                              <td>Описание...Клинический диагноз</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Характер заболевания</th>
+                              <td id="VREFERENCE_25003">Острое</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Вид первично-множественной опухоли</th>
+                              <td id="VREFERENCE_25004">нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">TNM. Описание категорий: Т</th>
+                              <td id="VREFERENCE_25005">T4a - Опухоль прорастает через висцеральную брюшину</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">TNM. Описание категорий: N</th>
+                              <td id="VREFERENCE_25006">N0 - Нет метастазов в регионарных лимфатических узлах</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">TNM. Описание категорий: M</th>
+                              <td id="VREFERENCE_25007">M1 - Есть отдалённый метастаз или диссеминация опухоли по брюшине </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">TNM. Описание категорий: G</th>
+                              <td id="VREFERENCE_25008">G1 - Высокодифференцированная опухоль. Слизистая (муцинозная) карцинома низкой степени злокачественности</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">TNM. Стадирование злокачественных опухолей</th>
+                              <td id="VREFERENCE_25009">IVB</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Сторона поражения</th>
+                              <td id="VREFERENCE_25010">неприменимо</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Морфологический тип опухоли </th>
+                              <td id="VREFERENCE_25011">M-8000/0 Новообразование, доброкачественное</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Топография опухоли</th>
+                              <td id="VREFERENCE_25012">C15.0 Шейный отдел пищевода</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Стадия опухолевого процесса</th>
+                              <td id="VREFERENCE_25013">Ia</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Локализация метастазов</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_25014">Желудок</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Локализация отдаленных метастазов (при IV стадии заболевания)</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_25015">неизвестна</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Метод подтверждения диагноза</th>
+                              <td id="VREFERENCE_25016">морфологический</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Порядковый номер данной опухоли у данного больного</th>
+                              <td id="VREFERENCE_25017">1</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Признак основной опухоли</th>
+                              <td id="VREFERENCE_25018">Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Клиническая группа</th>
+                              <td id="VREFERENCE_25019">IIа</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Обстоятельства выявления опухоли</th>
+                              <td id="VREFERENCE_25020">активно, при профосмотре</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Фаза течения хронического миелолейкоза</th>
+                              <td id="VREFERENCE_25021">Хроническая фаза</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Форма бластного криза</th>
+                              <td id="VREFERENCE_25022">Миелобластная</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Возраст пациента на дату диагноза</th>
+                              <td id="VREFERENCE_25023">35</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Впервые в жизни установленный диагноз</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span>Дата установления диагноза впервые в жизни - 25.01.2021</span>
+                                       <br/>
+                                    </li>
+                                    <li>
+                                       <span id="VREFERENCE_25025">Достоверность подтверждения даты установления диагноза впервые в жизни - Со слов пациента</span>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_7" title="vimisMedicalCard">Данные о медицинских картах пациента</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption" id="VREFERENCE_100">Медицинская карта стационарного больного</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер</th>
+                              <td id="VREFERENCE_101">КВ-567/3.4</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата создания</th>
+                              <td id="VREFERENCE_102">25.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Группа крови</th>
+                              <td id="VREFERENCE_103">0(I)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Резус-фактор</th>
+                              <td id="VREFERENCE_104">Rh(D)+, положительный резус-фактор</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption" id="VREFERENCE_110">Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер</th>
+                              <td id="VREFERENCE_111">КВ-567/3.4</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата создания</th>
+                              <td id="VREFERENCE_112">25.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Группа крови</th>
+                              <td id="VREFERENCE_113">0(I)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Резус-фактор</th>
+                              <td id="VREFERENCE_114">Rh(D)+, положительный резус-фактор</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

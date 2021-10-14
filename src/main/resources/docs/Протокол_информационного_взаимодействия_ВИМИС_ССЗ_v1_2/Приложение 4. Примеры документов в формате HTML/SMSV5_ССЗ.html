@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do NOT edit this HTML directly: it was generated via an XSLT transformation from a CDA Release 2 or 3 XML document. -->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Осмотр (консультация) пациента (September 27, 2020, 16:00 +0300)</title>
+      <!-- General CSS -->
+      <style type="text/css" media="all">
+                    *{
+                        font-family: Verdana, Tahoma, sans-serif;
+                        font-size: 9pt;
+                    }
+                    body{
+                        padding: 2px;
+                        color: #003366;
+                        background-color: white;
+                        font-size: 9pt;
+                    }
+                    #documentheader,
+                    #documentbody,
+                    #documentfooter{
+                        width: 100%;
+                    }
+                    #documentheader{
+                        border-bottom: 1px solid grey;
+                        margin-bottom: 1em;
+                    }
+                    #documentfooter{
+                        border-top: 1px solid grey;
+                        margin-top: 1em;
+                    }
+                    a{
+                        color: #003366;
+                        background-color: white;
+                    }
+                    h1{
+                        font-size: 12pt;
+                        font-weight: bold;
+                    }
+                    h1.title{
+                        text-align: center;
+                    }
+                    h2{
+                        font-size: 11pt;
+                        font-weight: bold;
+                    }
+                    h3{
+                        font-size: 10pt;
+                        font-weight: bold;
+                    }
+                    h4{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    h5{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    h6{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    hr{
+                        width: 100%;
+                    }
+                    span {
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        display: inline; /* IE8 hack: would go to next line otherwise */
+                    }
+                    table{
+                        line-height: 10pt;
+                        width: 100%;
+                    }
+                    thead tr, th{
+                        background-color: LightGrey;
+                    }
+                    tbody tr{
+                        background-color: #f2f2f2;
+                    }
+                    td{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        padding: 0.1cm 0.2cm;
+                        vertical-align: top;
+                    }
+                    .table_simple{
+                        width: auto;
+                        color: inherit;
+                        background-color: inherit;
+                    }
+                    .table_simple td{
+                        padding: 0;
+                    }
+                    .table_simple td.td_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: inherit;
+                        font-style: italic;
+                        padding-right: 0.2cm;
+                    }
+                    .header_table{
+                        border: 1pt solid #00008b;
+                    }
+                    .narr_table{
+                        width: 100%;
+                        margin: 0.3em 0;
+                    }
+                    .narr_tr{
+                        //background-color: #ffffcc;
+                    }
+                    .narr_th{
+                        background-color: LightGrey;
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                    }
+                    .narr_footnote{
+                        font-size: 8pt;
+                        font-style: italic;
+                    }
+                    .td_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: bold;
+                        background-color: LightGrey;
+                    }
+                    .td_label_width{
+                        width: 20%;
+                    }
+                    .span_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: bold;
+                    }
+                    .span_value{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: normal;
+                    }
+                    .revision_insert{
+                        text-decoration: underline overline;
+                    }
+                    .revision_insert_final{
+                    }
+                    .revision_delete{
+                        text-decoration: line-through;
+                    }
+                    .revision_delete_final{
+                        display: none;
+                    }
+                    .span_button {
+                        display: table-cell;
+                        cursor: pointer;
+                        border: 2pt inset #585858;
+                        border-radius: 15px;
+                        -moz-border-radius: 15px;
+                        padding: 0.1cm 0.2cm;
+                        background-color: #f2f2f2;
+                        font-weight: bold;
+                        vertical-align: baseline;
+                        width: 150px;
+                    }
+                    div.separator {
+                        height: 1em;
+                    }
+                    div.caption {
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                </style>
+      <!-- Stylecode CSS -->
+      <style type="text/css" media="all">
+                    .Bold{
+                        font-weight: bold;
+                    }
+                    .Italics{
+                        font-style: italic;
+                    }
+                    .Underline{
+                        text-decoration: underline;
+                    }
+                    .Emphasis{
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                    .Lrule{
+                        border-left-width: 2px;
+                        border-left-style: solid;
+                    }
+                    .Rrule{
+                        border-right-width: 2px;
+                        border-right-style: solid;
+                    }
+                    .Toprule{
+                        border-top-width: 2px;
+                        border-top-style: solid;
+                    }
+                    .Botrule{
+                        border-bottom-width: 2px;
+                        border-bottom-style: solid;
+                    }
+                    .Arabic{
+                        list-style: arabic;
+                    }
+                    .LittleRoman{
+                        list-style: lower-roman;
+                    }
+                    .BigRoman{
+                        list-style: upper-roman;
+                    }
+                    .LittleAlpha{
+                        list-style: lower-alpha;
+                    }
+                    .BigAlpha{
+                        list-style: upper-alpha
+                    }
+                    .Disc{
+                        list-style: disc;
+                    }
+                    .Circle{
+                        list-style: circle;
+                    }
+                    .Square{
+                        list-style: square;
+                    }</style>
+      <!-- Section Button Toggle CSS -->
+      <style type="text/css" media="screen">
+                    div.button.expandCollapse {
+                        float: left;
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                </style>
+      <!-- Revision Toggle CSS -->
+      <style type="text/css" media="print">
+                    button, 
+                    div.button,
+                    #buttontable {
+                        display: none;
+                    }
+                    div.section-content {
+                        display: block !important;
+                    }
+                    .print_visible {
+                        display: block;
+                        float: none;
+                        margin-right: 0;
+                    }
+                </style>
+      <!-- Table of Contents CSS -->
+      <style type="text/css" media="screen">
+                    #nav, #nav ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                    }
+                    
+                    #nav li {
+                        float: left;
+                        width: 300px;
+                    }
+                    #nav ul {
+                        position: absolute;
+                        width: 300px;
+                        left: -1000px;
+                    }
+                    #nav li ul li ul {
+                        display: none;
+                    }
+                    
+                    #nav li ul li:hover > ul {
+                        display: block;
+                        position: absolute;
+                        left: 50px !important;
+                    }
+                    #nav li ul li:hover > ul > li > a {
+                        border: 1px solid #585858;
+                    }
+                    
+                    #nav li:hover ul, #nav li.ie_does_hover ul {
+                        left: auto;
+                        background-position: 0 0;
+                    }
+                    
+                    #nav * a {
+                        display: block;
+                        padding: 2px 8px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 11px;
+                    }
+                    
+                    #nav ul * a {
+                        font-weight: bold;
+                        color: #585858;
+                        background-color: #f2f2f2;
+                        cursor: pointer;
+                    }
+                    
+                    #nav ul ul a:link, #nav ul ul a:visited {
+                        font-weight: normal;
+                        color: #585858;
+                        background-color: #f2f2f2;
+                        cursor: pointer;
+                    }
+                    
+                    #nav * li a:hover, #nav * li a:active,
+                    #nav * li * li a:hover, #nav * li * li a:active {
+                        /*font-weight: normal;*/
+                        color: white;
+                        background-color: #585858;
+                        cursor: pointer;
+                    }
+                    
+                    #nav * li {
+                        border-left: 2px solid white;
+                    }
+                    
+                    #nav * ul li {
+                        border-top: 2px solid white;
+                        border-left: 0;
+                    }
+                    
+                    /* IE only hack */
+                    * html ul li, * html ul ul li{
+                        border-bottom: 2px solid white;
+                    }
+                    
+                    * html ul ul li{
+                        border-top: 0;
+                    }
+                    /* End IE only hack */
+                </style>
+   </head>
+   <body>
+      <div id="documentheader">
+         <a id="_toc"> </a>
+         <h1 class="title">Осмотр (консультация) пациента (September 27, 2020, 16:00 +0300)</h1>
+         <table class="header_table">
+            <tbody>
+               <tr>
+                  <td class="td_label">Patient</td>
+                  <td>
+                     <span class="span_value"> Сельченков Михаил Владимирович</span>
+                     <span style="float: right; margin-left: 1em;">
+                        <span>
+                           <span class="span_label">Date of Birth: </span>
+                           <span class="span_value">February  17, 1980<span title="At document creation time"> (40yr)</span>
+                           </span>
+                        </span>
+                        <span class="span_label">Gender: </span>
+                        <span class="span_value">Мужской</span>
+                     </span>
+                     <span style="float: right;" class="print_visible">
+                        <span class="span_label">Patient-ID: </span>
+                        <span class="span_value">
+                           <span>735486 (1.2.643.5.1.13.13.12.2.77.8481.100.1.1.10)</span>, <span>254-636-254 26 (1.2.643.100.3)</span>, <span title="ОВД &#34;Твардовское&#34; ОУФМС России по гор. Москве. Код подразделения: 770-095. Дата выдачи: 18.02.2005">4509 395643 (1.2.643.5.1.13.13.11.1011.1)</span>
+                        </span>
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Encounter</td>
+                  <td>
+                     <span class="span_label">ID: </span>
+                     <span class="span_value">
+                        <span>5469-16 (1.2.643.5.1.13.13.12.2.77.8481.100.1.1.15)</span>
+                     </span>, <span class="span_label">Date/Time: </span>
+                     <span class="span_value">from September  27, 2020, 15:30 +0300</span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Documentation Of</td>
+                  <td>
+                     <span class="span_value">Консультация кардиолога</span>, <span class="span_label">Date/Time: </span>
+                     <span class="span_value">September  27, 2020 15:30 +0300 - 16:00 +0300</span>, <span class="span_label">Supporting Performer: </span>
+                     <span class="span_value"> Иванова Татьяна Михайловна</span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">In Fulfillment Of</td>
+                  <td>
+                     <span class="span_label">Order </span>
+                     <span class="span_label">ID: </span>
+                     <span class="span_value">
+                        <span>659481548 (1.2.643.5.1.13.3.25.77.50.100.1.1.59)</span>
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Author</td>
+                  <td>
+                     <span class="span_value"> Смирнов Александр Игоревич</span>, <span class="span_value">врач-кардиолог</span>, <span class="span_label">Organization: </span>
+                     <span class="span_value">Городская клиническая больница № 15 Департамента здравоохранения города Москвы"</span>, <span class="span_label">Authored On: </span>
+                     <span class="span_value">September  27, 2020, 16:00 +0300</span>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="documentbody">
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_1" title="Социальный анамнез">СОЦИАЛЬНЫЙ АНАМНЕЗ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <div style="font-weight:bold; ">
+                        <div class="caption">Занятость</div>
+                     </div>
+                     <ul>
+                        <li>
+                           <span id="socanam6">Работает</span> в «ООО Организация» в должности «Менеджер»</li>
+                     </ul>
+                     <div style="font-weight:bold; ">
+                        <div class="caption">Льготная категория</div>
+                     </div>
+                     <ul id="priveleges">
+                        <li>
+                           <span id="socanam1">Почетные доноры</span> (до 07.07.2020)</li>
+                        <li>
+                           <span id="socanam2">Сотрудники подразделений особого риска</span> (до 12.12.2020)</li>
+                     </ul>
+                     <div style="font-weight:bold; ">
+                        <div class="caption">Инвалидность</div>
+                     </div>
+                     <ul id="invalid">
+                        <li>
+                           <span id="socanam3">1 группа</span> (установлена: Впервые)</li>
+                        <li>
+                           <span id="socanam31">Причина:</span> 1 группа Атеросклеротическая болезнь сердца (I25.1).</li>
+                     </ul>
+                     <div style="font-weight:bold; ">
+                        <div class="caption">Социальные факторы и профессиональные вредности</div>
+                     </div>
+                     <ul>
+                        <li>
+                           <span id="socanam4">Нарушение режима сна и бодрствования</span>
+                        </li>
+                        <li>
+                           <span id="socanam5">Тяжелый и напряженный физический труд</span>
+                        </li>
+                     </ul>
+                     <div style="font-weight:bold; ">
+                        <div class="caption">Зависимости</div>
+                     </div>
+                     <ul>
+                        <li>
+                           <span id="addic1">Курение</span>
+                        </li>
+                        <li>
+                           <span id="addic2">Телевизионная зависимость</span>
+                        </li>
+                        <li>
+                           <span id="addic3">Интернет-зависимость</span>
+                        </li>
+                     </ul>
+                     <p>
+                        <div class="caption">Эпидемиологический анамнез</div>Контактов с инфекционными больными за время обращения не было.<br/>
+							В эндемичных районах тех или иных инфекций, загрязнённых радиацией и химикатами территориях, за время обращения не находился.
+						</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_2" title="Сведения о документе">СВЕДЕНИЯ О КОНСУЛЬТАЦИИ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Обращение</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_1">Первичное</span>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Место проведения</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_2">Стационар</span>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Дополнительные манипуляции</span>
+                              </td>
+                              <td>
+                                 <span id="DOC_3">Измерение АД</span>, <span id="DOC_4">Измерение ЧСС</span>, <span id="DOC_5">Измерение ЧД</span>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_3" title="Витальные параметры">ВИТАЛЬНЫЕ ПАРАМЕТРЫ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Масса тела</span>
+                              </td>
+                              <td>
+                                 <span id="VIT_1">75</span> кг
+									</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Длина тела</span>
+                              </td>
+                              <td>
+                                 <span id="VIT_2">160</span> см
+									</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Артериальное давление</span>
+                              </td>
+                              <td>
+                                 <span id="VIT_3">135</span> / <span id="VIT_4">85</span> мм.рт.ст.
+									</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Частота сердечных сокращений</span>
+                              </td>
+                              <td>
+                                 <span id="VIT_5">77</span> / мин
+									</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Частота дыхания</span>
+                              </td>
+                              <td>
+                                 <span id="VIT_6">18</span> / мин
+									</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>
+                                 <span>Сатурация</span>
+                              </td>
+                              <td>
+                                 <span id="VIT_7">90</span> %
+									</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_4"
+                   title="Дополнительные данные приема (осмотра, консультации)">ДОПОЛНИТЕЛЬНЫЕ СВЕДЕНИЯ О КОНСУЛЬТАЦИИ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Услуга осмотра (консультации)</th>
+                              <td id="VREFERENCE_601">B01.015.001 Прием (осмотр, консультация) врача-кардиолога первичный</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Обстоятельства посещения</th>
+                              <td id="VREFERENCE_602">по заболеваниям</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Жалобы</th>
+                              <td id="VREFERENCE_605">На боль за грудиной с иррадиацией в нижнюю челюсть</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Анамнез жизни</th>
+                              <td id="VREFERENCE_606">Перенес ОНМК месяц назад (точную дату назвать не может) с правостороннего гемипареза и нарушением речи. 
+										В течение 10 лет регистрируется фибрилляция предсердий пароксизмальная форма. 
+										Оперирован по поводу перелома левой голени в 2009 году
+									</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Анамнез заболевания</th>
+                              <td id="VREFERENCE_607">Со слов пациента, вышеописанные жалобы появились в 05:00 27.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Получаемое пациентом лечение</th>
+                              <td id="VREFERENCE_608">Кардиомагнил 75 мг, амлодипин 5 мг</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Объективный статус</th>
+                              <td id="VREFERENCE_609">рост: 168см. вес: 70кг. Индекс массы тела: 25.
+										Состояние пациента: средней тяжести; стабильное.
+										Кожные покровы: цвет - обычной окраски; обычной влажности;  Подкожно-жировой слой развит умеренно; Лимфоузлы: пальпаторно не увеличены, безболезненны. Костно- мышечная система без видимой патологии. Щитовидная железа: визуально не
+										увеличена. Аппетит: хороший. Мочеиспускание: свободное; безболезненное. Почки: не пальпируются; Дизурия: нет;
+									</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Группа состояния здоровья пациента</th>
+                              <td id="VREFERENCE_115">I группа</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_5" title="Прием (осмотр, консультация) врача-невролога">ДОПОЛНИТЕЛЬНЫЕ СВЕДЕНИЯ ОБ ОСМОТРЕ НЕВРОЛОГА</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption">Данные осмотра невролога</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="30%"/>
+                        <col width="70%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Оценка уровня сознания по ШКГ (интерпретация)</th>
+                              <td id="VREFERENCE_7200">Сознание ясное (15 баллов)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Сознание</th>
+                              <td id="VREFERENCE_7201">Ясное</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Общемозговые симптомы</th>
+                              <td id="VREFERENCE_7202">Головная боль, головокружение</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Высшая корковая деятельность и психоэмоциональная сфера</th>
+                              <td id="VREFERENCE_7203">Память не нарушена
+										Критика сохранена
+										Поведение адекватное
+										Ориентация сохранена</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Менингеальный синдром</th>
+                              <td id="VREFERENCE_7204">Ригидности затылочных мышц не выявлено
+										Проба Кернига отрицательная
+										Симптом Брудзинского (верхний, средний, нижний) отрицательные</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Речь</th>
+                              <td id="VREFERENCE_7205">моторная афазия</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Черепные нервы</th>
+                              <td id="VREFERENCE_7206">I (обонятельный) нерв: функция не нарушена.
+										II (зрительный) нерв: функция не нарушена.
+										III, IV, VI (глазодвигательный, блоковый, отводящий) нервы: функция не нарушена. 
+										V (тройничный) нерв: функция не нарушена. 
+										VII (лицевой) нерв: сглажена правая носогубная складка.
+										VIII (вестибулокохлеарный нерв) нерв: функция не нарушена. 
+										IX, X (языкоглоточный, блуждающий) нервы: функция не нарушена.
+										XI (добавочный) нерв: девиация язвка влево. 
+										XII (подъязычный) нерв: функция не нарушена.</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Чувствительность</th>
+                              <td id="VREFERENCE_7207">не нарушена</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Спинальное поражение</th>
+                              <td id="VREFERENCE_7208">двигательных нарушений нет
+										чувствительные нарушения выявлены в сегментах С3-С6</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Полиневритическое поражение</th>
+                              <td id="VREFERENCE_7209">нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Двигательная система</th>
+                              <td id="VREFERENCE_7210">Объем движений сохранен
+										Мышечная сила не нарушена
+										Мышечный тонус повышен
+										Сухожильные рефлексы сохранены
+										Патологические рефлексы не выявлены
+										Трофика сохранена</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Координационная система</th>
+                              <td id="VREFERENCE_7211">Ходьба не нарушена
+										Тандемная ходьба не нарушена
+										Пальце-носовая проба отрицательная
+										Пяточно-коленная проба: выполняет удовлетворительно
+										Проба Ромберга: выполняет удовлетворительно
+										Асинергия Бабинского: нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Экстрапирамидная система</th>
+                              <td id="VREFERENCE_7212">Тремор не выявлен
+										Гипокинезии нет
+										Гиперкинезы не выявлены
+										Постуральная неустоучивость нет
+										Тонус (ригидность) нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Вегетативная нервная система</th>
+                              <td id="VREFERENCE_7213">Ортостатическая проба без особенностей
+										Проба Даньини-Ашнера отрицательная
+										Гипергидроз/акрогипергидроз не выявлен</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Тазовые функции</th>
+                              <td id="VREFERENCE_7214">не нарушены</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Вертебральный синдром</th>
+                              <td id="VREFERENCE_7215">Визуальный осмотр без особенностей
+										Объем движений сохранен
+										Пальпация безболезненная
+										Определение симптомов натяжения: не обнаружены</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption">Данные осмотра невролога при остром нарушения мозгового кровообращения (ОНМК)</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="30%"/>
+                        <col width="70%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Срок возникновения первых клинических симптомов ОНМК (ПКС)</th>
+                              <td id="VREFERENCE_7216">Более 24 часов</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Оценка тяжести инсульта NIHSS (интерпретация)</th>
+                              <td id="VREFERENCE_7217">Легкая степень тяжести (1–4 балла)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Определение этапа реабилитации по ШРМ (интерпретация)</th>
+                              <td id="VREFERENCE_7218">Медицинская реабилитация осуществляется в стационарных условиях (4–6 баллов)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Определение уровня инвалидизации пациента (исхода) по модифицированной шкале Рэнкина (интерпретация)</th>
+                              <td id="VREFERENCE_7219">Симптомы отсутствуют</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Описание расположения внутримозговой гематомы с определением ее размеров</th>
+                              <td id="VREFERENCE_7220">Супратенториальное расположение, объемом 30 см3 или более</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Оценка тяжести субарахноидального кровоизлияния по шкале Ханта-Хесс (Hunt-Hess)</th>
+                              <td id="VREFERENCE_7221">I степень тяжести</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_6" title="Прием (осмотр, консультация) врача-кардиолога">ДОПОЛНИТЕЛЬНЫЕ СВЕДЕНИЯ ОБ ОСМОТРЕ КАРДИОЛОГА</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption">Данные осмотра кардиолога</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="30%"/>
+                        <col width="70%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th"> Оценка сознания</th>
+                              <td id="VREFERENCE_7300">Ясное</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие отеков</th>
+                              <td id="VREFERENCE_7301">Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Локализация отеков</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7302">Анасарка</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Оценка кожных покровов</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7303">Обычные (нормальные)</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Оценка Дыхания</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7304">Везикулярное</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Описание тонов сердца</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7305">Ритмичные</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие шума сердца</th>
+                              <td id="VREFERENCE_7306">Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Описание шума сердца</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7307">Трение перикарда</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Описание пульса</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7308">Ритмичный</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Описание языка</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7309">Обложен</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Описание живота</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7310">безболезненный</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Описание печени</th>
+                              <td id="VREFERENCE_7311">Не увеличена</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Характеристика пульсации на артериях нижних конечностей</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7312">Ослаблена</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Локализация нарушения пульсации на артериях нижних конечностей</th>
+                              <td id="VREFERENCE_7313">пульсация артерии на правой стопе не определяется</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption">Данные осмотра кардиолога при остром коронарном синдроме (ОКС)</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="30%"/>
+                        <col width="70%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Классификация ИМ на основании наличия ИМ в анамнезе</th>
+                              <td id="VREFERENCE_7314">Повторный инфаркт миокарда (развившийся через 28 суток после предшествующего инфаркта миокарда)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие болевого синдрома</th>
+                              <td id="VREFERENCE_7315">Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Описание характера болевого синдрома ОКС</th>
+                              <td id="VREFERENCE_7316">боли в грудной клетке с иррадиацией в нижнюю челюсть</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие одышки</th>
+                              <td id="VREFERENCE_7317">Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие хрипов</th>
+                              <td id="VREFERENCE_7318">Нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Характеристика хрипов в легких</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_7319">Влажные мелкопузырчатые</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие набухания шейных вен</th>
+                              <td id="VREFERENCE_7320">Нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Врачебное описание ЭКГ</th>
+                              <td id="VREFERENCE_7321">синусовый ритм, признаки нарушения кровоснабжения передне-перегородочной области, желудочковая экстрасистолия</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие кардиогенного шока</th>
+                              <td id="VREFERENCE_7322">Нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие повышенного уровня маркеров некроза миокарда</th>
+                              <td id="VREFERENCE_7323">Нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие операции аортокоронарного шунтирования в анамнезе</th>
+                              <td id="VREFERENCE_7324">Нет</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Наличие операции чрезкожного коронарного шунтирования в анамнезе</th>
+                              <td id="VREFERENCE_7325">Нет</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_7" title="Диагнозы">ДИАГНОЗЫ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption">Диагноз: I63.0 Инфаркт мозга, вызванный тромбозом прецеребральных артерий</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="50%"/>
+                        <col width="50%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Степень обоснованности диагноза</th>
+                              <td id="VREFERENCE_9300">Предварительный диагноз</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Вид нозологической единицы диагноза</th>
+                              <td id="VREFERENCE_9301">Основное заболевание</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата установления диагноза</th>
+                              <td>27.08.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Заболевание (состояние) по МКБ-10</th>
+                              <td id="VREFERENCE_9302">I63.0 Инфаркт мозга, вызванный тромбозом прецеребральных артерий</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Характер заболевания</th>
+                              <td id="VREFERENCE_9303">Острое</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Клиническое описание диагноза</th>
+                              <td id="VREFERENCE_9304">Клиническое описание диагноза</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th" colspan="2">Уточнение диагноза при остром нарушении мозгового кровообращения (ОНМК)</th>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата возникновения ОНМК</th>
+                              <td>27.08.2020 16:00</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Кратность ОНМК</th>
+                              <td id="VREFERENCE_9305">Повторное ОНМК</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Пострадавшие бассейны и артерии</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9306">Средняя мозговая артерия, сегмент M1</span>
+                                       <br/>
+                                       <span id="VREFERENCE_9307">Большая передняя радикуломедулярная артерия</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Локализация гематомы при ОНМК</th>
+                              <td id="VREFERENCE_9309">Ствол головного мозга</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Подтип ОНМК по ишемическому типу</th>
+                              <td id="VREFERENCE_9310">Кардиоэмболический инсульт</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Краткая характеристика клинической картины - проявления заболевания, перечисляются в виде симптомов по убыванию клинической значимости с указанием степени нарушения</th>
+                              <td id="VREFERENCE_9311">Правосторонний гемипарез. Моторная афазия.</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Период ОНМК</th>
+                              <td id="VREFERENCE_9312">Острый период</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Уточнение состояния сознания, если есть нарушение при ОНМК</th>
+                              <td id="VREFERENCE_9313">Умеренное оглушение (13–14 баллов)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Непосредственные причины, которые вызвали ОНМК</th>
+                              <td id="VREFERENCE_9314">Нарушение ритма</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Выполненное лечение у пациента с ОНМК</th>
+                              <td id="VREFERENCE_9315">ВСТЭ от 25.08.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Оценка восстановления перфузии при ОНМК по ишемическому типу (mTICI)</th>
+                              <td id="VREFERENCE_9316">2b</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Осложнения лечения у пациента с ОНМК (общие)</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9317">Пневмония</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption">Диагноз: I21.0 Острый трансмуральный инфаркт передней стенки миокарда</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="50%"/>
+                        <col width="50%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Степень обоснованности диагноза</th>
+                              <td id="VREFERENCE_9400">Предварительный диагноз</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Вид нозологической единицы диагноза</th>
+                              <td id="VREFERENCE_9401">Основное заболевание</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата установления диагноза</th>
+                              <td>27.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Заболевание (состояние) по МКБ-10</th>
+                              <td id="VREFERENCE_9402">I21.0 Острый трансмуральный инфаркт передней стенки миокарда</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Характер заболевания</th>
+                              <td id="VREFERENCE_9403">Острое</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Клиническое описание диагноза</th>
+                              <td id="VREFERENCE_9404">Клиническое описание диагноза</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th" colspan="2">Уточнение диагноза при остром коронарном синдроме (ОКС)</th>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата и время возникновения симптомов ОКС</th>
+                              <td>16:00 25.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Форма ОКС</th>
+                              <td id="VREFERENCE_9405">ОКС с подъемом сегмента ST</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Категория риска неблагоприятного исхода</th>
+                              <td id="VREFERENCE_9406">Умеренный (промежуточный) риск</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Пострадавшая коронарная артерия при ОКС</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9407">Правая коронарная артерия средний сегмент</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Класс острой сердечной недостаточности</th>
+                              <td id="VREFERENCE_9408">Killip II</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Риск развития неблагоприятного исхода при ОКС без подъема по шкале GRACE</th>
+                              <td id="VREFERENCE_9409">140</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Классификация инфаркта миокарда на основании локализации очага некроза</th>
+                              <td id="VREFERENCE_9410">Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Локализация зоны некроза</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9411">Передняя стенка левого желудочка</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Классификация ИМ на основании последующих изменений ЭКГ</th>
+                              <td id="VREFERENCE_9412">Инфаркт миокарда с формированием патологических зубцов Q</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Классификация ИМ на основании наличия ИМ в анамнезе</th>
+                              <td id="VREFERENCE_9413">Повторный инфаркт миокарда (развившийся через 28 суток после предшествующего инфаркта миокарда)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Тип инфаркта миокарда</th>
+                              <td id="VREFERENCE_9414">Тип 4с</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Стадия предшествующей хронической сердечной недостаточности</th>
+                              <td id="VREFERENCE_9415">IIА</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Функциональный класс предшествующей хронической сердечной недостаточности</th>
+                              <td id="VREFERENCE_9416">II ФК</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Выполненное хирургическое лечение при ОКС</th>
+                              <td>
+                                 <ul>
+                                    <li>
+												27.09.2020 <span id="VREFERENCE_9417">Выполненное хирургическое лечение при ОКС</span>
+                                       <br/>
+												Баллонная ангиопластика со стентированием передней коронарной артерии <br/>
+												27.09.2020 <span id="VREFERENCE_9418">Выполненное хирургическое лечение при ОКС</span>
+                                       <br/>
+												Имплантация временного электрокардиостимулятора<br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Осложнения лечения у пациента с ОКС</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9419">Диссекция стенки сосуда</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_8" title="Иммунизация">ВАКЦИНАЦИЯ И ИММУНИЗАЦИЯ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="5%"/>
+                        <col width="50%"/>
+                        <col width="5%"/>
+                        <col width="40%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата</th>
+                              <th class="narr_th">Препарат</th>
+                              <th class="narr_th">Комментарий</th>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>20.05.2017</td>
+                              <td>
+                                 <span id="imm1">Вакцина коклюшно-дифтерийно-столбнячная адсорбированная жидкая с уменьшенным содержанием антигенов (АКДС-М-вакцина)</span>
+                              </td>
+                              <td>-</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_9" title="Заключение">ЗАКЛЮЧЕНИЕ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">
+                                 <span>Состояние</span>
+                              </th>
+                              <td>
+                                 <span id="RES_1">Удовлетворительное</span>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">
+                                 <span>Протокол</span>
+                              </th>
+                              <td>
+                                 <span id="RES_2">Состояние удовлетворительное. Сознание ясное. Контакт доступен. Кожные покровы и видимые слизистые обычной окраски, достаточной влажности. Кожные высыпания. Питание:повыш. Щитовидная железа пальпаторно не определяется. Периферические лимфоузлы не увеличены. Костно-мышечная система без видимых изменений. Грудная клетка правильной формы. Голосовое дрожание не изменено. Перкуторно над легкими легочный звук. При аускультации в легких дыхание везикулярное, хрипов нет. При осмотре области сердца и крупных кровеносных сосудов б/о. Пальпаторно - верхушечный толчок в пятом межреберье; перкуторно: левая граница относительной тупости сердца по срединно-ключичной линии, правая – по правому краю грудины, верхняя – 3 ребро. При аускультации – тоны сердца достаточной звучности, ритм сердечных сокращений правильный, дефицита пульса нет.</span>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">
+                                 <span>Заключение</span>
+                              </th>
+                              <td>
+                                 <span id="RES_3">Предварительный диагноз: Острый коронарный синдром с подъемом сегмента ST. Клинический диагноз:  ИБС. 
+											Острый инфаркт миокарда передней стенки левого желудочка от 27.09.2020 г.  Постинфарктный кардиосклероз (инфаркт миокарда  нижней стенки  от 2016 г).
+											Нарушения ритма сердца: частая желудочковая экстрасистолия. Операция: ТБКА со стентированием передней межжелудочковой артерии 27.09.2020 г.
+											Операция: ТБКА со стентированием правой коронарной артерии  от 2016 г.
+											Атеросклероз аорты, сонных артерий. Дислипидемия 2 А.  
+											Сахарный диабет 2 тип, не инсулинпотребный, Узловой зоб, послеоперационный гипотиреоз.</span>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">
+                                 <span>Рекомендации</span>
+                              </th>
+                              <td>
+                                 <span id="RES_4">Рекомендовано: продолжить прием бисопролола(конкор) 5 мг/сут, аторвастатина 20 мг/сут, кардиомагнила 75 мг на ночь.</span>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">
+                                 <span>Выявленные патологии</span>
+                              </th>
+                              <td>
+                                 <span id="RES_5">Не выявлены</span>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">
+                                 <span>Результат консультации</span>
+                              </th>
+                              <td>
+                                 <span id="RES_7">Продолжить лечение</span>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_10" title="Связанные документы">СВЯЗАННЫЕ ДОКУМЕНТЫ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <ul>
+                        <li>
+                           <span id="VREFERENCE500">Направление на оказание медицинских услуг</span>
+                           <br/>
+                           <span id="VREFERENCE501">На обследование</span>, 27.09.2020<br/>
+                           <ul>
+                              <li>
+                                 <span id="VREFERENCE502">B03.016.004</span> Анализ крови биохимический общетерапевтический</li>
+                              <li>
+                                 <span id="VREFERENCE503">B03.005.006</span> Коагулограмма (ориентировочное исследование системы гемостаза)</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_11" title="Медицинские карты пациента">ДАННЫЕ О МЕДИЦИНСКИХ КАРТАХ ПАЦИЕНТА</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption" id="VREFERENCE_100">Медицинская карта стационарного больного</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="50%"/>
+                        <col width="50%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер</th>
+                              <td id="VREFERENCE_101">КВ-4000/800</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата создания</th>
+                              <td id="VREFERENCE_102">25.09.2018</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption" id="VREFERENCE_110">Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="50%"/>
+                        <col width="50%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер</th>
+                              <td id="VREFERENCE_111">КВ-5000/700</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата создания</th>
+                              <td id="VREFERENCE_112">25.09.2018</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

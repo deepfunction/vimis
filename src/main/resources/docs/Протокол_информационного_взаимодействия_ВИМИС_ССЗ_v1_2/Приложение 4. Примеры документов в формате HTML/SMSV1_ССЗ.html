@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do NOT edit this HTML directly: it was generated via an XSLT transformation from a CDA Release 2 or 3 XML document. -->
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Направление на оказание медицинских услуг (September 25, 2020, 11:47 +0300)</title>
+      <!-- General CSS -->
+      <style type="text/css" media="all">
+                    *{
+                        font-family: Verdana, Tahoma, sans-serif;
+                        font-size: 9pt;
+                    }
+                    body{
+                        padding: 2px;
+                        color: #003366;
+                        background-color: white;
+                        font-size: 9pt;
+                    }
+                    #documentheader,
+                    #documentbody,
+                    #documentfooter{
+                        width: 100%;
+                    }
+                    #documentheader{
+                        border-bottom: 1px solid grey;
+                        margin-bottom: 1em;
+                    }
+                    #documentfooter{
+                        border-top: 1px solid grey;
+                        margin-top: 1em;
+                    }
+                    a{
+                        color: #003366;
+                        background-color: white;
+                    }
+                    h1{
+                        font-size: 12pt;
+                        font-weight: bold;
+                    }
+                    h1.title{
+                        text-align: center;
+                    }
+                    h2{
+                        font-size: 11pt;
+                        font-weight: bold;
+                    }
+                    h3{
+                        font-size: 10pt;
+                        font-weight: bold;
+                    }
+                    h4{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    h5{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    h6{
+                        font-size: 9pt;
+                        font-weight: bold;
+                    }
+                    hr{
+                        width: 100%;
+                    }
+                    span {
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        display: inline; /* IE8 hack: would go to next line otherwise */
+                    }
+                    table{
+                        line-height: 10pt;
+                        width: 100%;
+                    }
+                    thead tr, th{
+                        background-color: LightGrey;
+                    }
+                    tbody tr{
+                        background-color: #f2f2f2;
+                    }
+                    td{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        padding: 0.1cm 0.2cm;
+                        vertical-align: top;
+                    }
+                    .table_simple{
+                        width: auto;
+                        color: inherit;
+                        background-color: inherit;
+                    }
+                    .table_simple td{
+                        padding: 0;
+                    }
+                    .table_simple td.td_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: inherit;
+                        font-style: italic;
+                        padding-right: 0.2cm;
+                    }
+                    .header_table{
+                        border: 1pt solid #00008b;
+                    }
+                    .narr_table{
+                        width: 100%;
+                        margin: 0.3em 0;
+                    }
+                    .narr_tr{
+                        //background-color: #ffffcc;
+                    }
+                    .narr_th{
+                        background-color: LightGrey;
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                    }
+                    .narr_footnote{
+                        font-size: 8pt;
+                        font-style: italic;
+                    }
+                    .td_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: bold;
+                        background-color: LightGrey;
+                    }
+                    .td_label_width{
+                        width: 20%;
+                    }
+                    .span_label{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: bold;
+                    }
+                    .span_value{
+                        font-size: 9pt; /* IE8 hack: doesn't understand inheritance */
+                        font-weight: normal;
+                    }
+                    .revision_insert{
+                        text-decoration: underline overline;
+                    }
+                    .revision_insert_final{
+                    }
+                    .revision_delete{
+                        text-decoration: line-through;
+                    }
+                    .revision_delete_final{
+                        display: none;
+                    }
+                    .span_button {
+                        display: table-cell;
+                        cursor: pointer;
+                        border: 2pt inset #585858;
+                        border-radius: 15px;
+                        -moz-border-radius: 15px;
+                        padding: 0.1cm 0.2cm;
+                        background-color: #f2f2f2;
+                        font-weight: bold;
+                        vertical-align: baseline;
+                        width: 150px;
+                    }
+                    div.separator {
+                        height: 1em;
+                    }
+                    div.caption {
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                </style>
+      <!-- Stylecode CSS -->
+      <style type="text/css" media="all">
+                    .Bold{
+                        font-weight: bold;
+                    }
+                    .Italics{
+                        font-style: italic;
+                    }
+                    .Underline{
+                        text-decoration: underline;
+                    }
+                    .Emphasis{
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                    .Lrule{
+                        border-left-width: 2px;
+                        border-left-style: solid;
+                    }
+                    .Rrule{
+                        border-right-width: 2px;
+                        border-right-style: solid;
+                    }
+                    .Toprule{
+                        border-top-width: 2px;
+                        border-top-style: solid;
+                    }
+                    .Botrule{
+                        border-bottom-width: 2px;
+                        border-bottom-style: solid;
+                    }
+                    .Arabic{
+                        list-style: arabic;
+                    }
+                    .LittleRoman{
+                        list-style: lower-roman;
+                    }
+                    .BigRoman{
+                        list-style: upper-roman;
+                    }
+                    .LittleAlpha{
+                        list-style: lower-alpha;
+                    }
+                    .BigAlpha{
+                        list-style: upper-alpha
+                    }
+                    .Disc{
+                        list-style: disc;
+                    }
+                    .Circle{
+                        list-style: circle;
+                    }
+                    .Square{
+                        list-style: square;
+                    }</style>
+      <!-- Section Button Toggle CSS -->
+      <style type="text/css" media="screen">
+                    div.button.expandCollapse {
+                        float: left;
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                </style>
+      <!-- Revision Toggle CSS -->
+      <style type="text/css" media="print">
+                    button, 
+                    div.button,
+                    #buttontable {
+                        display: none;
+                    }
+                    div.section-content {
+                        display: block !important;
+                    }
+                    .print_visible {
+                        display: block;
+                        float: none;
+                        margin-right: 0;
+                    }
+                </style>
+      <!-- Table of Contents CSS -->
+      <style type="text/css" media="screen">
+                    #nav, #nav ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style: none;
+                    }
+                    
+                    #nav li {
+                        float: left;
+                        width: 300px;
+                    }
+                    #nav ul {
+                        position: absolute;
+                        width: 300px;
+                        left: -1000px;
+                    }
+                    #nav li ul li ul {
+                        display: none;
+                    }
+                    
+                    #nav li ul li:hover > ul {
+                        display: block;
+                        position: absolute;
+                        left: 50px !important;
+                    }
+                    #nav li ul li:hover > ul > li > a {
+                        border: 1px solid #585858;
+                    }
+                    
+                    #nav li:hover ul, #nav li.ie_does_hover ul {
+                        left: auto;
+                        background-position: 0 0;
+                    }
+                    
+                    #nav * a {
+                        display: block;
+                        padding: 2px 8px;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 11px;
+                    }
+                    
+                    #nav ul * a {
+                        font-weight: bold;
+                        color: #585858;
+                        background-color: #f2f2f2;
+                        cursor: pointer;
+                    }
+                    
+                    #nav ul ul a:link, #nav ul ul a:visited {
+                        font-weight: normal;
+                        color: #585858;
+                        background-color: #f2f2f2;
+                        cursor: pointer;
+                    }
+                    
+                    #nav * li a:hover, #nav * li a:active,
+                    #nav * li * li a:hover, #nav * li * li a:active {
+                        /*font-weight: normal;*/
+                        color: white;
+                        background-color: #585858;
+                        cursor: pointer;
+                    }
+                    
+                    #nav * li {
+                        border-left: 2px solid white;
+                    }
+                    
+                    #nav * ul li {
+                        border-top: 2px solid white;
+                        border-left: 0;
+                    }
+                    
+                    /* IE only hack */
+                    * html ul li, * html ul ul li{
+                        border-bottom: 2px solid white;
+                    }
+                    
+                    * html ul ul li{
+                        border-top: 0;
+                    }
+                    /* End IE only hack */
+                </style>
+   </head>
+   <body>
+      <div id="documentheader">
+         <a id="_toc"> </a>
+         <h1 class="title">Направление на оказание медицинских услуг (September 25, 2020, 11:47 +0300)</h1>
+         <table class="header_table">
+            <tbody>
+               <tr>
+                  <td class="td_label">Patient</td>
+                  <td>
+                     <span class="span_value"> Демидов Петр Игоревич</span>
+                     <span style="float: right; margin-left: 1em;">
+                        <span>
+                           <span class="span_label">Date of Birth: </span>
+                           <span class="span_value">September  13, 1963<span title="At document creation time"> (57yr)</span>
+                           </span>
+                        </span>
+                        <span class="span_label">Gender: </span>
+                        <span class="span_value">Мужской</span>
+                     </span>
+                     <span style="float: right;" class="print_visible">
+                        <span class="span_label">Patient-ID: </span>
+                        <span class="span_value">
+                           <span>9589237 (1.2.643.5.1.13.13.12.2.77.8481.100.1.1.10)</span>, <span>000-000-000 00 (1.2.643.100.3)</span>, <span title="ОВД &#34;Твардовское&#34; ОУФМС России по гор. Москве. Код подразделения: 770-095. Дата выдачи: 18.02.2005">4509 395643 (1.2.643.5.1.13.13.11.1011.1)</span>, <span>1 (1.2.643.5.1.13.13.11.1042)</span>
+                        </span>
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Encounter</td>
+                  <td>
+                     <span class="span_label">ID: </span>
+                     <span class="span_value">
+                        <span>465465467678 (1.2.643.5.1.13.13.12.2.77.8481.100.1.1.15)</span>, <span>465433-13 (1.2.643.5.1.13.13.12.2.77.8481.100.1.1.17)</span>
+                     </span>, <span class="span_label">Date/Time: </span>
+                     <span class="span_value">from August  9, 2020, 10:30 +0300 to September  25, 2020, 10:30 +0300</span>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="td_label">Author</td>
+                  <td>
+                     <span class="span_value"> Иванов Александр Борисович</span>, <span class="span_value">врач-терапевт</span>, <span class="span_label">Organization: </span>
+                     <span class="span_value">ГБУЗ "МГОБ № 62 ДЗМ</span>, <span class="span_label">Authored On: </span>
+                     <span class="span_value">September  25, 2020, 16:55 +0300</span>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div id="documentbody">
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_1"
+                   title="Цель направления и медицинская организация, куда направлен">Направлен</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <span class="Bold" id="scoporg1">На консультацию к другому специалисту</span>
+                     </p>
+                     <p>Куда: Государственное бюджетное учреждение здравоохранения города Москвы "Городская клиническая больница № 24 Департамента здравоохранения г.Москвы"</p>
+                     <p>Уточнение направления</p>
+                     <ul>
+                        <li>
+                           <span>Тип консультации:</span>
+                           <span class="Bold" id="VREFERENCE_501"> : Консультация невролога</span>
+                        </li>
+                        <li>
+                           <span>Метод обследования пациента:</span>
+                           <span class="Bold" id="VREFERENCE_502">Лабораторные методы</span>
+                           <span class="Bold" id="VREFERENCE_505"> Инструментальные методы</span>
+                        </li>
+                        <li>
+                           <span>Тип лабораторного исследования:</span>
+                           <span class="Bold" id="VREFERENCE_503"> Общеклинический анализ крови</span>
+                        </li>
+                        <li>
+                           <span>Тип инструментального диагностического исследования:</span>
+                           <span class="Bold" id="VREFERENCE_504"> Компьютерная томография головного мозга</span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_2" title="Оказанные услуги">МЕДИЦИНСКИЕ УСЛУГИ, НА КОТОРЫЕ НАПРАВЛЕН ПАЦИЕНТ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="20%"/>
+                        <col width="80%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Код</th>
+                              <th class="narr_th">Услуга</th>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>B03.016.002</td>
+                              <td>Общий (клинический) анализ крови</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <td>A06.23.004</td>
+                              <td>Компьютерная томография головного мозга</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_3" title="Льготы">Коды льгот</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>3195 (Ветераны боевых действий на территории РФ);<br/>2552 (Диабет)</div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_4" title="Место работы и должность, условия труда">Место работы, должность</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-body">
+                  <div>ГУП Мосгортранс. Водитель.</div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_5" title="Диагнозы">ДИАГНОЗЫ</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption">Диагноз: I63.0 Инфаркт мозга, вызванный тромбозом прецеребральных артерий</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="50%"/>
+                        <col width="50%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Степень обоснованности диагноза</th>
+                              <td id="VREFERENCE_9300">Предварительный диагноз</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Вид нозологической единицы диагноза</th>
+                              <td id="VREFERENCE_9301">Основное заболевание</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата установления диагноза</th>
+                              <td>27.08.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Заболевание (состояние) по МКБ-10</th>
+                              <td id="VREFERENCE_9302">I63.0 Инфаркт мозга, вызванный тромбозом прецеребральных артерий</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Характер заболевания</th>
+                              <td id="VREFERENCE_9303">Острое</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Клиническое описание диагноза</th>
+                              <td id="VREFERENCE_9304">Клиническое описание диагноза</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th" colspan="2">Уточнение диагноза при остром нарушении мозгового кровообращения (ОНМК)</th>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата возникновения ОНМК</th>
+                              <td>27.08.2020 16:00</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Кратность ОНМК</th>
+                              <td id="VREFERENCE_9305">Повторное ОНМК</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Пострадавшие бассейны и артерии</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9306">Средняя мозговая артерия, сегмент M1</span>
+                                       <br/>
+                                       <span id="VREFERENCE_9307">Большая передняя радикуломедулярная артерия</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Локализация гематомы при ОНМК</th>
+                              <td id="VREFERENCE_9309">Ствол головного мозга</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Подтип ОНМК по ишемическому типу</th>
+                              <td id="VREFERENCE_9310">Кардиоэмболический инсульт</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Краткая характеристика клинической картины - проявления заболевания, перечисляются в виде симптомов по убыванию клинической значимости с указанием степени нарушения</th>
+                              <td id="VREFERENCE_9311">Правосторонний гемипарез. Моторная афазия.</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Период ОНМК</th>
+                              <td id="VREFERENCE_9312">Острый период</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Уточнение состояния сознания, если есть нарушение при ОНМК</th>
+                              <td id="VREFERENCE_9313">Умеренное оглушение (13–14 баллов)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Непосредственные причины, которые вызвали ОНМК</th>
+                              <td id="VREFERENCE_9314">Нарушение ритма</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Выполненное лечение у пациента с ОНМК</th>
+                              <td id="VREFERENCE_9315">ВСТЭ от 25.08.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Оценка восстановления перфузии при ОНМК по ишемическому типу (mTICI)</th>
+                              <td id="VREFERENCE_9316">2b</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Осложнения лечения у пациента с ОНМК (общие)</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9317">Пневмония</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption">Диагноз: I21.0 Острый трансмуральный инфаркт передней стенки миокарда</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1" width="100%">
+                        <col width="50%"/>
+                        <col width="50%"/>
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Степень обоснованности диагноза</th>
+                              <td id="VREFERENCE_9400">Предварительный диагноз</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Вид нозологической единицы диагноза</th>
+                              <td id="VREFERENCE_9401">Основное заболевание</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата установления диагноза</th>
+                              <td>27.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Заболевание (состояние) по МКБ-10</th>
+                              <td id="VREFERENCE_9402">I21.0 Острый трансмуральный инфаркт передней стенки миокарда</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Характер заболевания</th>
+                              <td id="VREFERENCE_9403">Острое</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Клиническое описание диагноза</th>
+                              <td id="VREFERENCE_9404">Клиническое описание диагноза</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th" colspan="2">Уточнение диагноза при остром коронарном синдроме (ОКС)</th>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата и время возникновения симптомов ОКС</th>
+                              <td>16:00 25.09.2020</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Форма ОКС</th>
+                              <td id="VREFERENCE_9405">ОКС с подъемом сегмента ST</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Категория риска неблагоприятного исхода</th>
+                              <td id="VREFERENCE_9406">Умеренный (промежуточный) риск</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Пострадавшая коронарная артерия при ОКС</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9407">Правая коронарная артерия средний сегмент</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Класс острой сердечной недостаточности</th>
+                              <td id="VREFERENCE_9408">Killip II</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Риск развития неблагоприятного исхода при ОКС без подъема по шкале GRACE</th>
+                              <td id="VREFERENCE_9409">140</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Классификация инфаркта миокарда на основании локализации очага некроза</th>
+                              <td id="VREFERENCE_9410">Да</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Локализация зоны некроза</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9411">Передняя стенка левого желудочка</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Классификация ИМ на основании последующих изменений ЭКГ</th>
+                              <td id="VREFERENCE_9412">Инфаркт миокарда с формированием патологических зубцов Q</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Классификация ИМ на основании наличия ИМ в анамнезе</th>
+                              <td id="VREFERENCE_9413">Повторный инфаркт миокарда (развившийся через 28 суток после предшествующего инфаркта миокарда)</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Тип инфаркта миокарда</th>
+                              <td id="VREFERENCE_9414">Тип 4с</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Стадия предшествующей хронической сердечной недостаточности</th>
+                              <td id="VREFERENCE_9415">IIА</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Функциональный класс предшествующей хронической сердечной недостаточности</th>
+                              <td id="VREFERENCE_9416">II ФК</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Выполненное хирургическое лечение при ОКС</th>
+                              <td>
+                                 <ul>
+                                    <li>
+												27.09.2020 <span id="VREFERENCE_9417">Выполненное хирургическое лечение при ОКС</span>
+                                       <br/>
+												Баллонная ангиопластика со стентированием передней коронарной артерии <br/>
+												27.09.2020 <span id="VREFERENCE_9418">Выполненное хирургическое лечение при ОКС</span>
+                                       <br/>
+												Имплантация временного электрокардиостимулятора<br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Осложнения лечения у пациента с ОКС</th>
+                              <td>
+                                 <ul>
+                                    <li>
+                                       <span id="VREFERENCE_9419">Диссекция стенки сосуда</span>
+                                       <br/>
+                                    </li>
+                                 </ul>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_6" title="Описание и обоснование направления">Обоснование направления</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-body">
+                  <div>Для подтверждения диагноза и составления плана лечения. 
+						
+						Уточнение наличия зон нарушения локальной сократимости. На ЭХО-КГ от 30.09.2020 определяется гипокинез передней стенки левого желудочка. 
+						По данным ЭКГ частая желудочковая экстрасистолия.</div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_7" title="Связанные документы">Связаные документы</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <ul>
+                        <li>
+                           <span id="VREFERENCE500">Осмотр (консультация) пациента</span>, 25.09.2020
+								<ul>
+                              <li>
+                                 <span id="VREFERENCE501">B01.023.001</span> Прием (осмотр, консультация) врача-невролога первичный</li>
+                           </ul>
+                        </li>
+                        <li>
+                           <span id="VREFERENCE502">Протокол инструментального исследования</span>, 25.09.2020
+								<ul>
+                              <li>
+                                 <span id="VREFERENCE503">A06.23.004</span> Компьютерная томография головного мозга</li>
+                           </ul>
+                        </li>
+                        <li>
+                           <span id="VREFERENCE504">Протокол лабораторного исследования</span>, 25.09.2020
+								<ul>
+                              <li>
+                                 <span id="VREFERENCE505">B03.016.003</span> Общий (клинический) анализ крови развернутый</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-left: 0em;" class="section">
+            <div class="section-title">
+               <h3 id="section_8" title="Медицинские карты пациента">Данные о медицинских картах пациента</h3>
+            </div>
+            <div class="section-content">
+               <div class="section-meta"/>
+               <div class="section-body">
+                  <div>
+                     <p>
+                        <div class="caption" id="VREFERENCE_100">Медицинская карта стационарного больного</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер</th>
+                              <td id="VREFERENCE_101">КВ-4000/800</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата создания</th>
+                              <td id="VREFERENCE_102">25.09.2018</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <p>
+                        <div class="caption" id="VREFERENCE_110">Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях</div>
+                     </p>
+                     <table class="narr_table" cellspacing="1" cellpadding="1">
+                        <tbody>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Номер</th>
+                              <td id="VREFERENCE_111">КВ-5000/700</td>
+                           </tr>
+                           <tr class="narr_tr">
+                              <th class="narr_th">Дата создания</th>
+                              <td id="VREFERENCE_112">25.09.2018</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

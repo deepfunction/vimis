@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'su.medsoft'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "su.medsoft.rir.Main"
+    }
+    duplicatesStrategy = 'include'
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+    implementation group: 'org.apache.flink', name: 'flink-java', version: '1.13.2'
+    implementation group: 'org.apache.flink', name: 'flink-clients_2.11', version: '1.13.2'
+    implementation group: 'org.apache.flink', name: 'flink-streaming-java_2.11', version: '1.13.2'
+    implementation group: 'org.apache.flink', name: 'flink-connector-kafka_2.11', version: '1.13.2'
+    implementation group: 'org.apache.flink', name: 'flink-connector-base', version: '1.13.2'
+    implementation group: 'org.apache.flink', name: 'flink-connector-jdbc_2.11', version: '1.13.2'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.24'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.5'
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.12.5'
+}
+
+test {
+    useJUnitPlatform()
+}

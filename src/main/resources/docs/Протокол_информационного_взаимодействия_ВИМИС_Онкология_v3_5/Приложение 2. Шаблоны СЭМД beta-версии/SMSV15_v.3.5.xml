@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 Infrastructure/CDA.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- ЗАГОЛОВОК ДОКУМЕНТА "Информация о талоне на оказание ВМП" -->
+	<!---->
+	<!-- R [1..] Требуемый элемент. Элемент обязан иметь непустое наполнение, nullFlavor не разрешён -->
+	<!-- [1..] Обязательный элемент. Элемент обязан присутствовать, но может иметь пустое наполнение с указанием причины отсутствия информации через nullFlavor -->
+	<!-- [0..] Не обязательный элемент. Элемент может отсутствовать -->
+	<!---->
+	<!-- R [1..1] Область применения документа (Страна) -->
+	<realmCode code="RU"/>
+	<!-- R [1..1] Указатель на использование CDA R2 -->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- R [1..1] Идентификатор Шаблона документа "Протокол консультации третий уровень формализации" -->
+	<!-- по справочнику "Шаблоны CDA документов" (OID: 1.2.643.5.1.13.13.11.1118) / Для целей взаимодействия с ВИМИС передавать "0" -->
+	<templateId root="0"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.51 extension = идентификатор документа -->
+	<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.51" extension="144632"/>
+	<!-- R [1..1] Тип документа -->
+	<code code="SMSV15" codeSystem="1.2.643.5.1.13.13.99.2.592"  codeSystemVersion="1.0"  codeSystemName="ВИМИС ОНКО. Типы структурированных медицинских сведений" displayName="Информация о талоне на оказание ВМП"/>
+	<!-- R [1..1] Заголовок документа -->
+	<title>Талон на оказание высокотехнологичной медицинской помощи</title>
+	<!-- R [1..1] Дата создания документа-->
+	<effectiveTime value="202005111600+0300"/>
+	<!-- R [1..1] Уровень конфиденциальности документа -->
+	<confidentialityCode code="N" codeSystem="1.2.643.5.1.13.13.99.2.285"  codeSystemVersion="1.1" codeSystemName="Уровень конфиденциальности документа" displayName="Обычный"/>
+	<!-- R [1..1] Язык документа -->
+	<languageCode code="ru-RU"/>
+	<!-- R [1..1] Уникальный идентификатор набора версий документа -->
+	<!-- по псравилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.50 extension = идентификатор набора версий документа -->
+	<setId root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.50" extension="163725"/>
+	<!-- R [1..1] Номер версии данного документа -->
+	<versionNumber value="1"/>
+	<!-- R [1..1] ДАННЫЕ О ПАЦИЕНТЕ-->
+	<recordTarget>
+		<!-- R [1..1] ПАЦИЕНТ (роль) -->
+		<patientRole>
+			<!-- R [1..1] Уникальный идентификатор пациента в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.10 extension = идентификатор пациента -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.10" extension="735486"/>
+			<!-- R [1..1] СНИЛС пациента -->
+			<id root="1.2.643.100.3" extension="254-636-254 26"/>
+			<!-- [1..1] Документ, удостоверяющий личность пациента, серия, номер, кем выдан. -->
+			<id root="1.2.643.5.1.13.13.11.1011.1" extension="4509 395643" assigningAuthorityName='ОВД "Твардовское" ОУФМС России по гор. Москве. Код подразделения: 770-095. Дата выдачи: 18.02.2005'/>
+			<!-- [1..1] ВИМИС: Признак жителя города или села  -->
+			<id root="1.2.643.5.1.13.13.11.1042" extension="1" />
+			<!-- [1..1] Адрес постоянной регистрации пациента -->
+			<addr use="H">
+				<!-- R [1..1] Адрес текстом -->
+				<streetAddressLine>123592, Россия, г. Москва, ул. Твардовского, д. 5, кв. 42</streetAddressLine>
+				<!-- R [1..1] Регион РФ (республика, край, область)-->
+				<state>77</state>
+				<!-- [1..1] ВИМИС: AOGUID населенного пункта -->
+				<city>62aa8ac8-37fc-473a-828a-b9f9b7877d3f</city>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта улицы -->
+				<streetNameBase>212d3123-9c4d-4579-b31a-b5c6e9632b04</streetNameBase>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта дома -->
+				<houseNumber>2a452fcf-d9f7-4e48-9ac4-0986eb057ad0</houseNumber>
+				<!-- [1..1] ВИМИС: Номер дома, если отсутствует GUID адресного объекта дома  -->
+				<houseNumberNumeric>5</houseNumberNumeric>
+				<!-- [0..1] ВИМИС: Номер квартиры -->
+				<unitID>1</unitID>
+			</addr>
+			<!-- R [1..1] Адрес фактического места жительства пациента -->
+			<addr use="HP">
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>123592, Россия, г. Москва, ул. Твардовского, д. 5, кв. 42</streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+				<!-- [1..1] ВИМИС: AOGUID населенного пункта -->
+				<city>62aa8ac8-37fc-473a-828a-b9f9b7877d3f</city>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта улицы -->
+				<streetNameBase>212d3123-9c4d-4579-b31a-b5c6e9632b04</streetNameBase>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта дома -->
+				<houseNumber>2a452fcf-d9f7-4e48-9ac4-0986eb057ad0</houseNumber>
+				<!-- [1..1] ВИМИС: Номер дома, если отсутствует GUID адресного объекта дома  -->
+				<houseNumberNumeric>5</houseNumberNumeric>
+				<!-- [0..1] ВИМИС: Номер квартиры -->
+				<unitID>1</unitID>
+			</addr>
+			<!-- [0..1] Телефон пациента -->
+			<telecom value="tel:+74951953745"/>
+			<!-- [0..*] Прочие контакты пациента (мобильный телефон) -->
+			<telecom use="MC" value="tel:+790347523647"/>
+			<!-- [0..*] Прочие контакты пациента (электронная почта) -->
+			<telecom value="mailto: selchen.m.v@mail.ru"/>
+			<!-- R [1..1] Пациент (человек)  -->
+			<patient>
+				<!-- R [1..1] ФИО пациента -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Сельченков</family>
+					<!-- R [1..1] Имя -->
+					<given>Михаил</given>
+					<!-- [0..1] Отчество -->
+					<given>Владимирович</given>
+				</name>
+				<!-- R [1..1] Пол пациента -->
+				<administrativeGenderCode code="1" codeSystem="1.2.643.5.1.13.13.11.1040" codeSystemVersion="2.1" codeSystemName="Классификатор половой принадлежности" displayName="Мужской"/>
+				<!-- R [1..1] Дата рождения пациента -->
+				<birthTime value="19800217"/>
+			</patient>
+			<!-- R [1..1] Орган управления здравоохранением (ОУЗ) оформивший талон на оказание ВМП / Медицинская организая оформившая талон на оказание ВМП -->
+			<providerOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<!-- ОУЗ - по справочнику «Регистр органов управления здравоохранением по субъектам Российской Федерации» (OID: 1.2.643.5.1.13.13.99.2.186) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование ОУЗ / медицинской организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953754826" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- [1..1] ДАННЫЕ ОБ АВТОРЕ ДОКУМЕНТА  -->
+	<author>
+		<!-- [1..1] Специальность автора -->
+		<functionCode code="118" codeSystem="1.2.643.5.1.13.13.11.1066" codeSystemVersion="4.1" codeSystemName="Номенклатура специальностей специалистов со средним, высшим и послевузовским медицинским и фармацевтическим образованием в сфере здравоохранения" displayName="Кардиология"/>
+		<!-- R [1..1] Дата подписи документа автором -->
+		<time value="202009251600+0300"/>
+		<!-- R [1..1] АВТОР (роль) -->
+		<assignedAuthor>
+			<!-- R [1..1] Уникальный идентификатор автора в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.70" extension="542174"/>
+			<!-- R [1..1] СНИЛС автора -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- R [1..1] Код должности автора-->
+			<code code="34" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="2.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="Врач-кардиолог"/>
+			<!-- [0..1] Адрес автора документа -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>119334, Россия, г. Москва, ул. Косыгина, д. 13, кв. 33</streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон автора -->
+			<telecom value="tel:+74957443256"/>
+			<!-- [0..*] Прочие контакты автора (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79267352628"/>
+			<!-- [0..*] Прочие контакты автора (электронная почта) -->
+			<telecom value="mailto:smirnov.a.i@rambler.ru"/>
+			<!-- R [1..1] АВТОР (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<given>Игоревич</given>
+				</name>
+			</assignedPerson>
+			<!-- R [1..1] Место работы автора  -->
+			<representedOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>119334, Россия, г. Москва, ул. Косыгина, д. 13, кв. 33</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- R [1..1] ДАННЫЕ ОБ ОРГАНИЗАЦИИ-ВЛАДЕЛЬЦЕ ДОКУМЕНТА -->
+	<custodian>
+		<!-- R [1..1] Организация-владелец документа (роль) -->
+		<assignedCustodian>
+			<!-- R [1..1] Организация-владелец документа (организация) -->
+			<representedCustodianOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<!-- ОУЗ - по справочнику «Регистр органов управления здравоохранением по субъектам Российской Федерации» (OID: 1.2.643.5.1.13.13.99.2.186) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации-владельца документа -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- R [1..1] ДАННЫЕ О ПОЛУЧАТЕЛЕ ДОКУМЕНТА -->
+	<informationRecipient>
+		<!-- R [1..1] Получатель документа (роль) -->
+		<intendedRecipient>
+			<!-- R [1..1] Получатель документа (организация) -->
+			<receivedOrganization>
+				<!-- R [1..1] Идентификатор получающей организации -->
+				<id root="1.2.643.5.1.13.13.12.2.77.7799"/>
+				<!-- R [1..1] Наименование получающей организации-->
+				<name>ФГБУ "НМИЦ онкологии им. Н.Н.Блохина" Минздрава России</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- [1..1] ДАННЫЕ О ЛИЦЕ, ПРИДАВШЕМ ЮРИДИЧЕСКУЮ СИЛУ ДОКУМЕНТУ -->
+	<legalAuthenticator>
+		<!-- R [1..1] Дата подписи документа лицом, придавшем юридическую силу документу -->
+		<time value="202009251600+0300"/>
+		<!-- R [1..1] Факт наличия подписи на документе -->
+		<signatureCode code="S"/>
+		<!-- R [1..1] Лицо, придавшее юридическую силу документу (роль) -->
+		<assignedEntity>
+			<!-- R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.70" extension="542174"/>
+			<!-- R [1..1] СНИЛС лица, придавшего юридическую силу документу -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- R [1..1] Код должности лица, придавшего юридическую силу документу -->
+			<code code="34" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="2.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="Врач-кардиолог"/>
+			<!-- [0..1] Адрес лица, придавшего юридическую силу документу -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine> 119334, Россия, г. Москва, ул. Косыгина, д.13, кв.33 </streetAddressLine>
+				<!-- R [1..1] Регион РФ -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон лица, придавшего юридическую силу документу -->
+			<telecom value="tel:+74957443256"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79267352628"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (электронная почта) -->
+			<telecom value="mailto:smirnov.a.i@rambler.ru"/>
+			<!-- R [1..1] Лицо, придавшее юридическую силу документу (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество лица, придавшего юридическую силу документу -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<given>Игоревич</given>
+				</name>
+			</assignedPerson>
+			<!-- R [1..1] Место работы лица, придавшего юридическую силу документу -->
+			<representedOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8312"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "Городская поликлиника № 129 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- [0..1] СВЕДЕНИЯ О СТРАХОВОМ ПОЛИСЕ ОМС -->
+	<participant typeCode='HLD'>
+		<!-- R [1..1] Полис ОМС -->
+		<associatedEntity classCode='POLHOLD'>
+			<!-- R [1..1] Полис ОМС (нового образца) пациента -->
+			<id root="1.2.643.5.1.13.2.7.100.2" extension="7712958452351689"/>
+			<!-- R [1..1] Указание, что держателем полиса является сам пациент -->
+			<code code='SELF' codeSystem='2.16.840.1.113883.5.111'/>
+			<scopingOrganization>
+				<!-- R [1..1] Уникальный идентификатор страховой компании -->
+				<id root="1.2.643.5.1.13.13.99.2.183" extension="112"/>
+				<!-- R [1..1] Наименование страховой компании -->
+				<name>ООО "РОСНО-МС"</name>
+				<!-- R [1..1] Телефон страховой компании -->
+				<telecom nullFlavor="NI"/>				
+				<!-- R [1..1] Адрес страховой компании -->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>129090, Россия, г. Москва, Протопоповский переулок, д. 9</streetAddressLine>
+					<!-- R [1..1] Регион РФ -->
+					<state>77</state>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- R [1..1] СВЕДЕНИЯ О СЛУЧАЕ ОКАЗАНИЯ МЕДИЦИНСКОЙ ПОМОЩИ -->
+	<componentOf>
+		<!-- R [1..1] Случай оказания медицинской помощи -->
+		<encompassingEncounter>
+			<!-- R [1..1] Уникальный идентификатор случая оказания медицинской помощи -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8312.100.1.1.15" extension="5469-16"/>
+			<!-- R [1..1] Даты случая -->
+			<effectiveTime>
+				<!-- R [1..1] Дата начала случая -->
+				<low value="202009251530+0300"/>
+			</effectiveTime>
+		</encompassingEncounter>
+	</componentOf>
+	<!-- ТЕЛО ДОКУМЕНТА -->
+	<component>
+		<!-- R [1..1] Структурированное тело документа -->
+		<structuredBody>
+			<!-- [0..1] ВИМИС: Секция связанных документов -->
+			<component>
+				<section>
+					<!-- R [1..1] Код cекции связаных документов -->
+					<code code="vimisReferenceDocs" codeSystem="vimis1" />
+					<!-- R [1..1] Заголовок секции -->
+					<title>Связаные документы</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<list>
+							<item><content ID="VIMISRES500">Осмотр (консультация) пациента</content>, 25.03.2020</item>
+						</list>
+					</text>
+					<!-- [0..*] ВИМИС: Связанный документ - Решение (протокол) врачебной комиссии (консилиума) врачей о наличии медицинских показаний к оказанию высокотехнологичной медицинской помощи-->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор документа -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.51" extension="659481548"/>
+							<!-- R [1..1] Код СМС по справочнику 1.2.643.5.1.13.13.99.2.592 / Код СЭМД по справочнику 1.2.643.5.1.13.13.11.1522 -->
+							<code code="SMSV6" codeSystem="1.2.643.5.1.13.13.99.2.592" codeSystemName="ВИМИС ОНКО. Типы структурированных медицинских сведений" displayName="Решение (протокол) врачебной комиссии (консилиума врачей)">
+								<originalText>
+									<reference value="#VIMISRES500"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..1] Дата создания документа -->
+							<effectiveTime value="202009251600+0300" />
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] ВИМИС: Данные по этапам талона на оказание ВМП -->
+			<component>
+				<section>
+					<!-- [1..1] ВИМИС: Код секции данных по этапам талона на оказание ВМП -->
+					<code
+						code="vimisVMPCoupon"
+						codeSystem="vimis1" displayName="Талон на оказание ВМП" />
+					<!-- R [1..1] Заголовок секции -->
+					<title>Талон на оказание высокотехнологичной медицинской помощи (ВМП) № 22.7777.77777.777</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Порядок обращения</th>
+									<td><content ID="VIMISRES_3001">Первичный</content></td>
+								</tr>
+								<tr>
+									<td colspan="2"><content styleCode="t_caption">1 ЭТАП - ОУЗ</content></td>
+								</tr>
+								<tr>
+									<th>Код принятого решения (ОУЗ)</th>
+									<td><content ID="VIMISRES_3002">1 - Наличие медицинских показаний для оказания ВМП</content></td>
+								</tr>
+								<tr>
+									<th>Код диагноза по МКБ-10</th>
+									<td><content ID="VIMISRES_3003">C16 Злокачественное новообразование желудка</content></td>
+								</tr>
+								<tr>
+									<th>Дата принятия решения (ОУЗ)</th>
+									<td><content ID="VIMISRES_3110">25.01.2020</content></td>
+								</tr>
+								<tr>
+									<th>Наименование вида ВМП (ОУЗ)</th>
+									<td><content ID="VIMISRES_3004">Микрохирургические, расширенные, комбинированные и реконструктивно-пластические операции на поджелудочной железе, в том числе лапароскопически ассистированные операции</content></td>
+								</tr>
+								<tr>
+									<th>Наименование МО-ВМП</th>
+									<td>НМИЦ им. Н.Н. Блохина</td>
+								</tr>
+								<tr>
+									<th>Дата направления документов в ФГУ или МО субъекта Российской Федерации (ОУЗ)</th>
+									<td><content ID="VIMISRES_3111">25.01.2020</content></td>
+								</tr>
+								<tr>
+									<th>Дата получения документов (МО-ОМС)</th>
+									<td><content ID="VIMISRES_3112">25.02.2020</content></td>
+								</tr>
+								<tr>
+									<th>Комментарий</th>
+									<td>
+										<content ID="VIMISRES_3115">Комментарий</content>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"><content styleCode="t_caption">2 ЭТАП - МУ</content></td>
+								</tr>
+								<tr>
+									<th>Дата получения документов</th>
+									<td><content ID="VIMISRES_3121">26.01.2020</content></td>
+								</tr>
+								<tr>
+									<th>Дата оформления документов МО-ВМП</th>
+									<td><content ID="VIMISRES_3122">26.02.2020</content></td>
+								</tr>
+								<tr>
+									<th>Код принятого решения </th>
+									<td><content  ID="VIMISRES_3005">1 - Наличие медицинских показаний для госпитализации в МО-ВМП</content></td>
+								</tr>
+								<tr>
+									<th>Дата принятия решения</th>
+									<td><content ID="VIMISRES_3123">26.02.2020</content></td>
+								</tr>
+								<tr>
+									<th>Наименование вида ВМП </th>
+									<td><content ID="VIMISRES_3006">Микрохирургические, расширенные, комбинированные и реконструктивно-пластические операции на поджелудочной железе, в том числе лапароскопически ассистированные операции</content></td>
+								</tr>
+								<tr>
+									<th>Дата планируемой госпитализации</th>
+									<td><content ID="VIMISRES_3124">1.03.2020</content></td>
+								</tr>
+								<tr>
+									<th>Дата уведомления пациента и (или) ОУЗ о дате госпитализации в МО-ВМП</th>
+									<td><content ID="VIMISRES_3125">28.02.2020</content></td>
+								</tr>
+								<tr>
+									<th>Комментарий</th>
+									<td>
+										<content ID="VIMISRES_3007">Комментарий</content>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"><content styleCode="t_caption">4 ЭТАП - МУ</content></td>
+								</tr>
+								<tr>
+									<th>Дата обращения пациента в МО-ВМП</th>
+									<td><content ID="VIMISRES_3141">01.03.2020</content></td>
+								</tr>
+								<tr>
+									<th>Код принятого решения</th>
+									<td><content ID="VIMISRES_3011">1 - Госпитализировать</content></td>
+								</tr>
+								<tr>
+									<th>Комментарий</th>
+									<td>
+										<content ID="VIMISRES_3012">Комментарий</content>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"><content styleCode="t_caption">5 ЭТАП - МУ</content></td>
+								</tr>
+								<tr>
+									<th>Дата выписки пациента из МО-ВМП</th>
+									<td><content ID="VIMISRES_3151">10.03.2020</content></td>
+								</tr>
+								<tr>
+									<th>Результат направления на ВМП</th>
+									<td><content ID="VIMISRES_3013">1 - ВМП оказана</content></td>
+								</tr>
+								<tr>
+									<th>Код диагноза по МКБ-10</th>
+									<td><content ID="VIMISRES_3014">C16 Злокачественное новообразование желудка</content></td>
+								</tr>
+								<tr>
+									<th>Наименование вида оказанной ВМП</th>
+									<td><content ID="VIMISRES_3015">Микрохирургические, расширенные, комбинированные и реконструктивно-пластические операции на поджелудочной железе, в том числе лапароскопически ассистированные операции"</content></td>
+								</tr>
+								<tr>
+									<th>Дата проведения оперативного вмешательства</th>
+									<td><content ID="VIMISRES_3152">07.03.2020</content></td>
+								</tr>
+								<tr>
+									<th>Результат оказания ВМП</th>
+									<td><content ID="VIMISRES_3016">2 - улучшение</content></td>
+								</tr>
+								<tr>
+									<th>Рекомендовано</th>
+									<td><content ID="VIMISRES_3017">1 - медицинская реабилитация</content></td>
+								</tr>
+								<tr>
+									<th>Комментарий</th>
+									<td>
+										<content ID="VIMISRES_3018">Комментарий</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation moodCode="EVN" classCode="OBS">
+							<!-- R [1..1] Обращение пациента за ВМП -->
+							<code
+								code="1"
+								codeSystem="1.2.643.5.1.13.13.11.1007"
+								codeSystemVersion="2.1"
+								codeSystemName="Порядок случаев госпитализации или обращения"
+								displayName="Первичный" >
+								<originalText>
+									<reference value="#VIMISRES_3001"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..1] Номер талона на оказание высокотехнологичной медицинской помощи -->
+							<text>22.7777.77777.777</text>
+							<!-- R [1..1] 1 ЭТАП - ОУЗ -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] 1 ЭТАП - ОУЗ: Уникальный идентификатор медицинской организации оказания ВМП -->
+									<id root="1.2.643.5.1.13.3.25.77.50" />
+									<!-- R [1..1] Номер этапа -->
+									<code 
+										code="1"
+										codeSystem="vimis4"
+										codeSystemName="Этапы талона на оказание ВПМ"
+										displayName="1 ЭТАП - ОУЗ" />
+									<effectiveTime>
+										<width>
+											<!-- R [1..1] 1 ЭТАП - ОУЗ: Дата принятия решения (ОУЗ) -->
+											<translation value="20200125" code="10">
+												<originalText>
+													<reference value="VIMISRES_3110"></reference>
+												</originalText>
+											</translation>
+											<!-- [0..1] 1 ЭТАП - ОУЗ: Дата направления документов в ФГУ или МО субъекта Российской Федерации (ОУЗ) -->
+											<translation value="20200125" code="11">
+												<originalText>
+													<reference value="VIMISRES_3111"></reference>
+												</originalText>
+											</translation>
+											<!-- [0..1] 1 ЭТАП - ОУЗ: Дата получения документов (МО-ОМС) -->
+											<translation value="20201002" code="12">
+												<originalText>
+													<reference value="VIMISRES_3112"></reference>
+												</originalText>
+											</translation>
+										</width>
+									</effectiveTime>
+									<!-- R [1..1] 1 ЭТАП - ОУЗ: Код принятого решения (ОУЗ) -->
+									<value xsi:type="CD"
+										code="1"
+										codeSystem="1.2.643.5.1.13.13.99.2.580"
+										codeSystemName="ВИМИС ОНКО. Принятое решение ОУЗ в рамках направления на ВМП"
+										displayName="Наличие медицинских показаний для оказания ВМП" >
+										<originalText>
+											<reference value="#VIMISRES_3002"></reference>
+										</originalText></value>
+									<!-- R [1..1] 1 ЭТАП - ОУЗ: Код диагноза по МКБ-10 -->
+									<value xsi:type="CD"
+										code="C16"
+										codeSystem="1.2.643.5.1.13.13.11.1005"
+										codeSystemVersion="2.10"
+										codeSystemName="Международная статистическая классификация болезней и проблем, связанных со здоровьем (10-й пересмотр)"
+										displayName="Злокачественное новообразование желудка">
+										<originalText>
+											<reference value="#VIMISRES_3003"></reference>
+										</originalText>
+									</value>
+									<!-- R [1..1] 1 ЭТАП - ОУЗ: Код вида ВМП -->
+									<value xsi:type="CD"
+										code="1"
+										codeSystem="1.2.643.5.1.13.13.11.1493"
+										codeSystemVersion="1.2"
+										codeSystemName="Виды высокотехнологичной медицинской помощи"
+										displayName="Микрохирургические, расширенные, комбинированные и реконструктивно-пластические операции на поджелудочной железе, в том числе лапароскопически ассистированные операции">
+										<originalText>
+											<reference value="#VIMISRES_3004"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] 1 ЭТАП - ОУЗ: Комментарий -->
+									<value xsi:type="CV">
+										<originalText>
+											<reference value="#VIMISRES_3115"></reference>
+											Комментарий
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] 2 ЭТАП - МУ -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Номер этапа -->
+									<code 
+										code="2"
+										codeSystem="vimis4"
+										codeSystemName="Этапы талона на оказание ВПМ"
+										displayName="2 ЭТАП - МУ" />
+									<effectiveTime>
+										<width>
+											<!-- R [1..1] 2 ЭТАП - МУ Дата получения документов -->
+											<translation value="20200126" code="21">
+												<originalText>
+													<reference value="#VIMISRES_3121"></reference>
+												</originalText>
+											</translation>
+											<!-- [0..1] 2 ЭТАП - МУ Дата оформления документов МО-ВМП -->
+											<translation value="20200226" code="22">
+												<originalText>
+													<reference value="#VIMISRES_3122"></reference>
+												</originalText>
+											</translation>
+											<!-- [0..1] Дата принятия решения -->
+											<translation value="20200226" code="23">
+												<originalText>
+													<reference value="#VIMISRES_3123"></reference>
+												</originalText>
+											</translation>
+											<!-- [0..1] Дата планируемой госпитализации -->
+											<translation value="20200301" code="24">
+												<originalText>
+													<reference value="#VIMISRES_3124"></reference>
+												</originalText>
+											</translation>
+											<!-- [0..1] Дата уведомления пациента и (или) ОУЗ о дате госпитализации в МО-ВМП    -->
+											<translation value="20200228" code="25">
+												<originalText>
+													<reference value="#VIMISRES_3125"></reference>
+												</originalText>
+											</translation>
+										</width>
+									</effectiveTime>
+									<!-- R [1..1] 2 ЭТАП - МУ Код принятого решения -->
+									<value xsi:type="CD"
+										code="1"
+										codeSystem="1.2.643.5.1.13.13.99.2.579"
+										codeSystemName="ВИМИС ОНКО. Принятое решение об оказании ВМП"
+										displayName="Наличие медицинских показаний для госпитализации в МО-ВМП" >
+										<originalText>
+											<reference value="#VIMISRES_3005"></reference>
+										</originalText>
+									</value>
+									<!-- R [1..1] 2 ЭТАП - МУ Код вида ВМП -->
+									<value xsi:type="CD"
+										code="1"
+										codeSystem="1.2.643.5.1.13.13.11.1493"
+										codeSystemVersion="1.2"
+										codeSystemName="Виды высокотехнологичной медицинской помощи"
+										displayName="Микрохирургические, расширенные, комбинированные и реконструктивно-пластические операции на поджелудочной железе, в том числе лапароскопически ассистированные операции">
+										<originalText>
+											<reference value="#VIMISRES_3006"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] 2 ЭТАП - МУ Комментарий -->
+									<value xsi:type="CV">
+										<originalText>
+											<reference value="#VIMISRES_3007"></reference>
+											Комментарий
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] 4 ЭТАП - МУ -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Номер этапа -->
+									<code 
+										code="4"
+										codeSystem="vimis4"
+										codeSystemName="Этапы талона на оказание ВПМ"
+										displayName="4 ЭТАП - МУ" />
+									<effectiveTime>
+										<width>
+											<!-- [0..1] 4 ЭТАП - МУ Дата обращения пациента в МО-ВМП-->
+											<translation value="20200301">
+												<originalText>
+													<reference value="#VIMISRES_3141"></reference>
+												</originalText>
+											</translation>
+										</width>
+									</effectiveTime>
+									<!-- R [1..1] 4 ЭТАП - МУ Код принятого решения -->
+									<value xsi:type="CD"
+										code="1"
+										codeSystem="1.2.643.5.1.13.13.11.1512"
+										codeSystemVersion="1.1"
+										codeSystemName="Решение о госпитализации в медицинскую организацию при поступлении"
+										displayName="Госпитализировать" >
+										<originalText>
+											<reference value="#VIMISRES_3011"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Комментарий -->
+									<value xsi:type="CV">
+										<originalText>
+											<reference value="#VIMISRES_3012"></reference>
+											Комментарий
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] 5 ЭТАП - МУ -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Номер этапа -->
+									<code 
+										code="5"
+										codeSystem="vimis4"
+										codeSystemName="Этапы талона на оказание ВПМ"
+										displayName="5 ЭТАП - МУ" />
+									<effectiveTime>
+										<width>
+											<!-- R [1..1] 5 ЭТАП - МУ Дата выписки пациента из МО-ВМП -->
+											<translation value="20200310" code="51" >
+												<originalText>
+													<reference value="#VIMISRES_3151"></reference>
+												</originalText>
+											</translation>
+											<!-- [0..1] 5 ЭТАП - МУ Дата проведения оперативного вмешательства -->
+											<translation value="20200307" code="52" >
+												<originalText>
+													<reference value="#VIMISRES_3152"></reference>
+												</originalText>
+											</translation>
+										</width>
+									</effectiveTime>
+									<!-- R [1..1] 5 ЭТАП - МУ Результат направления на ВМП -->
+									<value xsi:type="CD"
+										code="1"
+										codeSystem="1.2.643.5.1.13.13.99.2.581"
+										codeSystemName="ВИМИС ОНКО. Результат направления на высокотехнологичную медицинскую помощь"
+										displayName="ВМП оказана" >
+										<originalText>
+											<reference value="#VIMISRES_3013"></reference>
+										</originalText>
+									</value>
+									<!-- R [1..1] 5 ЭТАП - МУ Код диагноза при выписке по МКБ-10 -->
+									<value xsi:type="CD"
+										code="C16"
+										codeSystem="1.2.643.5.1.13.13.11.1005"
+										codeSystemVersion="2.10"
+										codeSystemName="Международная статистическая классификация болезней и проблем, связанных со здоровьем (10-й пересмотр)"
+										displayName="Злокачественное новообразование желудка">
+										<originalText>
+											<reference value="#VIMISRES_30014"></reference>
+										</originalText>
+									</value>
+									<!-- R [1..1] 5 ЭТАП - МУ Код вида оказанной ВМП -->
+									<value xsi:type="CD"
+										code="1"
+										codeSystem="1.2.643.5.1.13.13.11.1493"
+										codeSystemVersion="1.2"
+										codeSystemName="Виды высокотехнологичной медицинской помощи"
+										displayName="Микрохирургические, расширенные, комбинированные и реконструктивно-пластические операции на поджелудочной железе, в том числе лапароскопически ассистированные операции">
+										<originalText>
+											<reference value="#VIMISRES_3015"></reference>
+										</originalText>
+									</value>
+									<!-- [1..1] 5 ЭТАП - МУ Результат оказания ВМП -->
+									<value xsi:type="CD"
+										code="2"
+										codeSystem="1.2.643.5.1.13.13.11.1046"
+										codeSystemVersion="3.1"
+										codeSystemName="Результаты обращения (госпитализации)"
+										displayName="Улучшение">
+										<originalText>
+											<reference value="#VIMISRES_3016"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] 5 ЭТАП - МУ Рекомендовано -->
+									<value xsi:type="CD"
+										code="1"
+										codeSystem="1.2.643.5.1.13.13.99.2.582"
+										codeSystemVersion="1.0"
+										codeSystemName="ВИМИС ОНКО. Рекомендации по результатам оказания высокотехнологичной медицинской помощи"
+										displayName="Медицинская реабилитация">
+										<originalText>
+											<reference value="#VIMISRES_3017"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Комментарий -->
+									<value xsi:type="CV">
+										<originalText>
+											<reference value="#VIMISRES_3018"></reference>
+											Комментарий
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] ВИМИС: Данные о медицинских картах пациента  -->
+			<component>
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="vimisMedicalCard" codeSystem="vimis1" />
+					<!-- R [1..1] Заголовок секции -->
+					<title>Данные о медицинских картах пациента</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<paragraph><caption ID="VIMISRES_100">Медицинская карта стационарного больного</caption></paragraph>
+						<table>
+							<tbody>
+								<tr>
+									<th>Номер</th>
+									<td ID="VIMISRES_101">КВ-567/3.4</td>
+								</tr>
+								<tr>
+									<th>Дата создания</th>
+									<td ID="VIMISRES_102">25.09.2020</td>
+								</tr>
+								<tr>
+									<th>Группа крови</th>
+									<td ID="VIMISRES_103">0(I)</td>
+								</tr>
+								<tr>
+									<th>Резус-фактор</th>
+									<td ID="VIMISRES_104">Rh(D)+, положительный резус-фактор</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph><caption ID="VIMISRES_110">Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях</caption></paragraph>
+						<table>
+							<tbody>
+								<tr>
+									<th>Номер</th>
+									<td ID="VIMISRES_111">КВ-567/3.4</td>
+								</tr>
+								<tr>
+									<th>Дата создания</th>
+									<td ID="VIMISRES_112">25.09.2020</td>
+								</tr>
+								<tr>
+									<th>Группа крови</th>
+									<td ID="VIMISRES_113">0(I)</td>
+								</tr>
+								<tr>
+									<th>Резус-фактор</th>
+									<td ID="VIMISRES_114">Rh(D)+, положительный резус-фактор</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..*] Информация о мед.карте -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор медицинской карты -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="659481548"/>
+							<!-- R [1..1] Тип медицинской карты -->
+							<code code="53" codeSystem="1.2.643.5.1.13.13.11.1507" codeSystemVersion="1" codeSystemName="Тип медицинской карты" displayName="Медицинская карта стационарного больного" >
+								<originalText>
+									<reference value="#VIMISRES_100"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Номер медицинской карты -->
+							<text>
+								<reference value="#VIMISRES_101"></reference>
+								КВ-567/3.4
+							</text>
+							<!-- [0..1] Дата создания медицинской карты  -->
+							<effectiveTime value="202009251600+0300"/>
+							<!-- [0..1] Группа крови -->
+							<value xsi:type="CD" code="101" codeSystem="1.2.643.5.1.13.13.11.1061" codeSystemVersion="1.3" codeSystemName="Группы крови для учета сигнальной информации о пациенте" displayName="0(I)" >
+								<originalText>
+									<reference value="#VIMISRES_103"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Резус-фактор -->
+							<value xsi:type="CD" code="211" codeSystem="1.2.643.5.1.13.13.11.1061" codeSystemVersion="1.3" codeSystemName="Группы крови для учета сигнальной информации о пациенте" displayName="Rh(D)+, положительный резус-фактор" >
+								<originalText>
+									<reference value="#VIMISRES_104"></reference>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..*] Информация о мед.карте -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор медицинской карты -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="659481548"/>
+							<!-- R [1..1] Тип медицинской карты -->
+							<code code="51" codeSystem="1.2.643.5.1.13.13.11.1507" codeSystemVersion="1" codeSystemName="Тип медицинской карты" displayName="Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях" >
+								<originalText>
+									<reference value="#VIMISRES_110"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Номер медицинской карты -->
+							<text>
+								<reference value="#VIMISRES_111"></reference>
+								КВ-568/3.4
+							</text>
+							<!-- [0..1] Дата создания медицинской карты  -->
+							<effectiveTime value="202009251600+0300"/>
+							<!-- [0..1] Группа крови -->
+							<value xsi:type="CD" code="101" codeSystem="1.2.643.5.1.13.13.11.1061" codeSystemVersion="1.3" codeSystemName="Группы крови для учета сигнальной информации о пациенте" displayName="0(I)" >
+								<originalText>
+									<reference value="#VIMISRES_113"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Резус-фактор -->
+							<value xsi:type="CD" code="211" codeSystem="1.2.643.5.1.13.13.11.1061" codeSystemVersion="1.3" codeSystemName="Группы крови для учета сигнальной информации о пациенте" displayName="Rh(D)+, положительный резус-фактор" >
+								<originalText>
+									<reference value="#VIMISRES_114"></reference>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

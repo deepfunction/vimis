@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Header xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+		<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+			<wsse:BinarySecurityToken EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="X509-09508c7b-ef24-4fb3-8488-9762add9e68a">MIIB4zCCAY4CFHQS0RhMqu/a8sxl4uAsCSQrEI1IMAwGCCqFAwcBAQMCBQAwbzELMAkGA1UEBhMCUlUxDzANBgNVBAgMBk1vc2NvdzEPMA0GA1UEBwwGTW9zY293MQ4wDAYDVQQKDAVFR0lTWjEMMAoGA1UECwwDSVBTMSAwHgYDVQQDDBdpcHMtdGVzdC5yb3NtaW56ZHJhdi5ydTAeFw0xODExMTkwNTQ2MjNaFw0yMzExMTkwNTQ2MjNaMG8xCzAJBgNVBAYTAlJVMQ8wDQYDVQQIDAZNb3Njb3cxDzANBgNVBAcMBk1vc2NvdzEOMAwGA1UECgwFRUdJU1oxDDAKBgNVBAsMA0lQUzEgMB4GA1UEAwwXaXBzLXRlc3Qucm9zbWluemRyYXYucnUwZjAfBggqhQMHAQEBATATBgcqhQMCAiMBBggqhQMHAQECAgNDAARAZmU9pXI9pfyz3RjaXJMznDn4teUwVz735WmooeXcKHl2EY3qOkyWquyXnvKr4T1RkXM7EiTCDVwASbbjKUoGvjAMBggqhQMHAQEDAgUAA0EA5tDM4QG1iJQdjOd1xWVQgCBc7OOh4oRD4wN6ZLYOr3WSRTNptjAUDttm1IzdWd3+ybtGiWrg9k17YEIso0soNw==</wsse:BinarySecurityToken>
+			<ds:Signature Id="SIG-74016619-7592-4cd6-a376-09cef46b982a" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:SignedInfo>
+					<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+					<ds:SignatureMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34102012-gostr34112012-256"/>
+					<ds:Reference URI="#body">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+						<ds:DigestValue>eD7k0tjo/yQyK3YJPkip3Q92yXITMtR8vpzgNyRohuw=</ds:DigestValue>
+					</ds:Reference>
+					<ds:Reference URI="#TS-88a9073f-a703-469b-86f2-146ac1012f73">
+						<ds:Transforms>
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+						</ds:Transforms>
+						<ds:DigestMethod Algorithm="urn:ietf:params:xml:ns:cpxmlsec:algorithms:gostr34112012-256"/>
+						<ds:DigestValue>o1Fdds8EVV2gBOBja3Ge9rWJ79esUQlFsX5FuYHIGXY=</ds:DigestValue>
+					</ds:Reference>
+				</ds:SignedInfo>
+				<ds:SignatureValue>NnjgwdTXPZsD1MdEk1VvL8yIcRsakUCZVUEoLPoX5jHj/acQ4fY16SumMU6oFuvsI2bbuUtQ3T06ApQnveSKpQ==</ds:SignatureValue>
+				<ds:KeyInfo Id="KI-d69a01da-0eb4-496d-bc82-77bcb2da706e">
+					<wsse:SecurityTokenReference wsu:Id="STR-98ea4808-9f5f-4c23-a436-3f5f1408e870">
+						<wsse:Reference URI="#X509-09508c7b-ef24-4fb3-8488-9762add9e68a" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/>
+					</wsse:SecurityTokenReference>
+				</ds:KeyInfo>
+			</ds:Signature>
+			<wsu:Timestamp wsu:Id="TS-88a9073f-a703-469b-86f2-146ac1012f73">
+				<wsu:Created>2020-07-28T10:02:49.416Z</wsu:Created>
+				<wsu:Expires>2020-07-28T10:12:49.416Z</wsu:Expires>
+			</wsu:Timestamp>
+		</wsse:Security>
+	</s:Header>
+	<SOAP-ENV:Body wsu:Id="body" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+		<returnMsgId xmlns="http://vimis.rosminzdrav.ru/">
+			<msg_id xmlns="">0983eb58-9f37-4532-98a4-fd122152c60c</msg_id>
+		</returnMsgId>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

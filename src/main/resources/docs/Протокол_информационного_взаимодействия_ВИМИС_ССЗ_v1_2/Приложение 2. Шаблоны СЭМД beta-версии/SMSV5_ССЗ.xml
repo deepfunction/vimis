@@ -1,0 +1,2808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xsi:schemaLocation="urn:hl7-org:v3 Infrastructure/CDA.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- ЗАГОЛОВОК ДОКУМЕНТА "Осмотр (консультация) пациента" -->
+	<!---->
+	<!-- R [1..] Требуемый элемент. Элемент обязан иметь непустое наполнение, nullFlavor не разрешён -->
+	<!-- [1..] Обязательный элемент. Элемент обязан присутствовать, но может иметь пустое наполнение с указанием причины отсутствия информации через nullFlavor -->
+	<!-- [0..] Не обязательный элемент. Элемент может отсутствовать -->
+	<!---->
+	<!-- R [1..1] Область применения документа (Страна) -->
+	<realmCode code="RU"/>
+	<!-- R [1..1] Указатель на использование CDA R2 -->
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- R [1..1] Идентификатор Шаблона документа "Протокол консультации третий уровень формализации" -->
+	<!-- по справочнику "Шаблоны CDA документов" (OID: 1.2.643.5.1.13.13.11.1118) / Для целей взаимодействия с ВИМИС передавать "0" -->
+	<templateId root="0"/>
+	<!-- R [1..1] Уникальный идентификатор документа -->
+	<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.51 extension = идентификатор документа -->
+	<id root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.51" extension="144632"/>
+	<!-- R [1..1] Тип документа -->
+	<code code="SMSV5" codeSystem="1.2.643.5.1.13.13.99.2.592"  codeSystemVersion="2.1"  codeSystemName="Типы структурированных медицинских сведений" displayName="Осмотр (консультация) пациента"/>
+	<!-- R [1..1] Заголовок документа -->
+	<title>Осмотр (консультация) пациента</title>
+	<!-- R [1..1] Дата создания документа-->
+	<effectiveTime value="202009271600+0300"/>
+	<!-- R [1..1] Уровень конфиденциальности документа -->
+	<confidentialityCode code="N" codeSystem="1.2.643.5.1.13.13.99.2.285"  codeSystemVersion="1.1" codeSystemName="Уровень конфиденциальности медицинского документа" displayName="обычный"/>
+	<!-- R [1..1] Язык документа -->
+	<languageCode code="ru-RU"/>
+	<!-- R [1..1] Уникальный идентификатор набора версий документа -->
+	<!-- по псравилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.50 extension = идентификатор набора версий документа -->
+	<setId root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.50" extension="163725"/>
+	<!-- R [1..1] Номер версии данного документа -->
+	<versionNumber value="1"/>
+	<!-- R [1..1] ДАННЫЕ О ПАЦИЕНТЕ-->
+	<recordTarget>
+		<!-- R [1..1] ПАЦИЕНТ (роль) -->
+		<patientRole>
+			<!-- R [1..1] Уникальный идентификатор пациента в МИС -->
+			<!-- по правилу: root = OID_медицинской_организации.100.НомерМИС.НомерЭкзМИС.10 extension = идентификатор пациента -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.10" extension="735486"/>
+			<!-- R [1..1] СНИЛС пациента -->
+			<id root="1.2.643.100.3" extension="254-636-254 26"/>
+			<!-- [1..1] Документ, удостоверяющий личность пациента, серия, номер, кем выдан. -->
+			<id root="1.2.643.5.1.13.13.11.1011.1" extension="4509 395643" assigningAuthorityName='ОВД "Твардовское" ОУФМС России по гор. Москве. Код подразделения: 770-095. Дата выдачи: 18.02.2005'/>
+			<!-- [1..1] Адрес постоянной регистрации пациента -->
+			<addr use="H">
+				<!-- R [1..1] Адрес текстом -->
+				<streetAddressLine>123592, Россия, г. Москва, ул. Твардовского, д. 5, кв. 42</streetAddressLine>
+				<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+				<state>77</state>
+				<!-- [1..1] ВИМИС: AOGUID населенного пункта -->
+				<city>62aa8ac8-37fc-473a-828a-b9f9b7877d3f</city>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта улицы -->
+				<streetNameBase>212d3123-9c4d-4579-b31a-b5c6e9632b04</streetNameBase>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта дома -->
+				<houseNumber>2a452fcf-d9f7-4e48-9ac4-0986eb057ad0</houseNumber>
+				<!-- [1..1] ВИМИС: Номер дома, если отсутствует GUID адресного объекта дома  -->
+				<houseNumberNumeric>5</houseNumberNumeric>
+				<!-- [0..1] ВИМИС: Номер квартиры -->
+				<unitID>1</unitID>
+			</addr>
+			<!-- R [1..1] Адрес фактического места жительства пациента -->
+			<addr use="HP">
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>123592, Россия, г. Москва, ул. Твардовского, д. 5, кв. 42</streetAddressLine>
+				<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+				<state>77</state>
+				<!-- [1..1] ВИМИС: AOGUID населенного пункта -->
+				<city>62aa8ac8-37fc-473a-828a-b9f9b7877d3f</city>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта улицы -->
+				<streetNameBase>212d3123-9c4d-4579-b31a-b5c6e9632b04</streetNameBase>
+				<!-- [1..1] ВИМИС: AOGUID адресного объекта дома -->
+				<houseNumber>2a452fcf-d9f7-4e48-9ac4-0986eb057ad0</houseNumber>
+				<!-- [1..1] ВИМИС: Номер дома, если отсутствует GUID адресного объекта дома  -->
+				<houseNumberNumeric>5</houseNumberNumeric>
+				<!-- [0..1] ВИМИС: Номер квартиры -->
+				<unitID>1</unitID>
+			</addr>
+			<!-- [0..1] Телефон пациента -->
+			<telecom value="tel:+74951953745"/>
+			<!-- [0..*] Прочие контакты пациента (мобильный телефон) -->
+			<telecom use="MC" value="tel:+790347523647"/>
+			<!-- [0..*] Прочие контакты пациента (электронная почта) -->
+			<telecom value="mailto:selchen.m.v@mail.ru"/>
+			<!-- R [1..1] Пациент (человек)  -->
+			<patient>
+				<!-- R [1..1] ФИО пациента -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Сельченков</family>
+					<!-- R [1..1] Имя -->
+					<given>Михаил</given>
+					<!-- [0..1] Отчество -->
+					<given>Владимирович</given>
+				</name>
+				<!-- R [1..1] Пол пациента -->
+				<administrativeGenderCode code="1" codeSystem="1.2.643.5.1.13.13.11.1040" codeSystemVersion="2.1" codeSystemName="Пол пациента" displayName="Мужской"/>
+				<!-- R [1..1] Дата рождения пациента -->
+				<birthTime value="19800217"/>
+				<!-- [1..1] ВИМИС: Семейное положение пациента -->
+				<maritalStatusCode code="1" codeSystem="1.2.643.5.1.13.13.99.2.15" codeSystemVersion="1.1" codeSystemName="Семейное положение" displayName="состоит в зарегистрированном браке" />
+			</patient>
+			<!-- R [1..1] Медицинская организация, оформившая протокол консультации -->
+			<providerOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8481"/>
+				<!-- R [1..1] Наименование медицинской организации -->
+				<name>ГБУЗ "МГОБ № 62 ДЗМ</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953754826" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- R [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+					<state>77</state>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<!-- R [1..1] ДАННЫЕ ОБ АВТОРЕ ДОКУМЕНТА -->
+	<author>
+		<!-- R [1..1] Специальность автора -->
+		<functionCode code="118" codeSystem="1.2.643.5.1.13.13.11.1066" codeSystemVersion="5.1" codeSystemName="Номенклатура специальностей специалистов, имеющих медицинское и фармацевтическое образование" displayName="Кардиология"/>
+		<!-- R [1..1] Дата подписи документа автором -->
+		<time value="202009271600+0300"/>
+		<!-- R [1..1] АВТОР (роль) -->
+		<assignedAuthor>
+			<!-- R [1..1] Уникальный идентификатор автора в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.70" extension="542174"/>
+			<!-- R [1..1] СНИЛС автора -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- R [1..1] Код должности автора-->
+			<code code="34" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="6.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="врач-кардиолог"/>
+			<!-- [0..1] Адрес автора документа -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->
+				<streetAddressLine>119334, Россия, г. Москва, ул. Косыгина, д. 13, кв. 33</streetAddressLine>
+				<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+				<state>77</state>
+			</addr>
+			<!-- [0..1] Телефон автора -->
+			<telecom value="tel:+74957443256"/>
+			<!-- [0..*] Прочие контакты автора (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79267352628"/>
+			<!-- [0..*] Прочие контакты автора (электронная почта) -->
+			<telecom value="mailto:smirnov.a.i@rambler.ru"/>
+			<!-- R [1..1] АВТОР (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество автора -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<given>Игоревич</given>
+				</name>
+			</assignedPerson>
+			<!-- R [1..1] Место работы автора  -->
+			<representedOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8481"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>Городская клиническая больница № 15 Департамента здравоохранения города Москвы"</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+					<state>77</state>
+				</addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<!-- R [1..1] ДАННЫЕ ОБ ОРГАНИЗАЦИИ-ВЛАДЕЛЬЦЕ ДОКУМЕНТА -->
+	<custodian>
+		<!-- R [1..1] Организация-владелец документа (роль) -->
+		<assignedCustodian>
+			<!-- R [1..1] Организация-владелец документа (организация) -->
+			<representedCustodianOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8481"/>
+				<!-- R [1..1] Наименование организации-владельца документа -->
+				<name>ГБУЗ "МГОБ № 62 ДЗМ</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+					<state>77</state>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- R [1..1] ДАННЫЕ О ПОЛУЧАТЕЛЕ ДОКУМЕНТА -->
+	<informationRecipient>
+		<!-- R [1..1] Получатель документа (роль) -->
+		<intendedRecipient>
+			<!-- R [1..1] Получатель документа (организация) -->
+			<receivedOrganization>
+				<!-- R [1..1] Идентификатор получающей организации -->
+				<id root="1.2.643.5.1.13.13.12.2.78.8812"/>
+				<!-- R [1..1] Наименование получающей организации-->
+				<name>ФГБУ "НМИЦ им. В.А. Алмазова" Минздрава России</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- R [1..1] ДАННЫЕ О ЛИЦЕ, ПРИДАВШЕМ ЮРИДИЧЕСКУЮ СИЛУ ДОКУМЕНТУ -->
+	<legalAuthenticator>
+		<!-- R [1..1] Дата подписи документа лицом, придавшем юридическую силу документу -->
+		<time value="202009271600+0300"/>
+		<!-- R [1..1] Факт наличия подписи на документе -->
+		<signatureCode code="S"/>
+		<!-- R [1..1] Лицо, придавшее юридическую силу документу (роль) -->
+		<assignedEntity>
+			<!-- R [1..1] Уникальный идентификатор лица, придавшего юридическую силу документу в МИС -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.70" extension="542174"/>
+			<!-- R [1..1] СНИЛС лица, придавшего юридическую силу документу -->
+			<id root="1.2.643.100.3" extension="524-153-723 12"/>
+			<!-- R [1..1] Код должности лица, придавшего юридическую силу документу -->
+			<code code="50" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="6.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="врач-онколог"/>
+			<!-- [0..1] Адрес лица, придавшего юридическую силу документу -->
+			<addr>
+				<!-- R [1..1] адрес текстом -->1.2.643.5.1.13.13.99.2.285
+			</addr>
+			<!-- [0..1] Телефон лица, придавшего юридическую силу документу -->
+			<telecom value="tel:+74957443256"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (мобильный телефон) -->
+			<telecom use="MC" value="tel:+79267352628"/>
+			<!-- [0..*] Прочие контакты лица, придавшего юридическую силу документу (электронная почта) -->
+			<telecom value="mailto:smirnov.a.i@rambler.ru"/>
+			<!-- R [1..1] Лицо, придавшее юридическую силу документу (человек) -->
+			<assignedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество лица, придавшего юридическую силу документу -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Смирнов</family>
+					<!-- R [1..1] Имя -->
+					<given>Александр</given>
+					<!-- [0..1] Отчество -->
+					<given>Игоревич</given>
+				</name>
+			</assignedPerson>
+			<!-- R [1..1] Место работы лица, придавшего юридическую силу документу -->
+			<representedOrganization>
+				<!-- R [1..1] Идентификатор организации -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.13.12.2.77.8481"/>
+				<!-- R [1..1] Наименование организации -->
+				<name>ГБУЗ "МГОБ № 62 ДЗМ</name>
+				<!-- [0..1] Телефон организации -->
+				<telecom value="tel:+74953348153" use="WP"/>
+				<!-- [0..*] Прочие контакты организации (электронная почта) -->
+				<telecom value="mailto: gp129@mosgorzdrav.ru"/>
+				<!-- [1..1] Адрес организации-->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+					<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+					<state>77</state>
+				</addr>
+			</representedOrganization>
+		</assignedEntity>
+	</legalAuthenticator>
+	<!-- [0..1] СВЕДЕНИЯ О СТРАХОВОМ ПОЛИСЕ ОМС -->
+	<participant typeCode='HLD'>
+		<!-- R [1..1] Полис ОМС -->
+		<associatedEntity classCode='POLHOLD'>
+			<!-- R [1..1] Полис ОМС (нового образца) пациента -->
+			<id root="1.2.643.5.1.13.2.7.100.2" extension="7712958452351689"/>
+			<!-- R [1..1] Указание, что держателем полиса является сам пациент -->
+			<code code='SELF' codeSystem='2.16.840.1.113883.5.111'/>
+			<scopingOrganization>
+				<!-- R [1..1] Уникальный идентификатор страховой компании -->
+				<id root="1.2.643.5.1.13.13.99.2.183" extension="112"/>
+				<!-- R [1..1] Наименование страховой компании -->
+				<name>ООО "РОСНО-МС"</name>
+				<!-- R [1..1] Телефон страховой компании -->
+				<telecom nullFlavor="NI"/>				
+				<!-- R [1..1] Адрес страховой компании -->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>129090, Россия, г. Москва, Протопоповский переулок, д. 9</streetAddressLine>
+					<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+					<state>77</state>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- [0..1] СВЕДЕНИЯ О НАПРАВИВШЕМ ЛИЦЕ И ОРГАНИЗАЦИИ -->
+	<participant typeCode="REF">
+		<associatedEntity classCode='PROV'>
+			<!-- R [1..1] Уникальный идентификатор направившего лица -->
+			<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.70" extension="183640"/>
+			<!-- R [1..1] СНИЛС направившего лица -->
+			<id root="1.2.643.100.3" extension="000-000-000 00"/>
+			<!-- R [1..1] Код должности направившего лица -->
+			<code code="109" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="6.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="врач-терапевт"/>
+			<!-- [1..1] Адрес направившего лица -->
+			<addr>
+				<!-- [1..1] адрес текстом -->
+				<streetAddressLine nullFlavor="UNK"/>
+				<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+				<state nullFlavor="UNK"/>
+			</addr>
+			<!-- [0..1] Телефон направившего лица -->
+			<telecom value='tel:+79065184597' use='WP'/>
+			<!-- R [1..1] Направивший врач (человек) -->
+			<associatedPerson>
+				<!-- R [1..1] Фамилия, Имя, Отчество направившего врача -->
+				<name>
+					<!-- R [1..1] Фамилия -->
+					<family>Кузнецов</family>
+					<!-- R [1..1] Имя -->
+					<given>Дмитрий</given>
+					<!-- [0..1] Отчество -->
+					<given>Олегович</given>
+				</name>
+			</associatedPerson>
+			<!-- R [1..1] Место работы направившего врача -->
+			<scopingOrganization>
+				<!-- R [1..1] Уникальный идентификатор направившего учреждения -->
+				<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+				<id root="1.2.643.5.1.13.3.25.77.50"/>
+				<!-- R [1..1] Наименование направившего учреждения -->
+				<name>ГБУЗ "Городская поликлиника № 25 Департамента здравоохранения города Москвы"</name>
+				<!-- R [1..1] Телефон направившего учреждения -->
+				<telecom nullFlavor="NI"/>
+				<!-- R [1..1] Адрес направившего учреждения -->
+				<addr>
+					<!-- R [1..1] адрес текстом -->
+					<streetAddressLine>117198, Россия, г. Москва, ул. Миклухо-Маклая, д. 10</streetAddressLine>
+					<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+					<state>77</state>
+				</addr>
+			</scopingOrganization>
+		</associatedEntity>
+	</participant>
+	<!-- [1..1] СВЕДЕНИЯ О НАПРАВЛЕНИИ -->
+	<inFulfillmentOf>
+		<!-- R [1..1] Направление -->
+		<order>
+			<!-- R [1..1] Уникальный идентификатор направления на проведение консультации. В extension указывается уникальный идентификатор набора версий документа -->
+			<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="659481548"/>
+		</order>
+	</inFulfillmentOf>
+	<!-- R [1..1] СВЕДЕНИЯ О ДОКУМЕНТИРУЕМОМ СОБЫТИИ - ПРОВЕДЕННОМ ОСМОТРЕ (КОНСУЛЬТАЦИИ) -->
+	<documentationOf>
+		<!-- R [1..1] Проведенная консультация -->
+		<serviceEvent>
+			<!-- R [1..1] Тип консультации -->
+			<code code="11" codeSystem="1.2.643.5.1.13.13.11.1463" codeSystemVersion="1.11" codeSystemName="Типы консультаций" displayName="Консультация кардиолога"/>
+			<!-- R [1..1] Дата консультации -->
+			<effectiveTime>
+				<!-- R [1..1] Дата начала консультации -->
+				<low value="202009271530+0300"/>
+				<!-- R [1..1] Дата окончания консультации -->
+				<high value="202009271600+0300"/>
+			</effectiveTime>
+			<!-- [0..1] СВЕДЕНИЯ ОБ ИСПОЛНИТЕЛЕ КОНСУЛЬТАЦИИ -->
+			<performer typeCode="SPRF">
+				<assignedEntity>
+					<!-- R [1..1] Уникальный идентификатор исполнителя -->
+					<id root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.70" extension="183903"/>
+					<!-- R [1..1] СНИЛС исполнителя -->
+					<id root="1.2.643.100.3" extension="000-000-000 00"/>
+					<!-- R [1..1] Должность исполнителя -->
+					<code code="60" codeSystem="1.2.643.5.1.13.13.11.1002" codeSystemVersion="6.2" codeSystemName="Номенклатура должностей медицинских работников и фармацевтических работников" displayName="врач-кардиолог"/>
+					<!-- [0..1] Адрес исполнителя -->
+					<addr>
+						<!-- [0..1] адрес текстом -->
+						<streetAddressLine nullFlavor="UNK"/>
+						<!-- [0..1] Регион РФ -->
+						<state nullFlavor="UNK"/>
+					</addr>
+					<!-- [0..1] Телефон исполнителя -->
+					<telecom nullFlavor="NI"/>
+					<assignedPerson>
+						<!-- R [1..1] Фамилия, Имя, Отчество исполнителя -->
+						<name>
+							<!-- R [1..1] Фамилия -->
+							<family>Иванова</family>
+							<!-- R [1..1] Имя -->
+							<given>Татьяна</given>
+							<!-- [0..1] Отчество -->
+							<given>Михайловна</given>
+						</name>
+					</assignedPerson>
+					<!-- R [1..1] Место работы исполнителя -->
+					<representedOrganization>
+						<!-- R [1..1] Идентификатор организации исполнителя -->
+						<!-- Идентификатор организации - по справочнику «Реестр медицинских организаций Российской Федерации» (OID: 1.2.643.5.1.13.13.11.1461) -->
+						<id root="1.2.643.5.1.13.13.12.2.77.8481"/>
+						<!-- R [1..1] Наименование организации исполнителя -->
+						<name>ГБУЗ "МГОБ № 62 ДЗМ</name>
+						<!-- R [1..1] Телефон организации исполнителя -->
+						<telecom value='tel:+74951564895' use='WP'/>
+						<!-- R [1..1] Адрес организации исполнителя -->
+						<addr>
+							<!-- R [1..1] адрес текстом -->
+							<streetAddressLine>105005, Россия, г. Москва, ул. Ладожская, д. 4/6</streetAddressLine>
+							<!-- R [1..1] Регион РФ, для РФ rод по справочнику 1.2.643.5.1.13.13.99.2.206 -->
+							<state>77</state>
+						</addr>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<!-- R [1..1] СВЕДЕНИЯ О СЛУЧАЕ ОКАЗАНИЯ МЕДИЦИНСКОЙ ПОМОЩИ -->
+	<componentOf>
+		<!-- R [1..1] Случай оказания медицинской помощи -->
+		<encompassingEncounter>
+			<!-- R [1..1] Уникальный идентификатор случая оказания медицинской помощи -->
+			<id root="1.2.643.5.1.13.13.12.2.77.8481.100.1.1.15" extension="5469-16"/>
+			<!-- R [1..1] Даты случая -->
+			<effectiveTime>
+				<!-- R [1..1] Дата начала случая -->
+				<low value="202009271530+0300"/>
+			</effectiveTime>
+		</encompassingEncounter>
+	</componentOf>
+	<!-- ТЕЛО ДОКУМЕНТА -->
+	<component>
+		<!-- R [1..1] Структурированное тело документа -->
+		<structuredBody>			
+			<!-- [0..1] ВИМИС: СЕКЦИЯ: СОЦИАЛЬНЫЙ АНАМНЕЗ  -->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="SOCANAM" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.7"  codeSystemName="Секции электронных медицинских документов" displayName="Социальный анамнез"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>СОЦИАЛЬНЫЙ АНАМНЕЗ</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<list listType="unordered">
+							<caption>Занятость</caption>
+							<item>
+								<content ID="socanam6">Работает</content> в «ООО Организация» в должности «Менеджер»</item>
+						</list>
+						<list listType="unordered" ID="priveleges">
+							<caption>Льготная категория</caption>
+							<item>
+								<content ID="socanam1">Почетные доноры</content> (до 07.07.2020)</item>
+							<item>
+								<content ID="socanam2">Сотрудники подразделений особого риска</content> (до 12.12.2020)</item>
+						</list>
+						<list listType="unordered" ID="invalid">
+							<caption>Инвалидность</caption>
+							<item>
+								<content ID="socanam3">1 группа</content> (установлена: Впервые)</item>
+							<item>
+								<content ID="socanam31">Причина:</content> 1 группа Атеросклеротическая болезнь сердца (I25.1).</item>
+						</list>
+						<list listType="unordered">
+							<caption>Социальные факторы и профессиональные вредности</caption>
+							<item>
+								<content ID="socanam4">Нарушение режима сна и бодрствования</content>
+							</item>
+							<item>
+								<content ID="socanam5">Тяжелый и напряженный физический труд</content>
+							</item>
+						</list>
+						<list>
+							<caption>Зависимости</caption>
+							<item>
+								<content ID="addic1">Курение</content>
+							</item>
+							<item>
+								<content ID="addic2">Телевизионная зависимость</content>
+							</item>
+							<item>
+								<content ID="addic3">Интернет-зависимость</content>
+							</item>
+						</list>
+						<paragraph>
+							<caption>Эпидемиологический анамнез</caption>Контактов с инфекционными больными за время обращения не было.<br/>
+							В эндемичных районах тех или иных инфекций, загрязнённых радиацией и химикатами территориях, за время обращения не находился.
+						</paragraph>
+					</text>
+					<!-- [0..*] Кодирование льготной категории -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Льготная категория -->
+							<code code="9752" codeSystem="1.2.643.5.1.13.13.99.2.43" codeSystemVersion="3.2" codeSystemName="Льготные категории населения" displayName="Почетные доноры">
+								<!-- [0..1] Ссылка на фрагмент текстовой части секции -->
+								<originalText>
+									<reference value="#socanam1"/>
+								</originalText>
+							</code>
+							<!-- R [1..1] Дата\время действия льготы -->
+							<effectiveTime>
+								<!-- [1..1] Дата\время начала действия льготы -->
+								<low value="201902020000+0300"/>
+								<!-- [1..1] Дата\время окончания действия льготы -->
+								<high value="202007070000+0300"/>
+							</effectiveTime>
+						</observation>
+					</entry>
+					<!-- [0..1] Кодирование инвалидности -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Инвалидность -->
+							<code code="1" codeSystem="1.2.643.5.1.13.13.11.1053" codeSystemVersion="3.1" codeSystemName="Группы инвалидности" displayName="1 группа">
+								<!-- [0..1] Ссылка на фрагмент текстовой части секции -->
+								<originalText>
+									<reference value="#socanam3"/>
+								</originalText>
+								<!-- [0..1] Уточнение порядка установления инвалидности -->
+								<qualifier>
+									<!-- R [1..1] Порядок установления инвалидности -->
+									<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.11.1041" codeSystemVersion="1.1" codeSystemName="Порядок установления инвалидности" displayName="Впервые"/>
+								</qualifier>
+							</code>
+							<!-- R [1..1] Дата\время установления инвалидности -->
+							<effectiveTime>
+								<!-- [1..1] Дата\время установления инвалидности -->
+								<low value="196103310000+0300"/>
+							</effectiveTime>
+							<!-- R [1..1] ВИМИС: Причина инвалидности -->
+							<value xsi:type="CD" code="I11.9" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.10" codeSystemName="Справочник международной классификации болезней и состояний, связанных со здоровьем, десятого пересмотра, версии 4 (МКБ-10)" displayName="Гипертоническая болезнь сердца">
+								<originalText>
+									<reference value="#socanam31"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..*] Кодирование потенциально-опасных для здоровья социальных факторов -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Потенциально-опасный для здоровья социальный фактор -->
+							<code code="14" codeSystem="1.2.643.5.1.13.13.11.1059" codeSystemVersion="1.2"  codeSystemName="Потенциально-опасные для здоровья социальные факторы" displayName="Нарушение режима сна и бодрствования">
+								<!-- [0..1] Ссылка на фрагмент текстовой части секции -->
+								<originalText>
+									<reference value="#socanam4"/>
+								</originalText>
+							</code>
+						</observation>
+					</entry>
+					<!-- [0..*] Кодирование профессиональных вредностей -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Профессиональная вредность -->
+							<code code="589" codeSystem="1.2.643.5.1.13.13.11.1060" codeSystemVersion="1.3" codeSystemName="Профессиональные вредности для учета сигнальной информации о пациенте" displayName="Тяжелый и напряженный физический труд">
+								<!-- [0..1] Ссылка на фрагмент текстовой части секции -->
+								<originalText>
+									<reference value="#socanam5"/>
+								</originalText>
+							</code>
+						</observation>
+					</entry>
+					<!-- [0..1] Кодирование местности регистрации -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Местность регистрации -->
+							<code code="1" codeSystem="1.2.643.5.1.13.13.11.1042" codeSystemVersion="2.1" codeSystemName="Признак жителя города или села" displayName="Город"/>
+						</observation>
+					</entry>
+					<!-- [0..1] Кодирование занятости -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Занятость -->
+							<code code="5" codeSystem="1.2.643.5.1.13.13.11.1038" codeSystemVersion="3.1" codeSystemName="Занятость (социальные группы) населения" displayName="Работает">
+								<!-- [0..1] Ссылка на фрагмент текстовой части секции -->
+								<originalText>
+									<reference value="#socanam6"/>
+								</originalText>
+							</code>
+							<!-- [1..1] Текстовое описание занятости (место и должность работы) -->
+							<text>Работает в "ООО Организация" в должности "Менеджер"</text>
+						</observation>
+					</entry>
+					<!-- [0..*] Кодирование вредных привычек и зависимостей -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Вредная привычка или зависимость -->
+							<code code="1" codeSystem="1.2.643.5.1.13.13.11.1058" codeSystemVersion="1.2" codeSystemName="Вредные привычки и зависимости" displayName="Курение">
+								<!-- [0..1] Ссылка на фрагмент текстовой части секции -->
+								<originalText>
+									<reference value="#addic1"/>
+								</originalText>
+							</code>
+						</observation>
+					</entry>
+				</section>
+			</component>			
+			<!-- R [1..1] СЕКЦИЯ: Документ-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="DOCINFO" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.7" codeSystemName="Секции электронных медицинских документов" displayName="Сведения о документе"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>СВЕДЕНИЯ О КОНСУЛЬТАЦИИ</title>
+					<!-- R [1..1] наполнение секции -->
+					<text styleCode="section_DOCINFO">
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Обращение</content>
+									</td>
+									<td>
+										<content ID="DOC_1">Первичное</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Место проведения</content>
+									</td>
+									<td>
+										<content ID="DOC_2">Стационар</content>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Дополнительные манипуляции</content>
+									</td>
+									<td>
+										<content ID="DOC_3">Измерение АД</content>, <content ID="DOC_4">Измерение ЧСС</content>, <content ID="DOC_5">Измерение ЧД</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] кодирование ... Вид обращения -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="800" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Обращение">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.11.1007" codeSystemVersion="2.1" codeSystemName="Порядок случаев госпитализации или обращения" displayName="Первичный">
+								<originalText>
+									<reference value="#DOC_1"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Место оказания медицинской помощи -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="801" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Место проведения">
+							</code>
+							<value xsi:type="CD" code="7" codeSystem="1.2.643.5.1.13.13.11.1008" codeSystemVersion="4.2" codeSystemName="Место оказания медицинской помощи " displayName="Стационар">
+								<originalText>
+									<reference value="#DOC_2"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..*] кодирование ... Дополнительные манипуляции -->
+					<!-- Манипуляция - Измерение артериального давления -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="802" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Дополнительные манипуляции">
+							</code>
+							<value xsi:type="CD" code="A02.12.002" codeSystem="1.2.643.5.1.13.13.11.1070" codeSystemVersion="2.6" codeSystemName="Номенклатура медицинских услуг" displayName="Измерение артериального давления на периферических артериях">
+								<originalText>
+									<reference value="#DOC_3"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..*] кодирование ... Дополнительные манипуляции -->
+					<!-- Манипуляция - Измерение частоты сердечных сокращений -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="802" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Дополнительные манипуляции">
+							</code>
+							<value xsi:type="CD" code="A02.10.002" codeSystem="1.2.643.5.1.13.13.11.1070" codeSystemVersion="2.6" codeSystemName="Номенклатура медицинских услуг" displayName="Измерение частоты сердцебиения">
+								<originalText>
+									<reference value="#DOC_4"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..*] кодирование ... Дополнительные манипуляции -->
+					<!-- Манипуляция - Измерение частоты дыхания -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="802" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Дополнительные манипуляции">
+							</code>
+							<value xsi:type="CD" code="A02.09.001" codeSystem="1.2.643.5.1.13.13.11.1070" codeSystemVersion="2.6" codeSystemName="Номенклатура медицинских услуг" displayName="Измерение частоты дыхания">
+								<originalText>
+									<reference value="#DOC_5"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>	
+			<!-- [0..1] СЕКЦИЯ: Витальные параметры-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="VITALPARAM" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.7" codeSystemName="Секции электронных медицинских документов" displayName="Витальные параметры"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>ВИТАЛЬНЫЕ ПАРАМЕТРЫ</title>
+					<!-- R [1..1] наполнение секции -->
+					<text styleCode="section_VITALPARAM">
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<content>Масса тела</content>
+									</td>
+									<td>
+										<content ID="VIT_1">75</content> кг
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Длина тела</content>
+									</td>
+									<td>
+										<content ID="VIT_2">160</content> см
+									</td>
+								</tr>
+								<!-- -->
+								<tr>
+									<td>
+										<content>Артериальное давление</content>
+									</td>
+									<td>
+										<content ID="VIT_3">135</content> / <content ID="VIT_4">85</content> мм.рт.ст.
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Частота сердечных сокращений</content>
+									</td>
+									<td>
+										<content ID="VIT_5">77</content> / мин
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Частота дыхания</content>
+									</td>
+									<td>
+										<content ID="VIT_6">18</content> / мин
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<content>Сатурация</content>
+									</td>
+									<td>
+										<content ID="VIT_7">90</content> %
+									</td>
+								</tr>
+								<!-- -->
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..*] кодирование ... Витальные параметры -->
+					<entry>
+						<!-- [1..1] кодирование ... Масса тела -->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- R [1..1] Статус измерения - выполнено -->
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата измерения -->
+							<effectiveTime value="20200927"/>
+							<!-- R [1..1] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="50" codeSystem="1.2.643.5.1.13.13.99.2.262" codeSystemVersion="1.4" codeSystemName="Витальные параметры" displayName="Масса тела">
+										<originalText>
+											<reference value="#VIT_1"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="75000" unit="г"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<!-- R [1..*] кодирование ... Витальные параметры -->
+					<entry>
+						<!-- [1..1] кодирование ... Длина тела -->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- R [1..1] Статус измерения - выполнено -->
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата измерения -->
+							<effectiveTime value="20200927"/>
+							<!-- R [1..1] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="51" codeSystem="1.2.643.5.1.13.13.99.2.262" codeSystemVersion="1.4" codeSystemName="Витальные параметры" displayName="Длина тела">
+										<originalText>
+											<reference value="#VIT_2"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="160" unit="см"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<!-- [0..*] кодирование ... Витальные параметры -->
+					<entry>
+						<!-- R [1..1] кодирование ... Артериальное давление -->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- R [1..1] Статус измерения - выполнено -->
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата измерения -->
+							<effectiveTime value="20200927"/>
+							<!-- R [1..*] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<!-- [1..1] кодирование ... Систолическое давление -->
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="3" codeSystem="1.2.643.5.1.13.13.99.2.262" codeSystemVersion="1.4" codeSystemName="Витальные параметры" displayName="Артериальное давление систолическое">
+										<originalText>
+											<reference value="#VIT_3"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="135" unit="мм.рт.ст."/>
+								</observation>
+							</component>
+							<!-- R [1..*] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<!-- [1..1] кодирование ... Диастолическое давление -->
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.262" codeSystemVersion="1.4" codeSystemName="Витальные параметры" displayName="Артериальное давление диастолическое"> 
+										<originalText>
+											<reference value="#VIT_4"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="85" unit="мм.рт.ст."/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<!-- [0..*] кодирование ... Витальные параметры -->
+					<entry>
+						<!-- [1..1] кодирование ... Частота сердечных сокращений -->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- R [1..1] Статус измерения - выполнено -->
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата измерения -->
+							<effectiveTime value="20200927"/>
+							<!-- R [1..1] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="4" codeSystem="1.2.643.5.1.13.13.99.2.262" codeSystemVersion="1.4" codeSystemName="Витальные параметры" displayName="Частота сердечных сокращений"> 
+										<originalText>
+											<reference value="#VIT_5"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="77" unit="1/мин"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<!-- [0..*] кодирование ... Витальные параметры -->
+					<entry>
+						<!-- [1..1] кодирование ... Частота дыхания -->
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<!-- R [1..1] Статус измерения - выполнено -->
+							<statusCode code="completed"/>
+							<!-- R [1..1] Дата измерения -->
+							<effectiveTime value="20200927"/>
+							<!-- R [1..1] кодирование витального параметра -->
+							<component typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="7" codeSystem="1.2.643.5.1.13.13.99.2.262" codeSystemVersion="1.4" codeSystemName="Витальные параметры" displayName="Частота дыхания"> 
+										<originalText>
+											<reference value="#VIT_6"/>
+										</originalText>
+									</code>
+									<value xsi:type="PQ" value="18" unit="1/мин"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<!-- [0..*] кодирование ... Витальные параметры -->
+        			<entry>
+        				<!-- [1..1] кодирование ... Сатурация -->
+        				<organizer classCode="CLUSTER" moodCode="EVN">
+        					<!-- R [1..1] Статус измерения - выполнено -->
+        					<statusCode code="completed"/>
+        					<!-- R [1..1] Дата измерения -->
+        					<effectiveTime value="20200927"/>
+        					<!-- R [1..1] кодирование витального параметра -->
+        					<component typeCode="COMP">
+        						<observation classCode="OBS" moodCode="EVN">
+        							<code code="6" codeSystem="1.2.643.5.1.13.13.99.2.262" codeSystemVersion="1.4" codeSystemName="Витальные параметры" displayName="Сатурация">
+        								<originalText>
+        									<reference value="#VIT_7"/>
+        								</originalText>
+        							</code>
+        							<value xsi:type="PQ" value="90" unit="%"/>
+        						</observation>
+        					</component>
+        				</organizer>
+        			</entry>
+				</section>
+			</component>
+			<!--  R [1..1] ВИМИС: Дополнительные сведения о консультации -->
+			<component>
+				<section>
+					<!-- R [1..1] ВИМИС: Код секции дополнительных данных о консультации -->
+					<code code="vimisConsultationPurpose" codeSystem="vimis1" codeSystemVersion="1.0" displayName="Дополнительные данные приема (осмотра, консультации)" codeSystemName="Секции СЭМД beta-версии" />
+					<!-- R [1..1] заголовок секции -->
+					<title>ДОПОЛНИТЕЛЬНЫЕ СВЕДЕНИЯ О КОНСУЛЬТАЦИИ</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<table>
+							<tbody>
+								<tr>
+									<th>Услуга осмотра (консультации)</th>
+									<td ID="VREFERENCE_601">B01.015.001 Прием (осмотр, консультация) врача-кардиолога первичный</td>
+								</tr>
+								<tr>
+									<th>Обстоятельства посещения</th>
+									<td ID="VREFERENCE_602">по заболеваниям</td>
+								</tr>
+								<tr>
+									<th>Жалобы</th>
+									<td ID="VREFERENCE_605">На боль за грудиной с иррадиацией в нижнюю челюсть</td>
+								</tr>
+								<tr>
+									<th>Анамнез жизни</th>
+									<td ID="VREFERENCE_606">Перенес ОНМК месяц назад (точную дату назвать не может) с правостороннего гемипареза и нарушением речи. 
+										В течение 10 лет регистрируется фибрилляция предсердий пароксизмальная форма. 
+										Оперирован по поводу перелома левой голени в 2009 году
+									</td>
+								</tr>
+								<tr>
+									<th>Анамнез заболевания</th>
+									<td ID="VREFERENCE_607">Со слов пациента, вышеописанные жалобы появились в 05:00 27.09.2020</td>
+								</tr>
+								<tr>
+									<th>Получаемое пациентом лечение</th>
+									<td ID="VREFERENCE_608">Кардиомагнил 75 мг, амлодипин 5 мг</td>
+								</tr>
+								<tr>
+									<th>Объективный статус</th>
+									<td ID="VREFERENCE_609">рост: 168см. вес: 70кг. Индекс массы тела: 25.
+										Состояние пациента: средней тяжести; стабильное.
+										Кожные покровы: цвет - обычной окраски; обычной влажности;  Подкожно-жировой слой развит умеренно; Лимфоузлы: пальпаторно не увеличены, безболезненны. Костно- мышечная система без видимой патологии. Щитовидная железа: визуально не
+										увеличена. Аппетит: хороший. Мочеиспускание: свободное; безболезненное. Почки: не пальпируются; Дизурия: нет;
+									</td>
+								</tr>
+								<tr>
+									<th>Группа состояния здоровья пациента</th>
+									<td ID="VREFERENCE_115">I группа</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry>
+						<observation moodCode="EVN" classCode="OBS">
+							<!-- R [1..1] Услуга осмотра (консультации) -->
+							<code code="B01.015.001" codeSystem="1.2.643.5.1.13.13.11.1070" codeSystemVersion="2.6" codeSystemName="Номенклатура медицинских услуг" displayName="Прием (осмотр, консультация) врача-кардиолога первичный" >
+								<originalText>
+									<reference value="#VREFERENCE_601"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..1] Обстоятельства посещения -->
+							<value xsi:type="CD" code="10" codeSystem="1.2.643.5.1.13.13.11.1052" codeSystemVersion="3.1" codeSystemName="Обстоятельства посещения" displayName="по заболеваниям" >
+								<originalText>
+									<reference value="#VREFERENCE_602"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Жалобы -->
+							<value xsi:type="CV" codeSystem="complaint">
+								<originalText>
+									<reference value="#VREFERENCE_605"></reference>
+								</originalText>
+							</value> 
+							<!-- [0..1] Анамнез жизни -->
+							<value xsi:type="CV" codeSystem="anamnesisLife">
+								<originalText>
+									<reference value="#VREFERENCE_606"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Анамнез заболевания -->
+							<value xsi:type="CV" codeSystem="anamnesisDiseases">
+								<originalText>
+									<reference value="#VREFERENCE_607"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Получаемое пациентом лечение в настоящие время (со слов пациента)) -->
+							<value xsi:type="CV" codeSystem="receiveTreatment">
+								<originalText>
+									<reference value="#VREFERENCE_608"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Объективный статус -->
+							<value xsi:type="CV" codeSystem="objectiveStatus">
+								<originalText>
+									<reference value="#VREFERENCE_609"></reference>
+								</originalText>
+							</value>
+							<!-- [0..1] Группа состояния здоровья пациента -->
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.99.2.447" codeSystemVersion="2.1" codeSystemName="Классификатор групп состояния здоровья взрослого населения" displayName="I группа" >
+								<originalText>
+									<reference value="#VREFERENCE_115"></reference>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!--  [0..1] ВИМИС: Дополнительные сведения об осмотре невролога -->
+			<component>
+				<section>
+					<!-- R [1..1] ВИМИС: Код секции дополнительных данных об осмотре невролога -->
+					<code code="ConsultDocNeurologist" codeSystem="vimis1" codeSystemVersion="1.0" displayName="Прием (осмотр, консультация) врача-невролога" codeSystemName="Секции СЭМД beta-версии" />
+					<!-- R [1..1] заголовок секции -->
+					<title>ДОПОЛНИТЕЛЬНЫЕ СВЕДЕНИЯ ОБ ОСМОТРЕ НЕВРОЛОГА</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<paragraph><caption>Данные осмотра невролога</caption></paragraph>
+						<table width="100%">
+							<col width="30%"/>
+							<col width="70%"/>
+							<tbody>
+								<tr>
+									<th>Оценка уровня сознания по ШКГ (интерпретация)</th>
+									<td ID="VREFERENCE_7200">Сознание ясное (15 баллов)</td>
+								</tr>
+								<tr>
+									<th>Сознание</th>
+									<td ID="VREFERENCE_7201">Ясное</td>
+								</tr>
+								<tr>
+									<th>Общемозговые симптомы</th>
+									<td ID="VREFERENCE_7202">Головная боль, головокружение</td>
+								</tr>
+								<tr>
+									<th>Высшая корковая деятельность и психоэмоциональная сфера</th>
+									<td ID="VREFERENCE_7203">Память не нарушена
+										Критика сохранена
+										Поведение адекватное
+										Ориентация сохранена</td>
+								</tr>
+								<tr>
+									<th>Менингеальный синдром</th>
+									<td ID="VREFERENCE_7204">Ригидности затылочных мышц не выявлено
+										Проба Кернига отрицательная
+										Симптом Брудзинского (верхний, средний, нижний) отрицательные</td>
+								</tr>
+								<tr>
+									<th>Речь</th>
+									<td ID="VREFERENCE_7205">моторная афазия</td>
+								</tr>
+								<tr>
+									<th>Черепные нервы</th>
+									<td ID="VREFERENCE_7206">I (обонятельный) нерв: функция не нарушена.
+										II (зрительный) нерв: функция не нарушена.
+										III, IV, VI (глазодвигательный, блоковый, отводящий) нервы: функция не нарушена. 
+										V (тройничный) нерв: функция не нарушена. 
+										VII (лицевой) нерв: сглажена правая носогубная складка.
+										VIII (вестибулокохлеарный нерв) нерв: функция не нарушена. 
+										IX, X (языкоглоточный, блуждающий) нервы: функция не нарушена.
+										XI (добавочный) нерв: девиация язвка влево. 
+										XII (подъязычный) нерв: функция не нарушена.</td>
+								</tr>
+								<tr>
+									<th>Чувствительность</th>
+									<td ID="VREFERENCE_7207">не нарушена</td>
+								</tr>
+								<tr>
+									<th>Спинальное поражение</th>
+									<td ID="VREFERENCE_7208">двигательных нарушений нет
+										чувствительные нарушения выявлены в сегментах С3-С6</td>
+								</tr>
+								<tr>
+									<th>Полиневритическое поражение</th>
+									<td ID="VREFERENCE_7209">нет</td>
+								</tr>
+								<tr>
+									<th>Двигательная система</th>
+									<td ID="VREFERENCE_7210">Объем движений сохранен
+										Мышечная сила не нарушена
+										Мышечный тонус повышен
+										Сухожильные рефлексы сохранены
+										Патологические рефлексы не выявлены
+										Трофика сохранена</td>
+								</tr>
+								<tr>
+									<th>Координационная система</th>
+									<td ID="VREFERENCE_7211">Ходьба не нарушена
+										Тандемная ходьба не нарушена
+										Пальце-носовая проба отрицательная
+										Пяточно-коленная проба: выполняет удовлетворительно
+										Проба Ромберга: выполняет удовлетворительно
+										Асинергия Бабинского: нет</td>
+								</tr>
+								<tr>
+									<th>Экстрапирамидная система</th>
+									<td ID="VREFERENCE_7212">Тремор не выявлен
+										Гипокинезии нет
+										Гиперкинезы не выявлены
+										Постуральная неустоучивость нет
+										Тонус (ригидность) нет</td>
+								</tr>
+								<tr>
+									<th>Вегетативная нервная система</th>
+									<td ID="VREFERENCE_7213">Ортостатическая проба без особенностей
+										Проба Даньини-Ашнера отрицательная
+										Гипергидроз/акрогипергидроз не выявлен</td>
+								</tr>
+								<tr>
+									<th>Тазовые функции</th>
+									<td ID="VREFERENCE_7214">не нарушены</td>
+								</tr>
+								<tr>
+									<th>Вертебральный синдром</th>
+									<td ID="VREFERENCE_7215">Визуальный осмотр без особенностей
+										Объем движений сохранен
+										Пальпация безболезненная
+										Определение симптомов натяжения: не обнаружены</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph><caption>Данные осмотра невролога при остром нарушения мозгового кровообращения (ОНМК)</caption></paragraph>
+						<table width="100%">
+							<col width="30%"/>
+							<col width="70%"/>
+							<tbody>
+								<tr>
+									<th>Срок возникновения первых клинических симптомов ОНМК (ПКС)</th>
+									<td ID="VREFERENCE_7216">Более 24 часов</td>
+								</tr>
+								<tr>
+									<th>Оценка тяжести инсульта NIHSS (интерпретация)</th>
+									<td ID="VREFERENCE_7217">Легкая степень тяжести (1–4 балла)</td>
+								</tr>
+								<tr>
+									<th>Определение этапа реабилитации по ШРМ (интерпретация)</th>
+									<td ID="VREFERENCE_7218">Медицинская реабилитация осуществляется в стационарных условиях (4–6 баллов)</td>
+								</tr>
+								<tr>
+									<th>Определение уровня инвалидизации пациента (исхода) по модифицированной шкале Рэнкина (интерпретация)</th>
+									<td ID="VREFERENCE_7219">Симптомы отсутствуют</td>
+								</tr>
+								<tr>
+									<th>Описание расположения внутримозговой гематомы с определением ее размеров</th>
+									<td ID="VREFERENCE_7220">Супратенториальное расположение, объемом 30 см3 или более</td>
+								</tr>
+								<tr>
+									<th>Оценка тяжести субарахноидального кровоизлияния по шкале Ханта-Хесс (Hunt-Hess)</th>
+									<td ID="VREFERENCE_7221">I степень тяжести</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] Данные осмотра невролога -->
+					<entry>
+						<observation moodCode="EVN" classCode="OBS">
+							<code nullFlavor="NI"/>
+							<!-- R [1..1] Оценка уровня сознания по ШКГ (интерпретация) -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="306" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Шкала комы Глазго (ШКГ)">
+									</code>
+									<value xsi:type="CD" code="201" codeSystem="1.2.643.5.1.13.13.11.1516" codeSystemVersion="3.1" codeSystemName="Интерпретация результатов оценки по клиническим шкалам и опросникам" displayName="15" >
+										<originalText>
+											<reference value="#VREFERENCE_7200"/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>						
+							<!-- [0..1] Врачебное описание ... Сознание -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="216" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Сознание"/>
+									<text><reference value="#VREFERENCE_7201"/></text>
+									<value xsi:type="ST">
+										Ясное
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Общемозговые симптомы -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="211" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Общемозговые симптомы"/>
+									<text><reference value="#VREFERENCE_7202"/></text>
+									<value xsi:type="ST">
+										Головная боль, головокружение
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Высшая корковая деятельность и психоэмоциональная сфера -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="204" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Высшая корковая деятельность и психоэмоциональная сфера"/>
+									<text><reference value="#VREFERENCE_7203"/></text>
+									<value xsi:type="ST">
+										Память не нарушена
+										Критика сохранена
+										Поведение адекватное
+										Ориентация сохранена
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Менингеальный синдром -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="209" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Менингеальный синдром"/>
+									<text><reference value="#VREFERENCE_7204"/></text>
+										<value xsi:type="ST">
+											Ригидности затылочных мышц не выявлено
+											Проба Кернига отрицательная
+											Симптом Брудзинского (верхний, средний, нижний) отрицательные
+										</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Речь -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="215" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Речь"/>
+									<text><reference value="#VREFERENCE_7205"/></text>
+										<value xsi:type="ST">
+											моторная афазия
+										</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Черепные нервы -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="219" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Черепные нервы"/>
+									<text><reference value="#VREFERENCE_7206"/></text>
+									<value xsi:type="ST">
+										I (обонятельный) нерв: функция не нарушена.
+										II (зрительный) нерв: функция не нарушена.
+										III, IV, VI (глазодвигательный, блоковый, отводящий) нервы: функция не нарушена. 
+										V (тройничный) нерв: функция не нарушена. 
+										VII (лицевой) нерв: сглажена правая носогубная складка.
+										VIII (вестибулокохлеарный нерв) нерв: функция не нарушена. 
+										IX, X (языкоглоточный, блуждающий) нервы: функция не нарушена.
+										XI (добавочный) нерв: девиация язвка влево. 
+										XII (подъязычный) нерв: функция не нарушена.
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Чувствительность -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="220" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Чувствительность"/>
+									<text><reference value="#VREFERENCE_7207"/></text>
+									<value xsi:type="ST">
+										не нарушена
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Спинальное поражение -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="217" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Спинальное поражение"/>
+									<text><reference value="#VREFERENCE_7208"/></text>
+									<value xsi:type="ST">
+										двигательных нарушений нет
+										чувствительные нарушения выявлены в сегментах С3-С6
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Полиневритическое поражение -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="213" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Полиневритическое поражение"/>
+									<text><reference value="#VREFERENCE_7209"/></text>
+									<value xsi:type="ST">
+										нет
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..1] Врачебное описание ... Двигательная система -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="206" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Двигательная система"/>
+									<text><reference value="#VREFERENCE_7210"/></text>
+									<value xsi:type="ST">
+										Объем движений сохранен
+										Мышечная сила не нарушена
+										Мышечный тонус повышен
+										Сухожильные рефлексы сохранены
+										Патологические рефлексы не выявлены
+										Трофика сохранена
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Координационная система -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="207" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Координационная система"/>
+									<text><reference value="#VREFERENCE_7211"/></text>
+									<value xsi:type="ST">
+										Ходьба не нарушена
+										Тандемная ходьба не нарушена
+										Пальце-носовая проба отрицательная
+										Пяточно-коленная проба: выполняет удовлетворительно
+										Проба Ромберга: выполняет удовлетворительно
+										Асинергия Бабинского: нет
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Экстрапирамидная система -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="221" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Экстрапирамидная система"/>
+									<text><reference value="#VREFERENCE_7212"/></text>
+									<value xsi:type="ST">
+										Тремор не выявлен
+										Гипокинезии нет
+										Гиперкинезы не выявлены
+										Постуральная неустоучивость нет
+										Тонус (ригидность) нет
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Вегетативная нервная система -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="201" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Вегетативная нервная система"/>
+									<text><reference value="#VREFERENCE_7213"/></text>
+									<value xsi:type="ST">
+										Ортостатическая проба без особенностей
+										Проба Даньини-Ашнера отрицательная
+										Гипергидроз/акрогипергидроз не выявлен
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Тазовые функции -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="218" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Тазовые функции"/>
+									<text><reference value="#VREFERENCE_7214"/></text>
+									<value xsi:type="ST">
+										не нарушены
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Врачебное описание ... Вертебральный синдром -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="202" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Вертебральный синдром"/>
+									<text><reference value="#VREFERENCE_7215"/></text>
+									<value xsi:type="ST">
+										Визуальный осмотр без особенностей
+										Объем движений сохранен
+										Пальпация безболезненная
+										Определение симптомов натяжения: не обнаружены
+									</value>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<!-- [0..1] Данные осмотра невролога при остром нарушения мозгового кровообращения (ОНМК) -->
+					<entry>
+						<observation moodCode="EVN" classCode="OBS">
+							<!-- R [1..1] Срок возникновения первых клинических симптомов ОНМК (ПКС) -->
+							<code code="4" codeSystem="1.2.643.5.1.13.13.99.2.712" codeSystemVersion="1.1" codeSystemName="ВИМИС. Время от появления первых клинических симптомов острого нарушения мозгового кровообращения или от момента, когда пациента последний раз видели здоровым, до начала лечения (осмотра)" displayName="Более 24 часов" >
+								<originalText>
+									<reference value="#VREFERENCE_7216"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..1] Оценка тяжести инсульта NIHSS (интерпретация) -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="307" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Шкала инсульта национального института здоровья (NIHSS)">
+									</code>
+									<value xsi:type="CD" code="401" codeSystem="1.2.643.5.1.13.13.11.1516" codeSystemVersion="3.1" codeSystemName="Интерпретация результатов оценки по клиническим шкалам и опросникам" displayName="1-4" >
+										<originalText>
+											<reference value="#VREFERENCE_7217"/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..1] Определение этапа реабилитации по ШРМ (интерпретация) -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="3" codeSystem="1.2.643.5.1.13.13.99.2.741" codeSystemVersion="1.1" codeSystemName="ВИМИС. Оценка реабилитационной маршрутизации пациента (с использованием шкалы реабилитационной маршрутизации)" displayName="Медицинская реабилитация осуществляется в стационарных условиях" >
+										<originalText>
+											<reference value="#VREFERENCE_7218"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..1] Определение уровня инвалидизации пациента (исхода) по модифицированной шкале Рэнкина (интерпретация) -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="311" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Модифицированная шкала Рэнкина (Modified Rankin Scale)">
+									</code>
+									<value xsi:type="CD" code="4001" codeSystem="1.2.643.5.1.13.13.11.1515" codeSystemVersion="3.1" codeSystemName="Параметры клинических шкал и опросников" displayName="Симптомы отсутствуют" >
+										<originalText>
+											<reference value="#VREFERENCE_7219"/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] Описание расположения внутримозговой гематомы с определением ее размеров -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="1" codeSystem="1.2.643.5.1.13.13.99.2.715" codeSystemVersion="1.1" codeSystemName="ВИМИС. Объем и расположение внутримозговой гематомы относительно намета мозжечка" displayName="Супратенториальное расположение, объемом 30 см3 или более" >
+										<originalText>
+											<reference value="#VREFERENCE_7220"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] Оценка тяжести субарахноидального кровоизлияния по шкале Ханта-Хесс (Hunt-Hess) -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="309" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Шкала Хант-Хесс (Hunt Hess)">
+									</code>
+									<value xsi:type="CD" code="11100" codeSystem="1.2.643.5.1.13.13.11.1515" codeSystemVersion="3.1" codeSystemName="Параметры клинических шкал и опросников" displayName="I" >
+										<originalText>
+											<reference value="#VREFERENCE_7221"/>
+										</originalText>
+									</value>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!--  [0..1] ВИМИС: Дополнительные сведения об осмотре кардиолога -->
+			<component>
+				<section>
+					<!-- R [1..1] ВИМИС: Код секции дополнительных данных об осмотре кардиолога  -->
+					<code code="ConsultDocCardiologist" codeSystem="vimis1" codeSystemVersion="1.0" displayName="Прием (осмотр, консультация) врача-кардиолога" codeSystemName="Секции СЭМД beta-версии" />
+					<!-- R [1..1] заголовок секции -->
+					<title>ДОПОЛНИТЕЛЬНЫЕ СВЕДЕНИЯ ОБ ОСМОТРЕ КАРДИОЛОГА</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<paragraph><caption>Данные осмотра кардиолога</caption></paragraph>
+						<table width="100%">
+							<col width="30%"/>
+							<col width="70%"/>
+							<tbody>
+								<tr>
+									<th> Оценка сознания</th>
+									<td ID="VREFERENCE_7300">Ясное</td>
+								</tr>
+								<tr>
+									<th>Наличие отеков</th>
+									<td ID="VREFERENCE_7301">Да</td>
+								</tr>
+								 <tr>
+								  <th>Локализация отеков</th>
+								  <td>
+									<list>
+										<item>
+											<content ID="VREFERENCE_7302">Анасарка</content><br/>
+										</item>
+									</list>
+								  </td>
+								</tr>
+								<tr>
+								  <th>Оценка кожных покровов</th>
+								  <td>
+								 		<list>
+								 			<item>
+								 				<content ID="VREFERENCE_7303">Обычные (нормальные)</content><br/>
+								 			</item>
+								 		</list>
+								 </td>
+								</tr>
+								<tr>
+									<th>Оценка Дыхания</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_7304">Везикулярное</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Описание тонов сердца</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_7305">Ритмичные</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Наличие шума сердца</th>
+									<td ID="VREFERENCE_7306">Да</td>
+								</tr>
+								<tr>
+									<th>Описание шума сердца</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_7307">Трение перикарда</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Описание пульса</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_7308">Ритмичный</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Описание языка</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_7309">Обложен</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+								<th>Описание живота</th>
+								<td>
+									<list>
+										<item>
+											<content ID="VREFERENCE_7310">безболезненный</content><br/>
+										</item>
+									</list>
+								</td>
+								</tr>
+								<tr>
+									<th>Описание печени</th>
+									<td ID="VREFERENCE_7311">Не увеличена</td>
+								</tr>
+								<tr>
+									<th>Характеристика пульсации на артериях нижних конечностей</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_7312">Ослаблена</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Локализация нарушения пульсации на артериях нижних конечностей</th>
+									<td ID="VREFERENCE_7313">пульсация артерии на правой стопе не определяется</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph><caption>Данные осмотра кардиолога при остром коронарном синдроме (ОКС)</caption></paragraph>
+							<table width="100%">
+								<col width="30%"/>
+								<col width="70%"/>
+								<tbody>
+									<tr>
+										<th>Классификация ИМ на основании наличия ИМ в анамнезе</th>
+										<td ID="VREFERENCE_7314">Повторный инфаркт миокарда (развившийся через 28 суток после предшествующего инфаркта миокарда)</td> 
+									</tr>
+									<tr>
+										<th>Наличие болевого синдрома</th>
+										<td ID="VREFERENCE_7315">Да</td>
+									</tr>
+									<tr>
+										<th>Описание характера болевого синдрома ОКС</th>
+										<td ID="VREFERENCE_7316">боли в грудной клетке с иррадиацией в нижнюю челюсть</td>
+									</tr>
+									<tr>
+										<th>Наличие одышки</th>
+										<td ID="VREFERENCE_7317">Да</td>
+									</tr>
+									<tr>
+										<th>Наличие хрипов</th>
+										<td ID="VREFERENCE_7318">Нет</td>
+									</tr>
+									<tr>
+										<th>Характеристика хрипов в легких</th>
+										<td>
+											<list>
+												<item>
+													<content ID="VREFERENCE_7319">Влажные мелкопузырчатые</content><br/>
+												</item>
+											</list>
+										</td>
+									</tr>
+									<tr>
+										<th>Наличие набухания шейных вен</th>
+										<td ID="VREFERENCE_7320">Нет</td>
+									</tr>
+									<tr>
+										<th>Врачебное описание ЭКГ</th>
+										<td ID="VREFERENCE_7321">синусовый ритм, признаки нарушения кровоснабжения передне-перегородочной области, желудочковая экстрасистолия</td>
+									</tr>
+									<tr>
+										<th>Наличие кардиогенного шока</th>
+										<td ID="VREFERENCE_7322">Нет</td>
+									</tr>
+									<tr>
+										<th>Наличие повышенного уровня маркеров некроза миокарда</th>
+										<td ID="VREFERENCE_7323">Нет</td>
+									</tr>
+									<tr>
+										<th>Наличие операции аортокоронарного шунтирования в анамнезе</th>
+										<td ID="VREFERENCE_7324">Нет</td>
+									</tr>
+									<tr>
+										<th>Наличие операции чрезкожного коронарного шунтирования в анамнезе</th>
+										<td ID="VREFERENCE_7325">Нет</td>
+									</tr>
+								</tbody>
+							</table>
+					</text>
+					<!-- R [1..1] Данные осмотра кардиолога -->
+					<entry>
+						<observation moodCode="EVN" classCode="OBS">
+							<!-- R [1..1] Оценка сознания -->
+							<code code="1" codeSystem="1.2.643.5.1.13.13.11.1531" codeSystemVersion="1.1" codeSystemName="Оценка сознания пациента бригадой скорой медицинской помощи" displayName="Ясное" >
+								<originalText>
+									<reference value="#VREFERENCE_7300"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Наличие отеков -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="244" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие отеков"/>
+									<text><reference value="#VREFERENCE_7301"/></text>						
+									<value xsi:type="BL" value="true"/>
+								</observation>
+							</entryRelationship>
+							<!-- [0..*] Локализация отеков -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="4" codeSystem="1.2.643.5.1.13.13.99.2.738" codeSystemVersion="1.1" codeSystemName="ВИМИС. Виды отеков" displayName="Анасарка" >
+										<originalText>
+											<reference value="#VREFERENCE_7302"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [1..*] Оценка кожных покровов -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="1" codeSystem="1.2.643.5.1.13.13.11.1533" codeSystemVersion="1.1" codeSystemName="Оценка кожных покровов пациента бригадой скорой медицинской помощи" displayName="Обычные (нормальные)" >
+										<originalText>
+											<reference value="#VREFERENCE_7303"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [1..*] Оценка дыхания -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="1" codeSystem="1.2.643.5.1.13.13.11.1534" codeSystemVersion="1.1" codeSystemName="Оценка дыхания пациента бригадой скорой медицинской помощи" displayName="Везикулярное" >
+										<originalText>
+											<reference value="#VREFERENCE_7304"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [1..*] Оценка тонов сердца пациента -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="1" codeSystem="1.2.643.5.1.13.13.11.1523" codeSystemVersion="1.1" codeSystemName="Оценка тонов сердца пациента" displayName="Ритмичные" >
+										<originalText>
+											<reference value="#VREFERENCE_7305"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Наличие шума сердца -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="249" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие шума сердца"/>
+									<text><reference value="#VREFERENCE_7306"/></text>						
+									<value xsi:type="BL" value="true"/>
+								</observation>
+							</entryRelationship>
+							<!-- [0..*] Описание шума сердца  -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="3" codeSystem="1.2.643.5.1.13.13.11.1536" codeSystemVersion="1.1" codeSystemName="Оценка шумов сердца пациента бригадой скорой медицинской помощи" displayName="Трение перикарда" >
+										<originalText>
+											<reference value="#VREFERENCE_7307"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- R [1..*] Описание пульса -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="2" codeSystem="1.2.643.5.1.13.13.11.1537" codeSystemVersion="1.1" codeSystemName="Оценка пульса пациента бригадой скорой медицинской помощи" displayName="Ритмичный" >
+										<originalText>
+											<reference value="#VREFERENCE_7308"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [0..*] Описание языка -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="4" codeSystem="1.2.643.5.1.13.13.11.1538" codeSystemVersion="1.1" codeSystemName="Описание языка пациента бригадой скорой медицинской помощи" displayName="Обложен" >
+										<originalText>
+											<reference value="#VREFERENCE_7309"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [0..*] Описание живота -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="2" codeSystem="1.2.643.5.1.13.13.11.1539" codeSystemVersion="1.1" codeSystemName="Описание живота пациента бригадой скорой медицинской помощи" displayName="Безболезненный" >
+										<originalText>
+											<reference value="#VREFERENCE_7310"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] Описание печени -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="2" codeSystem="1.2.643.5.1.13.13.11.1540" codeSystemVersion="1.1" codeSystemName="Оценка размеров печени пациента бригадой скорой медицинской помощи" displayName="Не увеличена" >
+										<originalText>
+											<reference value="#VREFERENCE_7311"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [1..*] Характеристика пульсации на артериях нижних конечностей -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.730" codeSystemVersion="1.1" codeSystemName="ВИМИС. Характеристики пульсации на артериях нижних конечностей" displayName="Ослаблена" >
+										<originalText>
+											<reference value="#VREFERENCE_7312"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] Врачебное описание ... Локализация нарушения пульсации на артериях нижних конечностей -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="300" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Локализация нарушения пульсации на артериях нижних конечностей"/>
+									<text><reference value="#VREFERENCE_7313"/></text>
+									<value xsi:type="ST">пульсация артерии на правой стопе не определяется</value>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<!-- [0..1] Данные осмотра кардиолога при остром коронарном синдроме (ОКС) -->
+					<entry>
+						<observation moodCode="EVN" classCode="OBS">
+							<!-- [1..1] Классификация ИМ на основании наличия ИМ в анамнезе -->
+							<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.739" codeSystemVersion="1.1" codeSystemName="Классификация ИМ на основании наличия ИМ в анамнезе" displayName="Повторный инфаркт миокарда (развившийся через 28 суток после предшествующего инфаркта миокарда)" >
+								<originalText>
+									<reference value="#VREFERENCE_7314"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Наличие болевого синдрома -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="295" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие болевого синдрома"/>
+									<text><reference value="#VREFERENCE_7315"/></text>						
+									<value xsi:type="BL" value="true"/>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] Описание характера болевого синдрома ОКС -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="296" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Описание характера болевого синдрома ОКС"/>
+									<text><reference value="#VREFERENCE_7316"/></text>
+									<value xsi:type="ST">боли в грудной клетке с иррадиацией в нижнюю челюсть</value>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Наличие одышки -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="248" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие одышки"/>
+									<text><reference value="#VREFERENCE_7317"/></text>						
+									<value xsi:type="BL" value="true"/>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Наличие хрипов -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="297" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие хрипов"/>
+									<text><reference value="#VREFERENCE_7318"/></text>						
+									<value xsi:type="BL" value="false"/>
+								</observation>
+							</entryRelationship>
+							<!-- [0..*] Характеристика хрипов в легких -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="10" codeSystem="1.2.643.5.1.13.13.99.2.740" codeSystemVersion="1.1" codeSystemName="Побочные дыхательные шумы" displayName="Влажные мелкопузырчатые" > 
+										<originalText>
+											<reference value="#VREFERENCE_7319"></reference>
+										</originalText>
+									</code>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Наличие набухания шейных вен -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="298" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие набухания шейных вен"/>
+									<text><reference value="#VREFERENCE_7320"/></text>						
+									<value xsi:type="BL" value="false"/>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] Врачебное описание ЭКГ -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="299" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Врачебное описание ЭКГ"/>
+									<text><reference value="#VREFERENCE_7321"/></text>
+									<value xsi:type="ST">синусовый ритм, признаки нарушения кровоснабжения передне-перегородочной области, желудочковая экстрасистолия</value>
+								</observation>
+							</entryRelationship>
+							<!-- [0..1] Наличие кардиогенного шока  -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="301" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие кардиогенного шока"/>
+									<text><reference value="#VREFERENCE_7322"/></text>						
+									<value xsi:type="BL" value="false"/>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Наличие повышенного уровеня маркеров некроза миокарда  -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="302" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие повышенного уровеня маркеров некроза миокарда"/>
+									<text><reference value="#VREFERENCE_7323"/></text>						
+									<value xsi:type="BL" value="false"/>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Наличие операции аортокоронарного шунтирования в анамнезе -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="303" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие операции аортокоронарное шунтирование в анамнезе"/>
+									<text><reference value="#VREFERENCE_7324"/></text>						
+									<value xsi:type="BL" value="false"/>
+								</observation>
+							</entryRelationship>
+							<!-- [1..1] Наличие операции чрезкожного коронарного шунтирования в анамнезе  -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="304" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Наличие операции чрезкожное коронарное шунтирование в анамнезе"/>
+									<text><reference value="#VREFERENCE_7325"/></text>						
+									<value xsi:type="BL" value="false"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] ВИМИС: Диагноз (с кодированными элементами) -->
+			<component>
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="DGN" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.7"  codeSystemName="Секции электронных медицинских документов" displayName="Диагнозы"/>
+					<!-- R [1..1] Заголовок секции -->
+					<title>ДИАГНОЗЫ</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<paragraph><caption>Диагноз: I63.0 Инфаркт мозга, вызванный тромбозом прецеребральных артерий</caption></paragraph>
+						<table width="100%">
+							<col width="50%"/>
+							<col width="50%"/>
+							<tbody>
+								<tr>
+									<th>Степень обоснованности диагноза</th>
+									<td ID="VREFERENCE_9300">Предварительный диагноз</td>
+								</tr>
+								<tr>
+									<th>Вид нозологической единицы диагноза</th>
+									<td ID="VREFERENCE_9301">Основное заболевание</td>
+								</tr>
+								<tr>
+									<th>Дата установления диагноза</th>
+									<td>27.08.2020</td>
+								</tr>
+								<tr>
+									<th>Заболевание (состояние) по МКБ-10</th>
+									<td ID="VREFERENCE_9302">I63.0 Инфаркт мозга, вызванный тромбозом прецеребральных артерий</td>
+								</tr>
+								<tr>
+									<th>Характер заболевания</th>
+									<td ID="VREFERENCE_9303">Острое</td>
+								</tr>
+								<tr>
+									<th>Клиническое описание диагноза</th>
+									<td ID="VREFERENCE_9304">Клиническое описание диагноза</td>
+								</tr>
+								<tr>
+									<th colspan="2">Уточнение диагноза при остром нарушении мозгового кровообращения (ОНМК)</th>
+								</tr>
+								<tr>
+									<th>Дата возникновения ОНМК</th>
+									<td>27.08.2020 16:00</td>
+								</tr>
+								<tr>
+									<th>Кратность ОНМК</th>
+									<td ID="VREFERENCE_9305">Повторное ОНМК</td>
+								</tr>
+								<tr>
+									<th>Пострадавшие бассейны и артерии</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_9306">Средняя мозговая артерия, сегмент M1</content><br/>
+												<content ID="VREFERENCE_9307">Большая передняя радикуломедулярная артерия</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>		
+								<tr>
+									<th>Локализация гематомы при ОНМК</th>
+									<td ID="VREFERENCE_9309">Ствол головного мозга</td> 
+								</tr>
+								<tr>
+									<th>Подтип ОНМК по ишемическому типу</th>
+									<td ID="VREFERENCE_9310">Кардиоэмболический инсульт</td>
+								</tr>
+								<tr>
+									<th>Краткая характеристика клинической картины - проявления заболевания, перечисляются в виде симптомов по убыванию клинической значимости с указанием степени нарушения</th>
+									<td ID="VREFERENCE_9311">Правосторонний гемипарез. Моторная афазия.</td>
+								</tr>
+								<tr>
+									<th>Период ОНМК</th>
+									<td ID="VREFERENCE_9312">Острый период</td>
+								</tr>
+								<tr>
+									<th>Уточнение состояния сознания, если есть нарушение при ОНМК</th>
+									<td ID="VREFERENCE_9313">Умеренное оглушение (13–14 баллов)</td>
+								</tr>
+								<tr>
+									<th>Непосредственные причины, которые вызвали ОНМК</th>
+									<td ID="VREFERENCE_9314">Нарушение ритма</td>
+								</tr>
+								<tr>
+									<th>Выполненное лечение у пациента с ОНМК</th>
+									<td ID="VREFERENCE_9315">ВСТЭ от 25.08.2020</td>
+								</tr>
+								<tr>
+									<th>Оценка восстановления перфузии при ОНМК по ишемическому типу (mTICI)</th>
+									<td ID="VREFERENCE_9316">2b</td>
+								</tr>
+								<tr>
+									<th>Осложнения лечения у пациента с ОНМК (общие)</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_9317">Пневмония</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph><caption>Диагноз: I21.0 Острый трансмуральный инфаркт передней стенки миокарда</caption></paragraph>
+						<table width="100%">
+							<col width="50%"/>
+							<col width="50%"/>
+							<tbody>
+								<tr>
+									<th>Степень обоснованности диагноза</th>
+									<td ID="VREFERENCE_9400">Предварительный диагноз</td>
+								</tr>
+								<tr>
+									<th>Вид нозологической единицы диагноза</th>
+									<td ID="VREFERENCE_9401">Основное заболевание</td>
+								</tr>
+								<tr>
+									<th>Дата установления диагноза</th>
+									<td>27.09.2020</td>
+								</tr>
+								<tr>
+									<th>Заболевание (состояние) по МКБ-10</th>
+									<td ID="VREFERENCE_9402">I21.0 Острый трансмуральный инфаркт передней стенки миокарда</td>
+								</tr>
+								<tr>
+									<th>Характер заболевания</th>
+									<td ID="VREFERENCE_9403">Острое</td>
+								</tr>
+								<tr>
+									<th>Клиническое описание диагноза</th>
+									<td ID="VREFERENCE_9404">Клиническое описание диагноза</td>
+								</tr>
+								
+								<tr>
+									<th colspan="2">Уточнение диагноза при остром коронарном синдроме (ОКС)</th>
+								</tr>
+								
+								<tr>
+									<th>Дата и время возникновения симптомов ОКС</th>
+									<td>16:00 25.09.2020</td>
+								</tr>
+								<tr>
+									<th>Форма ОКС</th>
+									<td ID="VREFERENCE_9405">ОКС с подъемом сегмента ST</td>
+								</tr>
+								<tr>
+									<th>Категория риска неблагоприятного исхода</th>
+									<td ID="VREFERENCE_9406">Умеренный (промежуточный) риск</td>
+								</tr>
+								<tr>
+									<th>Пострадавшая коронарная артерия при ОКС</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_9407">Правая коронарная артерия средний сегмент</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Класс острой сердечной недостаточности</th>
+									<td ID="VREFERENCE_9408">Killip II</td>
+								</tr>
+								<tr>
+									<th>Риск развития неблагоприятного исхода при ОКС без подъема по шкале GRACE</th>
+									<td ID="VREFERENCE_9409">140</td>
+								</tr>
+								<tr>
+									<th>Классификация инфаркта миокарда на основании локализации очага некроза</th>
+									<td ID="VREFERENCE_9410">Да</td>
+								</tr>
+								<tr>
+									<th>Локализация зоны некроза</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_9411">Передняя стенка левого желудочка</content><br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Классификация ИМ на основании последующих изменений ЭКГ</th>
+									<td ID="VREFERENCE_9412">Инфаркт миокарда с формированием патологических зубцов Q</td>
+								</tr>
+								<tr>
+									<th>Классификация ИМ на основании наличия ИМ в анамнезе</th>
+									<td ID="VREFERENCE_9413">Повторный инфаркт миокарда (развившийся через 28 суток после предшествующего инфаркта миокарда)</td>    
+								</tr>
+								<tr>
+									<th>Тип инфаркта миокарда</th>
+									<td ID="VREFERENCE_9414">Тип 4с</td>
+								</tr>
+								<tr>
+									<th>Стадия предшествующей хронической сердечной недостаточности</th>
+									<td ID="VREFERENCE_9415">IIА</td>
+								</tr>
+								<tr>
+									<th>Функциональный класс предшествующей хронической сердечной недостаточности</th>
+									<td ID="VREFERENCE_9416">II ФК</td>
+								</tr>
+								<tr>
+									<th>Выполненное хирургическое лечение при ОКС</th>
+									<td>
+										<list>
+											<item>
+												27.09.2020 <content ID="VREFERENCE_9417">Выполненное хирургическое лечение при ОКС</content><br/>
+												Баллонная ангиопластика со стентированием передней коронарной артерии <br/>
+												27.09.2020 <content ID="VREFERENCE_9418">Выполненное хирургическое лечение при ОКС</content><br/>
+												Имплантация временного электрокардиостимулятора<br/>
+											</item>
+										</list>
+									</td>
+								</tr>
+								<tr>
+									<th>Осложнения лечения у пациента с ОКС</th>
+									<td>
+										<list>
+											<item>
+												<content ID="VREFERENCE_9419">Диссекция стенки сосуда</content><br/>  
+											</item>
+										</list>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..*] ВИМИС: Кодирование диагноза -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- R [1..1] Степень обоснованности диагноза -->
+							<code code="1" codeSystem="1.2.643.5.1.13.13.11.1076" codeSystemVersion="1.2" codeSystemName="Степень обоснованности диагноза" displayName="Предварительный диагноз" >
+								<originalText>
+									<reference value="#VREFERENCE_9300"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..*] ВИМИС: Кодирование диагноза указанной степени обоснованности -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Кодирование вида нозологической единицы диагноза -->
+									<code code="1" codeSystem="1.2.643.5.1.13.13.11.1077" codeSystemVersion="1.3" displayName="Основное заболевание" codeSystemName="Виды нозологических единиц диагноза">
+										<originalText>
+											<reference value="#VREFERENCE_9301"></reference>
+										</originalText>
+									</code>
+									<!-- R [1..1] Дата установления диагноза  -->
+									<effectiveTime value="202009271600+0300"/>
+									<!-- R [1..1] Заболевание (состояние) по МКБ-10 -->
+									<value xsi:type="CD" code="I63.0" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.10" codeSystemName="Международная классификация болезней и состояний, связанных со здоровьем 10 пересмотра. Версия 4" displayName="Инфаркт мозга, вызванный тромбозом прецеребральных артерий" >
+										<originalText>
+											<reference value="#VREFERENCE_9302"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Характер заболевания -->
+									<value xsi:type="CD" code="3" codeSystem="1.2.643.5.1.13.13.11.1049" codeSystemVersion="2.1" codeSystemName="Характер заболевания" displayName="Острое" >
+										<originalText>
+											<reference value="#VREFERENCE_9303"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Клиническое описание диагноза -->
+									<value xsi:type="CV" codeSystem="diseaseDescription">
+										<originalText>
+											<reference value="#VREFERENCE_9304"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Уточнение диагноза при остром нарушении мозгового кровообращения (ОНМК) -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- R [1..1] Кодирование секции дополнительных сведений о диагнозе -->
+											<code code="DiagnosisCVD" codeSystem="vimis1" codeSystemVersion="1.0" displayName="Уточнение диагноза при остром нарушении мозгового кровообращения (ОНМК)" codeSystemName="Секции СЭМД beta-версии"/>
+											<!-- R [1..1] Дата возникновения ОНМК -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="205" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Дата возникновения ОНМК"/>
+													<effectiveTime value="202009271600+0300"/>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Кратность ОНМК -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.711" codeSystemVersion="1.1" codeSystemName="ВИМИС. Кратность острого нарушения мозгового кровообращения" displayName="Повторное ОНМК" >
+														<originalText>
+															<reference value="#VREFERENCE_9305"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Пострадавшие бассейны и артерии -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="214" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Пострадавшие бассейны и артерии"/>
+													<!-- [1..*] Пострадавший бассейн или артерия при ОНМК -->
+													<entryRelationship typeCode="REFR" inversionInd="false">
+														<act classCode="ACT" moodCode="EVN">
+															<code code="791" displayName="Средняя мозговая артерия, сегмент M1" codeSystem="1.2.643.5.1.13.13.11.1477"  codeSystemVersion="2.1" codeSystemName="Анатомические локализации">
+																<originalText>
+																	<reference value="#VREFERENCE_9306"></reference>
+																</originalText>
+															</code>
+														</act>
+													</entryRelationship>
+													<!-- [1..*] Пострадавший бассейн или артерия при ОНМК -->
+													<entryRelationship typeCode="REFR" inversionInd="false">
+														<act classCode="ACT" moodCode="EVN">
+															<code code="827" displayName="Большая передняя радикуломедулярная артерия" codeSystem="1.2.643.5.1.13.13.11.1477"  codeSystemVersion="2.1" codeSystemName="Анатомические локализации">
+																<originalText>
+																	<reference value="#VREFERENCE_9307"></reference>
+																</originalText>
+															</code>
+														</act>
+													</entryRelationship>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Локализация гематомы при ОНМК -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="258" codeSystem="1.2.643.5.1.13.13.11.1477" codeSystemVersion="2.1" codeSystemName="Анатомические локализации" displayName="Ствол головного мозга" >
+														<originalText>
+															<reference value="#VREFERENCE_9309"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Подтип ОНМК по ишемическому типу -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="6" codeSystem="1.2.643.5.1.13.13.11.1511" codeSystemVersion="2.2" codeSystemName="Виды острых нарушений мозгового кровообращения" displayName="Кардиоэмболический инсульт" >
+														<originalText>
+															<reference value="#VREFERENCE_9310"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Врачебное описание ... Краткая характеристика клинической картины - проявления заболевания, перечисляются в виде симптомов по убыванию клинической значимости с указанием степени нарушения -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="208" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Краткая характиристика клинической картины"/>
+													<text><reference value="#VREFERENCE_9311"/></text>
+													<value xsi:type="ST">
+														Правосторонний гемипарез. Моторная афазия.
+													</value>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Врачебное описание ... Период ОНМК -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="212" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Период ОНМК"/>
+													<text><reference value="#VREFERENCE_9312"/></text>
+													<value xsi:type="ST">
+														Острый период
+													</value>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Уточнение состояния сознания, если есть нарушение при ОНМК -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="306" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Шкала комы Глазго (ШКГ)">
+													</code>
+													<value xsi:type="CD" code="201" codeSystem="1.2.643.5.1.13.13.11.1516" codeSystemVersion="3.1" codeSystemName="Интерпретация результатов оценки по клиническим шкалам и опросникам" displayName="13-14" >
+														<originalText>
+															<reference value="#VREFERENCE_9313"/>
+														</originalText>
+													</value>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Врачебное описание ... Непосредственные причины, которые вызвали ОНМК -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="210" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Непосредственные причины, которые вызвали ОНМК"/>
+													<text><reference value="#VREFERENCE_9314"/></text>
+													<value xsi:type="ST">
+														Нарушение ритма
+													</value>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Врачебное описание ... Выполненное лечение у пациента с ОНМК -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="203" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Выполненное лечение у пациента с ОНМК"/>
+													<text><reference value="#VREFERENCE_9315"/></text>
+													<value xsi:type="ST">
+														ВСТЭ от 25.08.2020
+													</value>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Оценка восстановления перфузии при ОНМК по ишемическому типу (mTICI) -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="310" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Модифицированная шкала восстановления перфузии при ишемическом инсульте (mTICI)">
+													</code>
+													<value xsi:type="CD" code="12400" codeSystem="1.2.643.5.1.13.13.11.1515" codeSystemVersion="3.1" codeSystemName="Параметры клинических шкал и опросников" displayName="2b" >
+														<originalText>
+															<reference value="#VREFERENCE_9316"/>
+														</originalText>
+													</value>
+												</observation>
+											</entryRelationship>
+											<!-- [0..*] Осложнения лечения у пациента с ОНМК (общие) -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="4" codeSystem="1.2.643.5.1.13.13.99.2.479" codeSystemVersion="1.0" codeSystemName="Классификатор осложнений, возникших за время госпитализации больного с острым нарушением мозгового кровообращения" displayName="Пневмония" >
+														<originalText>
+															<reference value="#VREFERENCE_9317"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- R [1..*] ВИМИС: Кодирование диагноза -->
+					<entry>
+						<act classCode="ACT" moodCode="EVN">
+							<!-- R [1..1] Степень обоснованности диагноза -->
+							<code code="1" codeSystem="1.2.643.5.1.13.13.11.1076" codeSystemVersion="1.2" codeSystemName="Степень обоснованности диагноза" displayName="Предварительный диагноз" >
+								<originalText>
+									<reference value="#VREFERENCE_9400"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..*] ВИМИС: Кодирование диагноза указанной степени обоснованности -->
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<!-- R [1..1] Кодирование вида нозологической единицы диагноза -->
+									<code code="1" codeSystem="1.2.643.5.1.13.13.11.1077" codeSystemVersion="1.3" displayName="Основное заболевание" codeSystemName="Виды нозологических единиц диагноза">
+										<originalText>
+											<reference value="#VREFERENCE_9401"></reference>
+										</originalText>
+									</code>
+									<!-- R [1..1] Дата установления диагноза  -->
+									<effectiveTime value="202009271600+0300"/>
+									<!-- R [1..1] Заболевание (состояние) по МКБ-10 -->
+									<value xsi:type="CD" code="I21.0" codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.10" codeSystemName="Международная классификация болезней и состояний, связанных со здоровьем 10 пересмотра. Версия 4" displayName="Острый трансмуральный инфаркт передней стенки миокарда" >
+										<originalText>
+											<reference value="#VREFERENCE_9402"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Характер заболевания -->
+									<value xsi:type="CD" code="3" codeSystem="1.2.643.5.1.13.13.11.1049" codeSystemVersion="2.1" codeSystemName="Характер заболевания" displayName="Острое" >
+										<originalText>
+											<reference value="#VREFERENCE_9403"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Клиническое описание диагноза -->
+									<value xsi:type="CV" codeSystem="diseaseDescription">
+										<originalText>
+											<reference value="#VREFERENCE_9404"></reference>
+										</originalText>
+									</value>
+									<!-- [0..1] Уточнение диагноза при остром коронарном синдроме (ОКС) -->
+									<entryRelationship typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<!-- R [1..1] Кодирование секции дополнительных сведений о диагнозе -->
+											<code code="DiagnosisACS" codeSystem="vimis1" codeSystemVersion="1.0" displayName="Уточнение диагноза при остром коронарном синдроме (ОКС)" codeSystemName="Секции СЭМД beta-версии"/>
+											<!-- [1..1] Дата и время возникновения симптомов ОКС -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="284" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Дата и время возникновения симптомов ОКС"/>
+													<effectiveTime value="202009271600+0300"/>
+												</observation>
+											</entryRelationship>
+											<!-- R [1..1] Форма ОКС -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.727" codeSystemVersion="1.1" codeSystemName="ВИМИС. Виды острого коронарного синдрома" displayName="ОКС с подъемом сегмента ST" >
+														<originalText>
+															<reference value="#VREFERENCE_9405"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Категория риска неблагоприятного исхода -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="14" codeSystem="1.2.643.5.1.13.13.99.2.736" codeSystemVersion="1.1" codeSystemName="ВИМИС. Категории риска неблагоприятного исхода при остром коронарном синдроме без подъема сегмента ST" displayName="Умеренный (промежуточный) риск" >
+														<originalText>
+															<reference value="#VREFERENCE_9406"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- R [1..1] Пострадавшие артерии -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="214" codeSystem="vimis5" codeSystemVersion="1.21" codeSystemName="Поля СЭМД beta-версии" displayName="Пострадавшие бассейны и артерии"/>
+													<!-- [1..*] Пострадавшая коронарная артерия при ОКС -->
+													<entryRelationship typeCode="REFR" inversionInd="false">
+														<act classCode="ACT" moodCode="EVN">
+															<code code="866" displayName="Правая коронарная артерия средний сегмент" codeSystem="1.2.643.5.1.13.13.11.1477"  codeSystemVersion="2.2" codeSystemName="Анатомические локализации">
+																<originalText>
+																	<reference value="#VREFERENCE_9407"></reference>
+																</originalText>
+															</code>
+														</act>
+													</entryRelationship>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Классификация острой сердечной недостаточности по Киллип (Killip) -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.481" codeSystemVersion="1.0" codeSystemName="Классификация острой сердечной недостаточности по Киллип (Killip)" displayName="Killip II" >
+														<originalText>
+															<reference value="#VREFERENCE_9408"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [0..1] Оценка риск неблагоприятного исхода по шкале GRACE при ОКС без подъема ST -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="285" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Риск развития неблагоприятного исхода при ОКС без подъема по шкале GRACE"/>
+													<text><reference value="#VREFERENCE_9409"/></text>
+													<value xsi:type="INT" value="140"/>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Классификация инфаркта миокарда на основании локализации очага некроза -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="286" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Классификация инфаркта миокарда на основании локализации очага некроза">
+														<originalText>
+															<reference value="#VREFERENCE_9410"></reference>
+														</originalText>
+													</code>
+													<!-- [1..*] Локализация зоны некроза -->
+													<entryRelationship typeCode="REFR" inversionInd="false">
+														<act classCode="ACT" moodCode="EVN">
+															<code code="874" codeSystem="1.2.643.5.1.13.13.11.1477" codeSystemVersion="2.2" codeSystemName="Анатомические локализации" displayName="Передняя стенка левого желудочка" >
+																<originalText>
+																	<reference value="#VREFERENCE_9411"></reference>
+																</originalText>
+															</code>
+														</act>
+													</entryRelationship>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Классификация ИМ на основании последующих изменений ЭКГ -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="1" codeSystem="1.2.643.5.1.13.13.99.2.731" codeSystemVersion="1.1" codeSystemName="ВИМИС. Виды инфаркта миокарда на основании последующих изменений на ЭКГ" displayName="Инфаркт миокарда с формированием патологических зубцов Q" >
+														<originalText>
+															<reference value="#VREFERENCE_9412"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Классификация ИМ на основании наличия ИМ в анамнезе -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.739" codeSystemVersion="1.1" codeSystemName="Классификация ИМ на основании наличия ИМ в анамнезе" displayName="Повторный инфаркт миокарда (развившийся через 28 суток после предшествующего инфаркта миокарда)" >
+														<originalText>
+															<reference value="#VREFERENCE_9413"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [0..1] Тип инфаркта миокарда -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="6" codeSystem="1.2.643.5.1.13.13.99.2.735" codeSystemVersion="1.1" codeSystemName="ВИМИС. Типы инфаркта миокарда" displayName="Тип 4с" >
+														<originalText>
+															<reference value="#VREFERENCE_9414"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Стадия предшествующей хронической сердечной недостаточности -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.728" codeSystemVersion="1.1" codeSystemName="ВИМИС. Стадии хронической сердечной недостаточности" displayName="IIА" >
+														<originalText>
+															<reference value="#VREFERENCE_9415"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [1..1] Функциональный класс предшествующей хронической сердечной недостаточности -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="2" codeSystem="1.2.643.5.1.13.13.99.2.729" codeSystemVersion="1.1" codeSystemName="ВИМИС. Функциональные классы хронической сердечной недостаточности" displayName="II ФК" >
+														<originalText>
+															<reference value="#VREFERENCE_9416"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+											<!-- [0..*] Выполненное хирургическое лечение при ОКС -->
+											<entryRelationship typeCode="REFR" inversionInd="false">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="287" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Выполненное хирургическое лечение при ОКС"/>
+													<text><reference value="#VREFERENCE_9417"/></text>
+													<!-- R [1..1] Дата проведения -->
+													<effectiveTime value="202009270835+0300"/>
+													<!-- R [1..1] Врачебное описание выполненного хирургического лечения при ОКС -->
+													<value xsi:type="ST">
+														Баллонная ангиопластика со стентированием передней коронарной артерии  
+													</value>
+												</observation>
+											</entryRelationship>
+											<!-- [0..*] Выполненное хирургическое лечение при ОКС -->
+											<entryRelationship typeCode="REFR" inversionInd="false">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="287" codeSystem="vimis5" codeSystemVersion="1.0" codeSystemName="Поля СЭМД beta-версии" displayName="Выполненное хирургическое лечение при ОКС"/>
+													<text><reference value="#VREFERENCE_9418"/></text>
+													<!-- R [1..1] Дата проведения -->
+													<effectiveTime value="202009270835+0300"/>
+													<!-- R [1..1] Врачебное описание выполненного хирургического лечения при ОКС -->
+													<value xsi:type="ST">
+														Имплантация временного электрокардиостимулятора 
+													</value>
+												</observation>
+											</entryRelationship>
+											<!-- [0..*] Осложнения лечения у пациента с ОКС -->
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="2266" codeSystem="1.2.643.5.1.13.13.11.1485" codeSystemVersion="3.2" codeSystemName="Осложнения лечения онкологических заболеваний" displayName="Диссекция стенки сосуда" >
+														<originalText>
+															<reference value="#VREFERENCE_9419"></reference>
+														</originalText>
+													</code>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</entryRelationship>
+								</observation>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<!-- [0..1] СЕКЦИЯ: ВАКЦИНАЦИЯ И ИММУНИЗАЦИЯ -->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="IMM" codeSystem="1.2.643.5.1.13.13.11.1379" codeSystemVersion="1.2"  codeSystemName="Секции электронных медицинских документов" displayName="Иммунизация"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>ВАКЦИНАЦИЯ И ИММУНИЗАЦИЯ</title>
+					<!-- [1..1] наполнение секции -->
+					<text>
+						<table width="100%">
+							<col width="5%"/>
+							<col width="50%"/>
+							<col width="5%"/>
+							<col width="40%"/>
+							<tbody>
+								<tr>
+									<th>Дата</th>
+									<th>Препарат</th>
+									<th>Комментарий</th>
+								</tr>
+								<tr>
+									<td>20.05.2017</td>
+									<td>
+										<content ID="imm1">Вакцина коклюшно-дифтерийно-столбнячная адсорбированная жидкая с уменьшенным содержанием антигенов (АКДС-М-вакцина)</content>
+									</td>
+									<td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- [0..1] Кодирование вакцинации -->
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<!-- [0..1] Комментарий -->
+							<text>-</text>
+							<!-- R [1..1] Дата вакцинации -->
+							<effectiveTime value="20170521"/>
+							<!-- R [1..1] Кодирование использованного препарата -->
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<manufacturedMaterial classCode="MMAT" determinerCode="KIND">
+										<!-- R [1..1] Препарат -->
+										<code code="261" codeSystem="1.2.643.5.1.13.13.11.1078" codeSystemVersion="1.1" codeSystemName="Иммунобиологические препараты для специфической профилактики, диагностики и терапии" displayName="Вакцина коклюшно-дифтерийно-столбнячная адсорбированная жидкая с уменьшенным содержанием антигенов (АКДС-М-вакцина)">
+											<!-- [0..1] Ссылка на фрагмент текстовой части секции -->
+											<originalText>
+												<reference value="#imm1"/>
+											</originalText>
+										</code>
+									</manufacturedMaterial>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] СЕКЦИЯ: Заключение врача-специалиста-->
+			<component>
+				<section>
+					<!-- R [1..1] код секции -->
+					<code code="RESINFO" codeSystem="1.2.643.5.1.13.13.99.2.197" codeSystemVersion="1.7" codeSystemName="Секции электронных медицинских документов" displayName="Заключение"/>
+					<!-- R [1..1] заголовок секции -->
+					<title>ЗАКЛЮЧЕНИЕ</title>
+					<!-- R [1..1] наполнение секции -->
+					<text styleCode="section_RESINFO">
+						<table>
+							<tbody>
+								<tr>
+									<th>
+										<content>Состояние</content>
+									</th>
+									<td>
+										<content ID="RES_1">Удовлетворительное</content>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<content>Протокол</content>
+									</th>
+									<td>
+										<content ID="RES_2">Состояние удовлетворительное. Сознание ясное. Контакт доступен. Кожные покровы и видимые слизистые обычной окраски, достаточной влажности. Кожные высыпания. Питание:повыш. Щитовидная железа пальпаторно не определяется. Периферические лимфоузлы не увеличены. Костно-мышечная система без видимых изменений. Грудная клетка правильной формы. Голосовое дрожание не изменено. Перкуторно над легкими легочный звук. При аускультации в легких дыхание везикулярное, хрипов нет. При осмотре области сердца и крупных кровеносных сосудов б/о. Пальпаторно - верхушечный толчок в пятом межреберье; перкуторно: левая граница относительной тупости сердца по срединно-ключичной линии, правая – по правому краю грудины, верхняя – 3 ребро. При аускультации – тоны сердца достаточной звучности, ритм сердечных сокращений правильный, дефицита пульса нет.</content>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<content>Заключение</content>
+									</th>
+									<td>
+										<content ID="RES_3">Предварительный диагноз: Острый коронарный синдром с подъемом сегмента ST. Клинический диагноз:  ИБС. 
+											Острый инфаркт миокарда передней стенки левого желудочка от 27.09.2020 г.  Постинфарктный кардиосклероз (инфаркт миокарда  нижней стенки  от 2016 г).
+											Нарушения ритма сердца: частая желудочковая экстрасистолия. Операция: ТБКА со стентированием передней межжелудочковой артерии 27.09.2020 г.
+											Операция: ТБКА со стентированием правой коронарной артерии  от 2016 г.
+											Атеросклероз аорты, сонных артерий. Дислипидемия 2 А.  
+											Сахарный диабет 2 тип, не инсулинпотребный, Узловой зоб, послеоперационный гипотиреоз.</content>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<content>Рекомендации</content>
+									</th>
+									<td>
+										<content ID="RES_4">Рекомендовано: продолжить прием бисопролола(конкор) 5 мг/сут, аторвастатина 20 мг/сут, кардиомагнила 75 мг на ночь.</content>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<content>Выявленные патологии</content>
+									</th>
+									<td>
+										<content ID="RES_5">Не выявлены</content>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<content>Результат консультации</content>
+									</th>
+									<td>
+										<content ID="RES_7">Продолжить лечение</content>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..1] кодирование ... Состояние пациента -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="804" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Состояние пациента">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.11.1006" codeSystemVersion="2.1" codeSystemName="Степень тяжести состояния пациента" displayName="Удовлетворительное">
+								<originalText>
+									<reference value="#RES_1"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Протокол консультации -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="805" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Протокол консультации"/>
+							<text><reference value="#RES_2"/></text>
+							<value xsi:type="ST">Произвольный текст протокола</value>
+						</observation>
+					</entry>
+					<!-- R [1..1] кодирование ... Заключение -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="806" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Заключение консультации"/>
+							<text><reference value="#RES_3"/></text>
+							<value xsi:type="ST">Произвольный текст заключения</value>
+						</observation>
+					</entry>
+					<!-- [0..1] кодирование ... Рекомендации -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="807" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Рекомендации"/>
+							<text><reference value="#RES_4"/></text>
+							<value xsi:type="ST">Произвольный текст рекомендаций</value>
+						</observation>
+					</entry>
+					<!-- [0..1] кодирование ... Выявленные патологии -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="808" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Выявленные патологии">
+							</code>
+							<value xsi:type="CD" code="I47.2 " codeSystem="1.2.643.5.1.13.13.11.1005" codeSystemVersion="2.10" codeSystemName="Справочник международной классификации болезней и состояний, связанных со здоровьем, десятого пересмотра, версии 4 (МКБ-10)" displayName="Пробежки желудочковой тахикардии">
+								<originalText>
+									<reference value="#RES_5"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+					<!-- [0..1] кодирование ... Результат консультации -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="810" codeSystem="1.2.643.5.1.13.13.99.2.166" codeSystemVersion="1.21" codeSystemName="Кодируемые поля CDA документов" displayName="Результат консультации">
+							</code>
+							<value xsi:type="CD" code="1" codeSystem="1.2.643.5.1.13.13.11.1009" codeSystemName="Виды медицинских направлений" displayName="На плановую госпитализацию">
+								<originalText>
+									<reference value="#RES_7"/>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- [0..1] ВИМИС: Секция связанных документов (сформированных в рамках события осмотра (консультации))-->
+			<component>
+				<section>
+					<!-- R [1..1] Код секции связанных документов -->
+					<code code="vimisReferenceDocs" codeSystem="vimis1" codeSystemVersion="1.0" displayName="Связанные документы" codeSystemName="Секции СЭМД beta-версии" />
+					<!-- R [1..1] заголовок секции -->
+					<title>СВЯЗАННЫЕ ДОКУМЕНТЫ</title>
+					<!-- R [1..1] наполнение секции -->
+					<text>
+						<list>
+							<item><content ID="VREFERENCE500">Направление на оказание медицинских услуг</content><br/><content ID="VREFERENCE501">На обследование</content>, 27.09.2020<br/>
+								<list>
+									<item><content ID="VREFERENCE502">B03.016.004</content> Анализ крови биохимический общетерапевтический</item>
+									<item><content ID="VREFERENCE503">B03.005.006</content> Коагулограмма (ориентировочное исследование системы гемостаза)</item>
+								</list>
+							</item>
+						</list>
+					</text>
+					<!-- [0..*] ВИМИС: Связанный документ - Направление на оказание медицинских услуг сформированное в рамках события осмотра (консультации)  -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор набора версий документа -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="659481548"/>
+							<!-- R [1..1] Код СЭМД beta-версии по справочнику 1.2.643.5.1.13.13.99.2.592 / Код СЭМД по справочнику 1.2.643.5.1.13.13.99.2.195 -->
+							<code code="SMSV1" codeSystem="1.2.643.5.1.13.13.99.2.592" codeSystemName="Типы структурированных медицинских сведений" displayName="Направление на оказание медицинских услуг">
+								<originalText>
+									<reference value="#VREFERENCE500"></reference>
+								</originalText>
+							</code>
+							<!-- R [1..1] Дата создания документа -->
+							<effectiveTime value="202009271600+0300" />
+							<!-- [0..1] Вид направления -->
+							<value xsi:type="CD" code="4" codeSystem="1.2.643.5.1.13.13.11.1009" codeSystemVersion="2.3" codeSystemName="Виды медицинских направлений" displayName="На обследование">
+								<originalText>
+									<reference value="#VREFERENCE501"></reference>
+								</originalText>
+							</value>
+							<!-- [0..*] Массив услуг в рамках документа -->
+							<value xsi:type="CD" code="B03.016.004" displayName="Анализ крови биохимический общетерапевтический" codeSystem="1.2.643.5.1.13.13.11.1070" codeSystemVersion="2.6" codeSystemName="Номенклатура медицинских услуг" >
+								<originalText>
+									<reference value="#VREFERENCE502"></reference>
+								</originalText>
+							</value>
+							<value xsi:type="CD" code="B03.005.006" displayName="Коагулограмма (ориентировочное исследование системы гемостаза)" codeSystem="1.2.643.5.1.13.13.11.1070" codeSystemVersion="2.6" codeSystemName="Номенклатура медицинских услуг">
+								<originalText>
+									<reference value="#VREFERENCE503"></reference>
+								</originalText>
+							</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- R [1..1] ВИМИС: Данные о медицинских картах пациента  -->
+			<component>
+				<section>
+					<!-- R [1..1] Код секции -->
+					<code code="vimisMedicalCard" codeSystem="vimis1" codeSystemVersion="1.0" displayName="Медицинские карты пациента" codeSystemName="Секции СЭМД beta-версии" />
+					<!-- R [1..1] Заголовок секции -->
+					<title>ДАННЫЕ О МЕДИЦИНСКИХ КАРТАХ ПАЦИЕНТА</title>
+					<!-- R [1..1] Наполнение секции -->
+					<text>
+						<!-- R [1..1] Наполнение секции -->
+						<paragraph><caption ID="VREFERENCE_100">Медицинская карта стационарного больного</caption></paragraph>
+						<table width="100%">
+							<col width="50%"/>
+							<col width="50%"/>
+							<tbody>
+								<tr>
+									<th>Номер</th>
+									<td ID="VREFERENCE_101">КВ-4000/800</td>
+								</tr>
+								<tr>
+									<th>Дата создания</th>
+									<td ID="VREFERENCE_102">25.09.2018</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph><caption ID="VREFERENCE_110">Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях</caption></paragraph>
+						<table width="100%">
+							<col width="50%"/>
+							<col width="50%"/>
+							<tbody>
+								<tr>
+									<th>Номер</th>
+									<td ID="VREFERENCE_111">КВ-5000/700</td>
+								</tr>
+								<tr>
+									<th>Дата создания</th>
+									<td ID="VREFERENCE_112">25.09.2018</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- R [1..*] ВИМИС: Данные о медицинских картах пациента -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор медицинской карты -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="4000/800"/>
+							<!-- R [1..1] Тип медицинской карты -->
+							<code code="53" codeSystem="1.2.643.5.1.13.13.11.1507" codeSystemVersion="1.1" codeSystemName="Тип медицинской карты" displayName="Медицинская карта стационарного больного" >
+								<originalText>
+									<reference value="#VREFERENCE_100"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Номер медицинской карты -->
+							<text>
+								<reference value="#VREFERENCE_101"></reference>
+								КВ-4000/800
+							</text>
+							<!-- [1..1] Дата создания медицинской карты  -->
+							<effectiveTime value="201809251600+0300"/>
+						</observation>
+					</entry>
+					<!-- R [1..*] ВИМИС: Данные о медицинских картах пациента -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<!-- R [1..1] Уникальный идентификатор медицинской карты -->
+							<id root="1.2.643.5.1.13.3.25.77.50.100.1.1.59" extension="5000/700"/>
+							<!-- R [1..1] Тип медицинской карты -->
+							<code code="51" codeSystem="1.2.643.5.1.13.13.11.1507" codeSystemVersion="1.1" codeSystemName="Тип медицинской карты" displayName="Медицинская карта пациента, получающего медицинскую помощь в амбулаторных условиях" >
+								<originalText>
+									<reference value="#VREFERENCE_110"></reference>
+								</originalText>
+							</code>
+							<!-- [1..1] Номер медицинской карты -->
+							<text>
+								<reference value="#VREFERENCE_111"></reference>
+								КВ-5000/700
+							</text>
+							<!-- [1..1] Дата создания медицинской карты  -->
+							<effectiveTime value="201809251600+0300"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
